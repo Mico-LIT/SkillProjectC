@@ -8,6 +8,12 @@ namespace OOP.Task
 {
     public class PersonFix : WorkflowBase
     {
+        /// <summary>
+        /// PersonFix
+        /// </summary>
+        /// <param name="id">идентификатор</param>
+        /// <param name="name">имя</param>
+        /// <param name="rate">ставка</param>
         public PersonFix(int id, string name, double rate) : base(id, name, rate)
         {
         }

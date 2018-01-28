@@ -1,0 +1,25 @@
+﻿using System.Security.Permissions;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OOP.Task
+{
+    public abstract class WorkflowBase
+    {
+        protected double Rate;
+        public string Name { get; set; }
+        public int Id { get; set; }
+
+        public abstract double Salary { get; }
+        public WorkflowBase(int id, string name, double rate)
+        {
+            this.Id = id;
+            this.Name = name;
+            this.Rate = rate;
+        }
+
+    }
+}

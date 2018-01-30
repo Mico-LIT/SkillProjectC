@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP.Task
 {
+    [Serializable]
     public class PersonFix : WorkflowBase
     {
         /// <summary>
@@ -17,6 +18,8 @@ namespace OOP.Task
         public PersonFix(int id, string name, double rate) : base(id, name, rate)
         {
         }
+
+        public PersonFix() { }
 
         public override double Salary => Rate;
     }

@@ -1,4 +1,6 @@
-﻿using System.Security.Cryptography.X509Certificates;
+﻿using System.IO;
+using System.Xml.Serialization;
+using System.Security.Cryptography.X509Certificates;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,11 +20,11 @@ namespace OOP.Task
         {
 
             NewPerson();
+            #region а) упорядочить всю последовательность....
             foreach (var item in Pf)
             {
                 System.Console.WriteLine(string.Format("{0} \t {1} \t {2}", item.Id, item.Name, item.Salary));
             }
-            // A
              Pf.Sort(SortPf);
             System.Console.WriteLine("");
             foreach (var item in Pf)
@@ -30,7 +32,51 @@ namespace OOP.Task
                 System.Console.WriteLine(string.Format("{0} \t {1} \t {2}",item.Id,item.Name,item.Salary));
             }
             System.Console.ReadLine();
+            #endregion
+            
+            // b)
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(Pf[i].Name);
+            }
+            
+            // c)
+            for (int i = Pf.Count-1; i > Pf.Count-4; i--)
+            {
+                Console.WriteLine(Pf[i].Name);
+            }
+            Console.ReadLine();
 
+            // d)
+            XmlSerializer xml = new XmlSerializer(typeof(List<PersonFix>));
+            using (FileStream fs=new FileStream("file.xml",FileMode.Create))
+            {
+                xml.Serialize(fs,Pf);
+            }
+
+            Console.WriteLine("Save file");
+            // d)
+            // e)
+            XmlSerializer xml2 = new XmlSerializer(typeof(List<PersonFix>));
+            List<PersonFix> pf2;
+            using (FileStream fs = new FileStream("file.xml", FileMode.OpenOrCreate))
+            {
+                try
+                {
+                    pf2 = (List<PersonFix>)xml.Deserialize(fs);
+
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("ERROR");
+                }
+            }
+            Console.WriteLine("Download file\n");
+            foreach (var item in pf2)
+            {
+                System.Console.WriteLine(string.Format("{0} \t {1} \t {2}", item.Id, item.Name, item.Salary));
+            }
+            Console.ReadLine();
         }
 
         private int SortPf(PersonFix x, PersonFix y)

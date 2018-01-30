@@ -9,7 +9,7 @@ namespace OOP.Task
 {
     public abstract class WorkflowBase
     {
-        protected double Rate;
+        public double Rate;
         public string Name { get; set; }
         public int Id { get; set; }
 
@@ -20,6 +20,7 @@ namespace OOP.Task
             this.Name = name;
             this.Rate = rate;
         }
+        public WorkflowBase() { }
 
     }
 }

@@ -48,6 +48,10 @@
     <Compile Include="Task\PersonTime.cs" />
     <Compile Include="Task\task.cs" />
     <Compile Include="Task\WorkflowBase.cs" />
+    <Compile Include="Собеседование developer\Task_1.cs" />
+    <Compile Include="Собеседование developer\Task_2.cs" />
+    <Compile Include="Собеседование developer\Task_3.cs" />
+    <Compile Include="Собеседование developer\Task_4.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

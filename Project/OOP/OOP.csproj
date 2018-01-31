@@ -52,6 +52,8 @@
     <Compile Include="Собеседование developer\Task_2.cs" />
     <Compile Include="Собеседование developer\Task_3.cs" />
     <Compile Include="Собеседование developer\Task_4.cs" />
+    <Compile Include="Собеседование developer\Task_5.cs" />
+    <Compile Include="Собеседование developer\Task_6.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

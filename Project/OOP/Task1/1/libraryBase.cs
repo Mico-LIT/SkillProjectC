@@ -6,11 +6,17 @@ using System.Threading.Tasks;
 
 namespace OOP.Task1._1
 {
-    public abstract class libraryBase
+    internal abstract class libraryBase
     {
-        protected abstract Dictionary<int,Book> Book { get; }
-        public abstract void Add(Book bk);
-        public abstract void Delete();
-        public abstract IEnumerable<Book> Find(int id);
+        protected List<User> User { get; set; } = new List<User>();
+        protected List<Book> Book { get; set; } = new List<Book>();
+        protected List<UserBook> UserBook { get; set; } = new List<UserBook>();
+        public abstract void AddBook(Book bk);
+        public abstract bool DeleteBook(int id);
+        public abstract Book FindBookID(int id);
+        public abstract bool AddUser(User user);
+        public abstract bool DeleteUser(int userID);
+        public abstract bool AttachmentsUser(int userID, int bookID);
+        public abstract bool NotAttachmentsUser(int userID, int bookID);
     }
 }

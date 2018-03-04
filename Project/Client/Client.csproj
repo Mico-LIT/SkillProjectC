@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5F6B917E-54DF-40DE-AC21-5CE2688A6B62}</ProjectGuid>
+    <ProjectGuid>{EC1E4740-BBF7-4AE2-91C0-9D0E54B29DF5}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>OOP</RootNamespace>
-    <AssemblyName>OOP</AssemblyName>
+    <RootNamespace>Client</RootNamespace>
+    <AssemblyName>Client</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,40 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OtherTask\Boxing\Boxing1.cs" />
-    <Compile Include="OtherTask\Boxing\Boxing2.cs" />
-    <Compile Include="OtherTask\Boxing\Boxing3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Task1\1\Book.cs" />
-    <Compile Include="Task1\1\library.cs" />
-    <Compile Include="Task1\1\libraryBase.cs" />
-    <Compile Include="Task1\1\Task.cs" />
-    <Compile Include="Task1\1\User.cs" />
-    <Compile Include="Task1\1\UserBook.cs" />
-    <Compile Include="Task\PersonFix.cs" />
-    <Compile Include="Task\PersonTime.cs" />
-    <Compile Include="Task\task.cs" />
-    <Compile Include="Task\WorkflowBase.cs" />
-    <Compile Include="Собеседование developer\Task_1.cs" />
-    <Compile Include="Собеседование developer\Task_2.cs" />
-    <Compile Include="Собеседование developer\Task_3.cs" />
-    <Compile Include="Собеседование developer\Task_4.cs" />
-    <Compile Include="Собеседование developer\Task_5.cs" />
-    <Compile Include="Собеседование developer\Task_6.cs" />
-    <Compile Include="Собеседование developer\Task_7.cs" />
-    <Compile Include="Собеседование developer\Task_8.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Task1\condition.txt" />
-    <Content Include="Task\condition.txt" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

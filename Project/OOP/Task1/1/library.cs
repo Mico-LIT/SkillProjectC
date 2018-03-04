@@ -7,46 +7,105 @@ using System.Threading.Tasks;
 
 namespace OOP.Task1._1
 {
-    public class library : libraryBase
+    internal class library : libraryBase
     {
-        protected override Dictionary<int, Book> Book { get; }
-        public library() { Book = new Dictionary<int, Book>(); }
+        public library() { }
 
-        public override void Add(Book bk)
+        public override void AddBook(Book bk)
         {
+            Book book = null;
             try
             {
                 if (bk.Type == BookType.журнал)
                 {
                     bk.BookAuthor = null;
                 }
-                Book.Add(bk.ID, bk);
+                book = Book.Find(x => x.ID == bk.ID);
+
+                Book.Add(bk);
             }
             catch (Exception)
             {
-                Console.WriteLine("Кника сущевствует");
+                Console.WriteLine($"Кника c таким ID существует! ID={book.ID}/r {book.Name + " " + book.Type}");
+            }
+            finally
+            {
+                Console.WriteLine("Укажите новую книжку");
             }
         }
 
-        public override void Delete()
+        public override bool DeleteBook(int id)
         {
-            throw new NotImplementedException();
+            foreach (var item in Book.Where(x => x.ID == id))
+            {
+                Book.Remove(item);
+                return true;
+            }
+
+            return false;
         }
 
-        public IEnumerable<Book> Find(string Name)
+        public IEnumerable<Book> FindBookName(string Name)
         {
-            foreach (var item in Book.Where(x => x.Value.Name == Name))
+            foreach (var item in Book.Where(x => x.Name == Name))
             {
-                yield return item.Value;
-            } 
-        }
-        public override IEnumerable<Book> Find(int id)
-        {
-            foreach (var item in Book.Where(x => x.Key == id))
-            {
-                yield return item.Value;
+                yield return item;
             }
         }
+        public override Book FindBookID(int id)
+        {
+            return Book.SingleOrDefault(x => x.ID == id);
+        }
 
+        public override bool AddUser(User user)
+        {
+            if (User.FindIndex(x => x.ID == user.ID) < 0)
+            {
+                User.Add(user);
+                return true;
+            }
+            return true;
+        }
+
+        public override bool DeleteUser(int userID)
+        {
+            if (User.Find(x => x.ID == userID) != null)
+            {
+                User.RemoveAll(x => x.ID == userID);
+                return true;
+            }
+            return true;
+        }
+
+        public override bool AttachmentsUser(int userid, int bookid)
+        {
+            if (UserBook.Find(x => x.Book.ID == bookid) == null)
+            {
+                User user = User.Find(x=>x.ID == userid);
+                Book book = Book.Find(x => x.ID == bookid);
+                UserBook.Add(new UserBook()
+                {
+                    User = user,
+                    Book = book,
+                    DateTimeStart = DateTime.Now.Date,
+                    ID = UserBook.Count
+                });
+                return true;
+            }
+
+            return false;
+        }
+
+        public override bool NotAttachmentsUser(int userID, int bookID)
+        {
+            UserBook userBook = UserBook.Find(x => x.User.ID == userID && x.Book.ID == bookID);
+            if (userBook != null)
+            {
+                userBook.DateTimeEnd = DateTime.Now.Date;
+                return true;
+            }
+
+            return false;
+        }
     }
 }

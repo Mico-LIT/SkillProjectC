@@ -13,9 +13,9 @@ namespace OOP.Task1._1
         {
             library lib = new library();
             
-            lib.Add(new Book() { ID = 1,Name="d12", Type = BookType.журнал });
-            var g=lib.Find(1);
-            var g1 = lib.Find("d12");
+            lib.AddBook(new Book() { ID = 1,Name="d12", Type = BookType.журнал });
+            var g=lib.FindBookID(1);
+            var g1 = lib.FindBookName("d12");
             foreach (var item in g1)
             {
                 var gg = item;

@@ -45,6 +45,10 @@
     <Compile Include="OtherTask\Boxing\Boxing1.cs" />
     <Compile Include="OtherTask\Boxing\Boxing2.cs" />
     <Compile Include="OtherTask\Boxing\Boxing3.cs" />
+    <Compile Include="OtherTask\Delegats\_Delegate.cs" />
+    <Compile Include="OtherTask\Delegats\_Delegats4.cs" />
+    <Compile Include="OtherTask\Delegats\_Delegats2.cs" />
+    <Compile Include="OtherTask\Delegats\_Delegats3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Task1\1\Book.cs" />

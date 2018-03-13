@@ -49,6 +49,9 @@
     <Compile Include="OtherTask\Delegats\_Delegats4.cs" />
     <Compile Include="OtherTask\Delegats\_Delegats2.cs" />
     <Compile Include="OtherTask\Delegats\_Delegats3.cs" />
+    <Compile Include="OtherTask\Delegats\_Delegats5.cs" />
+    <Compile Include="OtherTask\Delegats\_Delegats6.cs" />
+    <Compile Include="OtherTask\Delegats\_Delegats7.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Task1\1\Book.cs" />

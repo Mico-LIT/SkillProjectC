@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOP.OtherTask.Events
+namespace OOP.OtherTask.Events1
 {
     delegate void EventDelegats();
 

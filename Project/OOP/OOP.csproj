@@ -53,6 +53,8 @@
     <Compile Include="OtherTask\Delegats\_Delegats6.cs" />
     <Compile Include="OtherTask\Delegats\_Delegats7.cs" />
     <Compile Include="OtherTask\Delegats\_Delegats8.cs" />
+    <Compile Include="OtherTask\Events\Events_3.cs" />
+    <Compile Include="OtherTask\Events\Events_4.cs" />
     <Compile Include="OtherTask\Events\Event_1.cs" />
     <Compile Include="OtherTask\Events\Event_2.cs" />
     <Compile Include="Program.cs" />

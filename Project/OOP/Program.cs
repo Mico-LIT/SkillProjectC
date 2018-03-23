@@ -11,7 +11,7 @@ namespace OOP
     {
         static void Main(string[] args)
         {
-
+            OOP.OtherTask.Delegats.Example.Unit_1 sd = new OtherTask.Delegats.Example.Unit_1();
         }
     }
 }

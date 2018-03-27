@@ -60,6 +60,7 @@
     <Compile Include="OtherTask\Events\Event_1.cs" />
     <Compile Include="OtherTask\Events\Event_2.cs" />
     <Compile Include="OtherTask\Events\Example\Unit_1.cs" />
+    <Compile Include="OtherTask\Thread\Thread1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Task1\1\Book.cs" />

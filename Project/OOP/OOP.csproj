@@ -64,6 +64,8 @@
     <Compile Include="OtherTask\Thread\Thread2.cs" />
     <Compile Include="OtherTask\Thread\Thread3.cs" />
     <Compile Include="OtherTask\Thread\Thread4.cs" />
+    <Compile Include="OtherTask\Thread\Thread5.cs" />
+    <Compile Include="OtherTask\Thread\Thread6.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Task1\1\Book.cs" />

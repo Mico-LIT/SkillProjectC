@@ -45,6 +45,11 @@
     <Compile Include="OtherTask\Boxing\Boxing1.cs" />
     <Compile Include="OtherTask\Boxing\Boxing2.cs" />
     <Compile Include="OtherTask\Boxing\Boxing3.cs" />
+    <Compile Include="OtherTask\Collections\Collections1.cs" />
+    <Compile Include="OtherTask\Collections\Collections2.cs" />
+    <Compile Include="OtherTask\Collections\Collections3.cs" />
+    <Compile Include="OtherTask\Collections\Collections4.cs" />
+    <Compile Include="OtherTask\Collections\Collections5.cs" />
     <Compile Include="OtherTask\Collections\UserCollections\Element.cs" />
     <Compile Include="OtherTask\Collections\UserCollections\TestGo.cs" />
     <Compile Include="OtherTask\Collections\UserCollections\UserCollection.cs" />

@@ -20,8 +20,11 @@ namespace OOP.OtherTask.Game
 
         public void Draw()
         {
-            Thread th = new Thread(DrawCarBody);
+            Thread th = new Thread(DrawWheels);
             th.Start();
+            Thread.Sleep(100);
+            Thread th2 = new Thread(DrawCarBody);
+            th2.Start();
         }
 
         void DrawCarBody()
@@ -40,6 +43,31 @@ namespace OOP.OtherTask.Game
             Console.BackgroundColor = ConsoleColor.Black;
         }
 
+        void DrawWheels()
+        {
+            Console.BackgroundColor = ConsoleColor.Gray;
 
+            Console.SetCursorPosition(left - 1, top +1);
+            Console.Write(" ");
+            Console.SetCursorPosition(left - 1, top+2);
+            Console.Write(" ");
+
+            Console.SetCursorPosition(left + 10, top + 1);
+            Console.Write(" ");
+            Console.SetCursorPosition(left + 10, top + 2);
+            Console.Write(" ");
+
+            Console.SetCursorPosition(left - 1, top + 7);
+            Console.Write(" ");
+            Console.SetCursorPosition(left - 1, top + 8);
+            Console.Write(" ");
+
+            Console.SetCursorPosition(left + 10, top + 7);
+            Console.Write(" ");
+            Console.SetCursorPosition(left + 10, top + 8);
+            Console.Write(" ");
+
+            Console.BackgroundColor = ConsoleColor.Black;
+        }
     }
 }

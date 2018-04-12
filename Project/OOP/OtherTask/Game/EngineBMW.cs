@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace OOP.OtherTask.Game
 {
-    class Engine
+    class EngineBMW : IEngine
     {
         bool engineIsDead = false;
         int currentSpeed = 0;
         const int maxSpeed = 200;
 
-        public Engine()
+        public EngineBMW()
         {
 
         }
@@ -53,5 +53,9 @@ namespace OOP.OtherTask.Game
             }
         }
 
+        public void Braking()
+        {
+            Console.WriteLine("Стоп машина");
+        }
     }
 }

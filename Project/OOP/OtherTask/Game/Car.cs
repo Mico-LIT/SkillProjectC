@@ -8,27 +8,28 @@ namespace OOP.OtherTask.Game
 {
     class Car
     {
-        CarBody carbody;
-        Engine engine;
-        public Car(int left = 44,int top = 15)
+        ICarBody icarbody;
+        IEngine iengine;
+
+        public Car(IEngine engine, ICarBody carbody)
         {
-            engine = new Engine();
-            carbody = new CarBody(left,top);
+            this.iengine = engine;
+            this.icarbody = carbody;
         }
 
         public void Show()
         {
-            carbody.Draw();
+            icarbody.Draw();
         }
 
         public int Accelerator(int delta = 1)
         {
-            return engine.Accelerator(delta);
+            return iengine.Accelerator(delta);
         }
 
         public void Braking()
         {
-
+            iengine.Braking();
         }
     }
 }

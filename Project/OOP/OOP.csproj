@@ -69,9 +69,13 @@
     <Compile Include="OtherTask\Events\Event_1.cs" />
     <Compile Include="OtherTask\Events\Event_2.cs" />
     <Compile Include="OtherTask\Events\Example\Unit_1.cs" />
+    <Compile Include="OtherTask\Game\Car.cs" />
     <Compile Include="OtherTask\Game\CarBody.cs" />
-    <Compile Include="OtherTask\Game\Engine.cs" />
+    <Compile Include="OtherTask\Game\EngineBMW.cs" />
     <Compile Include="OtherTask\Game\Game.cs" />
+    <Compile Include="OtherTask\Game\ICarBody.cs" />
+    <Compile Include="OtherTask\Game\IEngine.cs" />
+    <Compile Include="OtherTask\Game\Road.cs" />
     <Compile Include="OtherTask\Thread\Thread1.cs" />
     <Compile Include="OtherTask\Thread\Thread2.cs" />
     <Compile Include="OtherTask\Thread\Thread3.cs" />

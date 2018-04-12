@@ -7,7 +7,7 @@ using System.Threading;
 
 namespace OOP.OtherTask.Game
 {
-    class CarBody
+    class CarBody : ICarBody
     {
         int left;
         int top;

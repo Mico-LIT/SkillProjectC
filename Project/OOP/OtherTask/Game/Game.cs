@@ -8,16 +8,22 @@ namespace OOP.OtherTask.Game
 {
     class Game
     {
+        Car car;
+
         public Game()
         {
-            Console.SetWindowSize(100, 50);
+            car = new Car(
+                new EngineBMW(),
+                new CarBody(44, 15)
+                );
+            //Console.SetWindowSize(100, 50);
 
-            Console.CursorVisible = true;
+            //Console.CursorVisible = true;
 
-            CarBody a = new CarBody(44,15);
-            a.Draw();
+            //CarBody a = new CarBody(44,15);
+            //a.Draw();
 
-            Console.ReadLine();
+            //Console.ReadLine();
         }
     }
 }

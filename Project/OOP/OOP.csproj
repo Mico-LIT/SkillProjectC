@@ -45,6 +45,8 @@
     <Compile Include="OtherTask\Boxing\Boxing1.cs" />
     <Compile Include="OtherTask\Boxing\Boxing2.cs" />
     <Compile Include="OtherTask\Boxing\Boxing3.cs" />
+    <Compile Include="OtherTask\ClassObject\ClassObj.cs" />
+    <Compile Include="OtherTask\ClassObject\ClassObj2.cs" />
     <Compile Include="OtherTask\Collections\Collections1.cs" />
     <Compile Include="OtherTask\Collections\Collections2.cs" />
     <Compile Include="OtherTask\Collections\Collections3.cs" />

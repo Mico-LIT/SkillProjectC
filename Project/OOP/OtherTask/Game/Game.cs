@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace OOP.OtherTask.Game
@@ -9,21 +10,35 @@ namespace OOP.OtherTask.Game
     class Game
     {
         Car car;
+        Road road;
 
         public Game()
         {
             car = new Car(
                 new EngineBMW(),
-                new CarBody(44, 15)
+                new CarBody(40, 20)
                 );
-            //Console.SetWindowSize(100, 50);
+            road = new Road();
+        }
 
-            //Console.CursorVisible = true;
+        public void Run()
+        {
+            car.Show();
+            road.Movie();
+            while (true)
+            {
+                try
+                {
+                    Thread.Sleep(1000);
+                    road.Speed = car.Accelerator(10);
+                }
+                catch (Exception)
+                {
 
-            //CarBody a = new CarBody(44,15);
-            //a.Draw();
+                    //throw;
+                }
+            }
 
-            //Console.ReadLine();
         }
     }
 }

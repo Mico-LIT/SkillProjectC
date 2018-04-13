@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace OOP.OtherTask.Game
@@ -29,8 +30,54 @@ namespace OOP.OtherTask.Game
             this.top = top;
         }
 
-        void Movie()
+        public void Movie()
         {
+            Thread th = new Thread(DrowSprint);
+            th.Start();
+            th.IsBackground = true;
+        }
+
+        void DrowSprint()
+        {
+            while (true)
+            {
+                if (this.speed !=0)
+                {
+                    for (int i = 0; i < 3; i++)
+                    {
+                        top = i;
+
+                        // очистка старой полосы
+                        for (int e = 0; e < 45; e++)
+                        {
+                            Console.BackgroundColor = ConsoleColor.Black;
+
+                            Console.SetCursorPosition(left,e); // левая
+                            Console.Write(" ");
+
+                            Console.SetCursorPosition(left+35, e); // правая
+                            Console.Write(" ");
+                        }
+
+                        // Новая полоса 
+                        for (int s = 0; s < 15; s++)
+                        {
+                            Console.BackgroundColor = ConsoleColor.Gray;
+
+                            Console.SetCursorPosition(left, top);
+                            Console.Write(" ");
+
+                            Console.SetCursorPosition(left + 35, top);
+                            Console.Write(" ");
+
+                            top += 3;
+                            Console.BackgroundColor = ConsoleColor.Black;
+                        }
+
+                        Thread.Sleep(this.speed);
+                    }
+                }
+            }
 
         }
     }

@@ -11,6 +11,16 @@ namespace OOP
     {
         static void Main(string[] args)
         {
+            //Game();
+        }
+
+        void Game()
+        {
+            Console.SetWindowSize(100, 50);
+            OtherTask.Game.Game asd = new OtherTask.Game.Game();
+            asd.Run();
+            ///Console.CursorVisible = true;
+            Console.ReadLine();
         }
     }
 }

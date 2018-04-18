@@ -20,7 +20,8 @@ namespace OOP.OtherTask.ClassObject
         {
             MyClass my = new MyClass();
 
-            Console.WriteLine(my);
+            Console.WriteLine(my.GetHashCode());
+            Console.WriteLine(my.ToString());
             Console.ReadLine();
         }
     }

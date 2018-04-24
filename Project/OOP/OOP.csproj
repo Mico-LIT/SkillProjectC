@@ -47,6 +47,10 @@
     <Compile Include="OtherTask\Boxing\Boxing3.cs" />
     <Compile Include="OtherTask\ClassObject\ClassObj.cs" />
     <Compile Include="OtherTask\ClassObject\ClassObj2.cs" />
+    <Compile Include="OtherTask\ClassObject\ClassObj3.cs" />
+    <Compile Include="OtherTask\ClassObject\ClassObj4.cs" />
+    <Compile Include="OtherTask\ClassObject\ClassObj5.cs" />
+    <Compile Include="OtherTask\ClassObject\Cloning.cs" />
     <Compile Include="OtherTask\Collections\Collections1.cs" />
     <Compile Include="OtherTask\Collections\Collections2.cs" />
     <Compile Include="OtherTask\Collections\Collections3.cs" />

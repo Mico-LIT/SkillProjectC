@@ -85,6 +85,10 @@
     <Compile Include="OtherTask\LINQ\Linq_1.cs" />
     <Compile Include="OtherTask\LINQ\Linq_2.cs" />
     <Compile Include="OtherTask\LINQ\Linq_3.cs" />
+    <Compile Include="OtherTask\LINQ\Linq_4.cs" />
+    <Compile Include="OtherTask\LINQ\Linq_5.cs" />
+    <Compile Include="OtherTask\LINQ\Linq_6.cs" />
+    <Compile Include="OtherTask\LINQ\Linq_7.cs" />
     <Compile Include="OtherTask\Operators\Operators.cs" />
     <Compile Include="OtherTask\Operators\Operators1.cs" />
     <Compile Include="OtherTask\Thread\Thread1.cs" />

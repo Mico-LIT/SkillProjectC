@@ -50,7 +50,7 @@ namespace OOP.OtherTask.LINQ
             };
 
             // Выражение запроса. (Использование вызовов статических методов)
-            var query =
+            var query = // переменная диапазона
                 Enumerable.Select(
                     Enumerable.OrderBy(
                         Enumerable.OrderBy(

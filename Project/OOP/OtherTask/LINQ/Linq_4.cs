@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOP.OtherTask.LINQ
+namespace OOP.OtherTask.LINQ_
 {
     static class Myset
     {

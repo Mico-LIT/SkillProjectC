@@ -58,7 +58,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SQL Essential\SQL_1.sql" />
+    <Content Include="SQL Essential\Start\SQL_1.sql" />
     <Content Include="SkillDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -66,6 +66,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>SkillDB.mdf</DependentUpon>
     </Content>
+    <Content Include="SQL Essential\Start\SQL_GroupBY.sql" />
+    <Content Include="SQL Essential\Start\SQL_Insert.sql" />
+    <Content Include="SQL Essential\Start\SQL_OrderBy.sql" />
+    <Content Include="SQL Essential\Start\SQL_Select.sql" />
+    <Content Include="SQL Essential\DDL\SQL_TableDefinition.sql" />
+    <Content Include="SQL Essential\Start\SQL_UPDATE_DELETE.sql" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

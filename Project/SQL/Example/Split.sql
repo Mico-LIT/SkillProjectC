@@ -15,8 +15,9 @@ RETURN
             FROM Split
             WHERE endpos > 0
     )
-    SELECT 'Id' = ROW_NUMBER() OVER (ORDER BY (SELECT 1)),
-        'Data' = LTRIM(RTRIM(SUBSTRING(@String,stpos,COALESCE(NULLIF(endpos,0),LEN(@String)+1)-stpos)))
+
+    SELECT 'Id' = ROW_NUMBER() OVER (ORDER BY stpos),
+           'Data' = LTRIM(RTRIM(SUBSTRING(@String,stpos,COALESCE(NULLIF(endpos,0),LEN(@String)+1)-stpos)))
     FROM Split
 )
 GO

@@ -63,6 +63,8 @@
     <Content Include="SQL Essential\DDL\SQL_Cascading_Referential_Integrity_Constraints.sql" />
     <Content Include="SQL Essential\DDL\SQL_Foreign_Key.sql" />
     <Content Include="SQL Essential\DDL\SQL_Primary_Key.sql" />
+    <Content Include="SQL Essential\DDL\SQL_Relations.sql" />
+    <Content Include="SQL Essential\Design\Normalization.sql" />
     <Content Include="SQL Essential\Start\SQL_1.sql" />
     <Content Include="SkillDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

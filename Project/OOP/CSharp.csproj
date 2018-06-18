@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="OOP\Base\OverrideMethod.cs" />
     <Compile Include="OOP\Base\Полиморфизм\InheritanceAndPolymorphism.cs" />
+    <Compile Include="OOP\Base\Полиморфизм\InheritanceAndPolymorphismV2.cs" />
     <Compile Include="OOP\Base\Полиморфизм\Overload.cs" />
     <Compile Include="OOP\OtherTask\Boxing\Boxing1.cs" />
     <Compile Include="OOP\OtherTask\Boxing\Boxing2.cs" />

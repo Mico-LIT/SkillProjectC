@@ -58,7 +58,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="OOP\Base\OverrideMethod.cs" />
+    <Compile Include="OOP\Base\Полиморфизм\AccessModifiers.cs" />
+    <Compile Include="OOP\Base\Полиморфизм\AccessModifiersLibrary.cs" />
     <Compile Include="OOP\Base\Полиморфизм\InheritanceAndPolymorphism.cs" />
+    <Compile Include="OOP\Base\Полиморфизм\InheritanceAndPolymorphismAbstract.cs" />
     <Compile Include="OOP\Base\Полиморфизм\InheritanceAndPolymorphismV2.cs" />
     <Compile Include="OOP\Base\Полиморфизм\Overload.cs" />
     <Compile Include="OOP\OtherTask\Boxing\Boxing1.cs" />

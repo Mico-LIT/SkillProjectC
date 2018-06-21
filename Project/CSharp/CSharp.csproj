@@ -87,6 +87,7 @@
     <Compile Include="Base\Delegats\_Delegats8.cs" />
     <Compile Include="Base\Delegats\_Delegats9.cs" />
     <Compile Include="Base\Enums\Enums.cs" />
+    <Compile Include="Base\Events\_Events.cs" />
     <Compile Include="Base\Events\Events_3.cs" />
     <Compile Include="Base\Events\Events_4.cs" />
     <Compile Include="Base\Events\Event_1.cs" />
@@ -158,9 +159,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Base\Delegats\NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>

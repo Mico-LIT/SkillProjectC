@@ -66,6 +66,7 @@
     <Content Include="SQL Essential\DDL\SQL_Relations.sql" />
     <Content Include="SQL Essential\Design\Normalization.sql" />
     <Content Include="SQL Essential\JOINs\Join.sql" />
+    <Content Include="SQL Essential\JOINs\UNION_EXCEPT_INTERSECT.sql" />
     <Content Include="SQL Essential\Start\SQL_1.sql" />
     <Content Include="SkillDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

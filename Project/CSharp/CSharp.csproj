@@ -109,6 +109,7 @@
     <Compile Include="Base\LINQs\Linq_7.cs" />
     <Compile Include="Base\LINQs\Linq_8.cs" />
     <Compile Include="Base\LINQs\Linq_9.cs" />
+    <Compile Include="Base\OOP\Examples2\Task.cs" />
     <Compile Include="Base\OOP\Examples\PersonFix.cs" />
     <Compile Include="Base\OOP\Examples\PersonTime.cs" />
     <Compile Include="Base\OOP\Examples\task.cs" />

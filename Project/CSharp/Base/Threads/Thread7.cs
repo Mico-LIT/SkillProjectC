@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace OOP.OtherTask.Thread7
+namespace CSharp.Base.Threads.Thread7
 {
     class Thread7
     {

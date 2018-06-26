@@ -85,6 +85,7 @@
     <Content Include="SQL Essential\DDL\SQL_TableDefinition.sql" />
     <Content Include="SQL Essential\Start\SQL_UPDATE_DELETE.sql" />
     <Content Include="SQL Essential\Subqueries\1_SubqueryStatements.sql" />
+    <Content Include="SQL Essential\Subqueries\Cursors.sql" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

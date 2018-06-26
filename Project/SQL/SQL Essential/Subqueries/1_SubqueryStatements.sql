@@ -112,4 +112,86 @@ SELECT
   JOIN OrderDetails od ON p.ProdID = od.ProdID
 
 
+SELECT (SELECT  ProdID FROM Products 
+    WHERE Products.ProdID = OrderDetails.ProdID) AS ProdID,
+   (SELECT  [Description] FROM Products 
+    WHERE Products.ProdID = OrderDetails.ProdID) AS [Description], 
+      Qty, 
+      TotalPrice 
+FROM OrderDetails
 
+-- Вывести общую сумму продаж по сотрудникам
+
+  SELECT  
+    e.FName,
+    e.LName,
+    e.MName,
+    SUM(od.TotalPrice) AS TotalSold    
+    FROM Employees e
+    JOIN Orders o ON e.EmployeeID = o.EmployeeID
+    JOIN OrderDetails od ON o.OrderID = od.OrderID
+    GROUP BY e.FName,e.LName,e.MName
+
+-- Создание временной таблицы CREATE TABLE #TableName:
+-- #TableName  - локальная таблица, данной таблицей может пользоваться только
+--               текущий пользователь
+-- ##TableName - глобальная таблица, данной таблицей может пользоваться любой
+--               пользователь
+
+CREATE TABLE #TmpTable
+(FName varchar(50),
+ LName varchar(50),
+ MName varchar(50),
+ TotalPrice money);
+ GO
+
+
+SELECT (SELECT FName FROM Employees 
+          WHERE EmployeeID = (SELECT EmployeeID FROM Orders
+                             WHERE Orders.OrderID = OrderDetails.OrderID)
+          ) AS FName,
+          (SELECT LName FROM Employees 
+          WHERE EmployeeID = (SELECT EmployeeID FROM Orders
+                             WHERE Orders.OrderID = OrderDetails.OrderID)
+          ) AS LName,
+          (SELECT MName FROM Employees 
+          WHERE EmployeeID = (SELECT EmployeeID FROM Orders
+                             WHERE Orders.OrderID = OrderDetails.OrderID)
+          ) AS MName,
+          TotalPrice
+INTO TmpTable 
+FROM OrderDetails;
+GO
+  
+SELECT FName, LName, MName, SUM(TotalPrice) AS [Total Sold] FROM TmpTable
+GROUP BY FName, LName, MName;
+GO
+
+WITH Managers (FName,LName,Mname,TotalPrice) AS
+  (
+SELECT (
+        SELECT FName FROM Employees 
+        WHERE EmployeeID = (
+                            SELECT EmployeeID FROM Orders
+                            WHERE Orders.OrderID = OrderDetails.OrderID
+                            )
+        ),
+        (
+        SELECT LName FROM Employees 
+        WHERE EmployeeID = (
+                             SELECT EmployeeID FROM Orders
+                             WHERE Orders.OrderID = OrderDetails.OrderID
+                             )
+        ),
+        (
+        SELECT MName FROM Employees 
+        WHERE EmployeeID = (
+                             SELECT EmployeeID FROM Orders
+                             WHERE Orders.OrderID = OrderDetails.OrderID
+                             )
+        ),
+        TotalPrice 
+FROM OrderDetails
+  )
+  SELECT FName, LName, MName, SUM(TotalPrice) AS [Total Sold] 
+         FROM Managers GROUP BY FName, LName, MName;

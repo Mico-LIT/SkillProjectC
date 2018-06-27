@@ -70,6 +70,7 @@
     <Content Include="SQL Essential\JOINs\JoinsPractice.sql" />
     <Content Include="SQL Essential\JOINs\Join.sql" />
     <Content Include="SQL Essential\JOINs\UNION_EXCEPT_INTERSECT.sql" />
+    <Content Include="SQL Essential\Procedures_Functions\IF_WHILE_TRY_CATCH.sql" />
     <Content Include="SQL Essential\Start\SQL_1.sql" />
     <Content Include="SkillDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

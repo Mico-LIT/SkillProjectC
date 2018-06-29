@@ -145,6 +145,17 @@
     <Compile Include="InterviewDeveloper\Task_6.cs" />
     <Compile Include="InterviewDeveloper\Task_7.cs" />
     <Compile Include="InterviewDeveloper\Task_8.cs" />
+    <Compile Include="Professional\UserCollections\Collection2\Element.cs" />
+    <Compile Include="Professional\UserCollections\Collection2\Prog.cs" />
+    <Compile Include="Professional\UserCollections\Collection2\UserCollection.cs" />
+    <Compile Include="Professional\UserCollections\Collection3\Element.cs" />
+    <Compile Include="Professional\UserCollections\Collection3\Prog.cs" />
+    <Compile Include="Professional\UserCollections\Collection3\UserCollection.cs" />
+    <Compile Include="Professional\UserCollections\Collection\Element.cs" />
+    <Compile Include="Professional\UserCollections\Collection\Prog.cs" />
+    <Compile Include="Professional\UserCollections\Collection\UserCollection.cs" />
+    <Compile Include="Professional\UserICollections\UICollection\Prog.cs" />
+    <Compile Include="Professional\UserICollections\UICollection\UserCollection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tasks\Unit1\Book.cs" />

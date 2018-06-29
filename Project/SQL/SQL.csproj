@@ -70,6 +70,7 @@
     <Content Include="SQL Essential\JOINs\JoinsPractice.sql" />
     <Content Include="SQL Essential\JOINs\Join.sql" />
     <Content Include="SQL Essential\JOINs\UNION_EXCEPT_INTERSECT.sql" />
+    <Content Include="SQL Essential\Procedures_Functions\Functions.sql" />
     <Content Include="SQL Essential\Procedures_Functions\Procedures.sql" />
     <Content Include="SQL Essential\Procedures_Functions\IF_WHILE_TRY_CATCH.sql" />
     <Content Include="SQL Essential\Start\SQL_1.sql" />
@@ -100,6 +101,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SQL Essential\Transactions_Triggers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

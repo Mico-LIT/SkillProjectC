@@ -147,6 +147,9 @@
     <Compile Include="InterviewDeveloper\Task_8.cs" />
     <Compile Include="Professional\SystemCollection\_ArrayList\ArrayListDemo.cs" />
     <Compile Include="Professional\SystemCollection\_ArrayList\ArrayListDemo1.cs" />
+    <Compile Include="Professional\SystemCollection\_BitArray\BitArrayExample2.cs" />
+    <Compile Include="Professional\SystemCollection\_BitArray\BitArrayExample.cs" />
+    <Compile Include="Professional\SystemCollection\_BitVector32\BitVector32Example.cs" />
     <Compile Include="Professional\SystemCollection\_Hashtable\HashtableExample4.cs" />
     <Compile Include="Professional\SystemCollection\_Hashtable\HashtableExample3.cs" />
     <Compile Include="Professional\SystemCollection\_Hashtable\HashtableExample2.cs" />

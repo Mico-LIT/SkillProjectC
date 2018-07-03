@@ -146,6 +146,13 @@
     <Compile Include="InterviewDeveloper\Task_6.cs" />
     <Compile Include="InterviewDeveloper\Task_7.cs" />
     <Compile Include="InterviewDeveloper\Task_8.cs" />
+    <Compile Include="Professional\ProgrammingIO\_InputOutput\InputOutput4.cs" />
+    <Compile Include="Professional\ProgrammingIO\_InputOutput\InputOutput7.cs" />
+    <Compile Include="Professional\ProgrammingIO\_InputOutput\InputOutput6.cs" />
+    <Compile Include="Professional\ProgrammingIO\_InputOutput\InputOutput5.cs" />
+    <Compile Include="Professional\ProgrammingIO\_InputOutput\InputOutput3.cs" />
+    <Compile Include="Professional\ProgrammingIO\_InputOutput\InputOutput2.cs" />
+    <Compile Include="Professional\ProgrammingIO\_InputOutput\InputOutput.cs" />
     <Compile Include="Professional\SystemCollection\_ArrayList\ArrayListDemo.cs" />
     <Compile Include="Professional\SystemCollection\_ArrayList\ArrayListDemo1.cs" />
     <Compile Include="Professional\SystemCollection\_BitArray\BitArrayExample2.cs" />

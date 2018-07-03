@@ -7,12 +7,11 @@ using System.Collections;
 
 namespace CSharp.Professional.SystemCollection._SortedList
 {
-    class SortedListExample
+    class SortedListExample3
     {
-        public SortedListExample()
+        public SortedListExample3()
         {
-            // Гетерогенная коллекция
-            var sort = new SortedList();
+            var sort = new SortedList<string,string>();
 
             sort["First"] = "1st"; // 1
             sort["Second"] = "2nd";// 4
@@ -20,7 +19,7 @@ namespace CSharp.Professional.SystemCollection._SortedList
             sort["Fourth"] = "4th";// 3
             sort["fourth"] = "4th";// 2
 
-            foreach (DictionaryEntry item in sort)
+            foreach (KeyValuePair<string,string> item in sort)
             {
                 Console.WriteLine($"[{item.Key}] = {item.Value}");
                 //Console.WriteLine(item.GetType());

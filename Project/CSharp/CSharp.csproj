@@ -48,6 +48,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -150,17 +151,24 @@
     <Compile Include="Professional\SystemCollection\_BitArray\BitArrayExample2.cs" />
     <Compile Include="Professional\SystemCollection\_BitArray\BitArrayExample.cs" />
     <Compile Include="Professional\SystemCollection\_BitVector32\BitVector32Example.cs" />
+    <Compile Include="Professional\SystemCollection\_Dictionary\DictionaryExample.cs" />
     <Compile Include="Professional\SystemCollection\_Hashtable\HashtableExample4.cs" />
     <Compile Include="Professional\SystemCollection\_Hashtable\HashtableExample3.cs" />
     <Compile Include="Professional\SystemCollection\_Hashtable\HashtableExample2.cs" />
     <Compile Include="Professional\SystemCollection\_Hashtable\HashtableExample.cs" />
     <Compile Include="Professional\SystemCollection\_HybridDictionary\HybriDictionaryExample.cs" />
+    <Compile Include="Professional\SystemCollection\_LinkedList\LinkedListExample.cs" />
     <Compile Include="Professional\SystemCollection\_ListDictionary\ListDictionaryExample.cs" />
+    <Compile Include="Professional\SystemCollection\_List\ListExample.cs" />
+    <Compile Include="Professional\SystemCollection\_NameValueCollection\NameValueCollectionExample.cs" />
     <Compile Include="Professional\SystemCollection\_OrderedDictionary\OrderedDictionaryExample.cs" />
+    <Compile Include="Professional\SystemCollection\_Queue\QueueDemo2.cs" />
     <Compile Include="Professional\SystemCollection\_Queue\QueueDemo1.cs" />
     <Compile Include="Professional\SystemCollection\_Queue\QueueDemo.cs" />
+    <Compile Include="Professional\SystemCollection\_SortedList\SortedListExample3.cs" />
     <Compile Include="Professional\SystemCollection\_SortedList\SortedListExample2.cs" />
     <Compile Include="Professional\SystemCollection\_SortedList\SortedListExample.cs" />
+    <Compile Include="Professional\SystemCollection\_Stack\StackDemo2.cs" />
     <Compile Include="Professional\SystemCollection\_Stack\StackDemo1.cs" />
     <Compile Include="Professional\SystemCollection\_Stack\StackDemo.cs" />
     <Compile Include="Professional\UserCollections\_IList\UIList\Prog.cs" />

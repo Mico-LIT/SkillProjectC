@@ -187,6 +187,7 @@
     <Compile Include="Professional\SystemCollection\_Stack\StackDemo2.cs" />
     <Compile Include="Professional\SystemCollection\_Stack\StackDemo1.cs" />
     <Compile Include="Professional\SystemCollection\_Stack\StackDemo.cs" />
+    <Compile Include="Professional\TextWorking\_String\_StringExamle.cs" />
     <Compile Include="Professional\UserCollections\_IList\UIList\Prog.cs" />
     <Compile Include="Professional\UserCollections\_IList\UIList\UserCollection.cs" />
     <Compile Include="Professional\UserCollections\_Collections\Collection2\Element.cs" />

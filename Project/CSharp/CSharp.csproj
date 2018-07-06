@@ -203,6 +203,8 @@
     <Compile Include="Professional\UserCollections\_ICollections\UICollection2\UserCollection.cs" />
     <Compile Include="Professional\UserCollections\_ICollections\UICollection\Prog.cs" />
     <Compile Include="Professional\UserCollections\_ICollections\UICollection\UserCollection.cs" />
+    <Compile Include="Professional\XMLandConfigFile\Config\ConfigurationBasic.cs" />
+    <Compile Include="Professional\XMLandConfigFile\XML\XMLExample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tasks\Unit1\Book.cs" />
@@ -233,6 +235,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Base\OOP\Examples\condition.txt" />
+    <Content Include="Professional\XMLandConfigFile\XML\XMLFile1.xml" />
     <Content Include="Tasks\condition.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

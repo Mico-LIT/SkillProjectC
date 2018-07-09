@@ -162,6 +162,8 @@
     <Compile Include="Professional\ProgrammingIO\_InputOutput\InputOutput2.cs" />
     <Compile Include="Professional\ProgrammingIO\_InputOutput\InputOutput.cs" />
     <Compile Include="Professional\ProgrammingIO\_StreamReader\StreamReaderExample.cs" />
+    <Compile Include="Professional\Reflection\_Type\TypeTest.cs" />
+    <Compile Include="Professional\Reflection\_Type\TypeTest2.cs" />
     <Compile Include="Professional\RegistryBasics\Registr.cs" />
     <Compile Include="Professional\SystemCollection\_ArrayList\ArrayListDemo.cs" />
     <Compile Include="Professional\SystemCollection\_ArrayList\ArrayListDemo1.cs" />

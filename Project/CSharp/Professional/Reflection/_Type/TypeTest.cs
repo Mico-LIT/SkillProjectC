@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace CSharp.Professional.Reflection._Type
 {
-    class MyClass
-    {
-    }
 
     class TypeTest
     {
+        class MyClass {}
+
         public TypeTest()
         {
             //1

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 
 /// <summary>
 /// Атрибуты (Аспектно-Ориентированное Программирование)
@@ -24,7 +25,7 @@ namespace CSharp.Professional.AtributeWork
     /// Именованный параметр - AllowMultiple = false, определяет сколько раз к одному элементу 
     /// можно применять атрибут.
     /// </summary>
-    [AttributeUsage(AttributeTargets.All, AllowMultiple =false)]
+    [AttributeUsage(AttributeTargets.All /* | AttributeTargets.Method*/, AllowMultiple =false)]
     class MyAttribute : System.Attribute
     {
         private readonly string date;
@@ -41,14 +42,49 @@ namespace CSharp.Professional.AtributeWork
 
     }
 
-    [My("d12", Number =12)]
+    [My("class Myclass", Number =444)]
     class Myclass
     {
-        [My("d12", Number = 12)]
-        public Myclass()
+        [My("public void Method()", Number = 333)]
+        public void Method()
         {
 
         }
 
+    }
+
+    class Go
+    {
+        public Go()
+        {
+            Myclass myclass = new Myclass();
+            myclass.Method();
+
+            //Анализ атрибутов
+
+            Type type = typeof(Myclass);
+
+            // Получаем все аттрибутты заданного типа MyAtribute
+            // (false- без проверки базовых классов)
+
+            object[] attributes = type.GetCustomAttributes(false);
+
+            foreach (MyAttribute item in attributes)
+            {
+                Console.WriteLine($"{item.Date}  {item.Number}");
+            }
+
+
+            // Анализ атрибутов метода
+            MethodInfo method = type.GetMethod("Method", BindingFlags.Public | BindingFlags.Instance);
+            attributes = method.GetCustomAttributes(typeof(MyAttribute), false);
+
+            foreach (MyAttribute item in attributes)
+            {
+                Console.WriteLine($"{item.Date}  {item.Number}");
+            }
+
+            Console.ReadLine();
+        }
     }
 }

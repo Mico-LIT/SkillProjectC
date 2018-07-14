@@ -50,6 +50,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -167,6 +168,8 @@
     <Compile Include="Professional\Reflection\_Type\TypeTest2.cs" />
     <Compile Include="Professional\Reflection\_Type\TypeTest3.cs" />
     <Compile Include="Professional\RegistryBasics\Registr.cs" />
+    <Compile Include="Professional\Serealizations\XML\Go.cs" />
+    <Compile Include="Professional\Serealizations\XML\MyClassData.cs" />
     <Compile Include="Professional\SystemCollection\_ArrayList\ArrayListDemo.cs" />
     <Compile Include="Professional\SystemCollection\_ArrayList\ArrayListDemo1.cs" />
     <Compile Include="Professional\SystemCollection\_BitArray\BitArrayExample2.cs" />

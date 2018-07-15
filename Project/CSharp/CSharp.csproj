@@ -168,6 +168,11 @@
     <Compile Include="Professional\Reflection\_Type\TypeTest2.cs" />
     <Compile Include="Professional\Reflection\_Type\TypeTest3.cs" />
     <Compile Include="Professional\RegistryBasics\Registr.cs" />
+    <Compile Include="Professional\Serealizations\Binary\Car.cs" />
+    <Compile Include="Professional\Serealizations\Binary\Go.cs" />
+    <Compile Include="Professional\Serealizations\Binary\Mersedes.cs" />
+    <Compile Include="Professional\Serealizations\Binary\Mode.cs" />
+    <Compile Include="Professional\Serealizations\Binary\Radio.cs" />
     <Compile Include="Professional\Serealizations\XML\Go.cs" />
     <Compile Include="Professional\Serealizations\XML\MyClassData.cs" />
     <Compile Include="Professional\SystemCollection\_ArrayList\ArrayListDemo.cs" />

@@ -173,6 +173,9 @@
     <Compile Include="Professional\Serealizations\Binary\Mersedes.cs" />
     <Compile Include="Professional\Serealizations\Binary\Mode.cs" />
     <Compile Include="Professional\Serealizations\Binary\Radio.cs" />
+    <Compile Include="Professional\Serealizations\NonSerialized\Go.cs" />
+    <Compile Include="Professional\Serealizations\UserSerial\Car.cs" />
+    <Compile Include="Professional\Serealizations\UserSerial\Go.cs" />
     <Compile Include="Professional\Serealizations\XML\Go.cs" />
     <Compile Include="Professional\Serealizations\XML\MyClassData.cs" />
     <Compile Include="Professional\SystemCollection\_ArrayList\ArrayListDemo.cs" />

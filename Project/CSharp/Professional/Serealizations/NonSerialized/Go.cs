@@ -18,6 +18,10 @@ namespace CSharp.Professional.Serealizations.NonSerialized
         [NonSerialized]
         public decimal total;
 
+        // Поле добавленное в класс в новой версии. Инициализируется значением по умолчанию.
+        [OptionalField]
+        public bool taxable;
+
         public ShoppingCartItem(int _productID,decimal _price,int _quantity)
         {
             this.productID = _productID;

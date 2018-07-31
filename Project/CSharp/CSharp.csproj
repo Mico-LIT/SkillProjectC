@@ -132,6 +132,7 @@
     <Compile Include="Base\Threads\Thread5.cs" />
     <Compile Include="Base\Threads\Thread6.cs" />
     <Compile Include="Base\Threads\Thread7.cs" />
+    <Compile Include="Base\Threads\Thread8.cs" />
     <Compile Include="Games\Car.cs" />
     <Compile Include="Games\CarBody.cs" />
     <Compile Include="Games\EngineBMW.cs" />

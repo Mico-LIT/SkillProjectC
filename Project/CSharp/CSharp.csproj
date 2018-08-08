@@ -125,8 +125,12 @@
     <Compile Include="Base\OOP\Полиморфизм\Overload.cs" />
     <Compile Include="Base\Operators\Operators.cs" />
     <Compile Include="Base\Operators\Operators1.cs" />
+    <Compile Include="Base\Threads\Synchronization\_Mutex.cs" />
+    <Compile Include="Base\Threads\Synchronization\_Mutex2.cs" />
+    <Compile Include="Base\Threads\Synchronization\_Semaphore.cs" />
     <Compile Include="Base\Threads\Thread1.cs" />
     <Compile Include="Base\Threads\Thread10.cs" />
+    <Compile Include="Base\Threads\InterLocked.cs" />
     <Compile Include="Base\Threads\Thread2.cs" />
     <Compile Include="Base\Threads\Thread3.cs" />
     <Compile Include="Base\Threads\Thread4.cs" />

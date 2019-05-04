@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Network_programming", "Network_programming\Network_programming.csproj", "{EB837ADE-8F08-4590-8F9A-26004F031848}"
 EndProject
@@ -9,13 +9,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SClient", "SClient\SClient.csproj", "{AFD033A7-28BC-4429-9B4D-4D561B01540E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{B6FE84F1-B8DD-4E4F-9E7F-514F5354E349}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationOAuth", "WebApplication\WebApplicationOAuth.csproj", "{B6FE84F1-B8DD-4E4F-9E7F-514F5354E349}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQL", "SQL\SQL.csproj", "{79861ED8-448E-4C12-8E56-4E2C3342465A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp", "CSharp\CSharp.csproj", "{5F6B917E-54DF-40DE-AC21-5CE2688A6B62}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{7102476F-920E-4339-878B-47DD073C64D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication1\WebApplication.csproj", "{5217E41D-438B-4536-87E8-489FF7B894C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{7102476F-920E-4339-878B-47DD073C64D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7102476F-920E-4339-878B-47DD073C64D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7102476F-920E-4339-878B-47DD073C64D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5217E41D-438B-4536-87E8-489FF7B894C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5217E41D-438B-4536-87E8-489FF7B894C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5217E41D-438B-4536-87E8-489FF7B894C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5217E41D-438B-4536-87E8-489FF7B894C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

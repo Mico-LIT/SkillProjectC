@@ -1,0 +1,104 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <title>Index</title>
+
+    <!-- Latest compiled and minified CSS -->
+    @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">*@
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+
+    <!-- jQuery library -->
+    @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>*@
+    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
+
+    <!-- Popper JS -->
+    @*<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>*@
+    <script src="~/Scripts/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    @*<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>*@
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <style>
+        .navbar {
+            background: #F97300;
+        }
+
+        .nav-link, .navbar-brand {
+            color: #f4f4f4;
+            cursor: pointer;
+        }
+
+        .nav-link {
+            margin-right: 1em !important;
+        }
+
+        .nav-link:hover {
+            color: rgba(245, 245, 247, 0.99) !important;
+        }
+
+        .navbar-collapse {
+            justify-content: flex-end;
+        }
+
+        .navbar-toggler {
+            background: #fff !important;
+        }
+
+    header {
+        background-image: url(https://cdn.pixabay.com/photo/2018/03/27/21/43/startup-3267505_960_720.jpg); 
+        background-attachment:fixed;
+        background-size:cover;
+        background-position:center;
+    }
+
+    .overlay{
+        position:absolute;
+        min-width:100%;
+        min-height:100%;
+        top:0;
+        left:0;
+        background:rgba(252, 252, 252, 0.70);
+    }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+        <a class="navbar-brand" href="#">MikoProduction</a>
+        <button class="navbar-toggler" type="button"
+                data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-4">
+                <li class="nav-item"><a class="nav-link" href="#">Обо мне</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Учеба</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Где работал</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Что умею</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
+            </ul>
+        </div>
+
+    </nav>
+    <header>
+       <div class="overlay"></div>
+        <div class="container"></div>
+    </header>
+
+    <script>
+        $(document).ready(function () {
+            $('header').height($(window).height());
+        })
+    </script>
+ </body>
+</html>

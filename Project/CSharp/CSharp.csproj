@@ -231,6 +231,7 @@
     <Compile Include="Professional\XMLandConfigFile\XML\XMLExample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tasks\Class1.cs" />
     <Compile Include="Tasks\Unit1\Book.cs" />
     <Compile Include="Tasks\Unit1\library.cs" />
     <Compile Include="Tasks\Unit1\libraryBase.cs" />

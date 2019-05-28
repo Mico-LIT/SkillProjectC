@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BooksAPI.App_Start.Formatter;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
@@ -13,6 +14,7 @@ namespace BooksAPI
 
             // Web API routes
             config.MapHttpAttributeRoutes();
+            config.Formatters.Add(new BookCsvFormatter());
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

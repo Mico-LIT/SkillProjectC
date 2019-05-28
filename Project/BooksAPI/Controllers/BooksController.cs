@@ -10,6 +10,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
+using BooksAPI.App_Start.Attribute;
 using BooksAPI.DTOs;
 using BooksAPI.Models;
 
@@ -140,6 +141,8 @@ namespace BooksAPI.Controllers
         }
 
         // POST: api/Books
+        [Route("")]
+        //[ValidateModel]
         [ResponseType(typeof(Book))]
         public async Task<IHttpActionResult> PostBook(Book book)
         {

@@ -94,6 +94,7 @@
     <Compile Include="App_Start\Formatter\BookCsvFormatter.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\BooksController.cs" />
+    <Compile Include="Controllers\BooksV2Controller.cs" />
     <Compile Include="DTOs\BookDetailDto.cs" />
     <Compile Include="DTOs\BookDto.cs" />
     <Compile Include="Global.asax.cs">
@@ -104,9 +105,10 @@
       <DependentUpon>201905161057077_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Author.cs" />
-    <Compile Include="Models\Book.cs" />
-    <Compile Include="Models\BooksAPIContext.cs" />
+    <Compile Include="Models\Books\Author.cs" />
+    <Compile Include="Models\Books\Book.cs" />
+    <Compile Include="Models\Books\BooksAPIContext.cs" />
+    <Compile Include="Models\Books\HttpContentResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

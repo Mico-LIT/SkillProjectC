@@ -12,7 +12,7 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using BooksAPI.App_Start.Attribute;
 using BooksAPI.DTOs;
-using BooksAPI.Models;
+using BooksAPI.Models.Books;
 
 // TODO API
 namespace BooksAPI.Controllers

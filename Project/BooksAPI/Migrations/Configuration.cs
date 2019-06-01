@@ -1,19 +1,20 @@
 namespace BooksAPI.Migrations
 {
     using BooksAPI.Models;
+    using BooksAPI.Models.Books;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<BooksAPI.Models.BooksAPIContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<BooksAPIContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(BooksAPI.Models.BooksAPIContext context)
+        protected override void Seed(BooksAPIContext context)
         {
             context.Authors.AddOrUpdate(new Author[] {
                 new Author() { AuthorId = 1, Name = "Ralls, Kim" },

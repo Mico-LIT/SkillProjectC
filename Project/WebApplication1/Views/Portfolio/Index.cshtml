@@ -1,6 +1,15 @@
 ﻿
 @{
     Layout = null;
+    //TODO Bootstrap to make
+    /*
+
+    Что делать дальше?
+    1) Заполнить нормальным текстом
+    2) CSS Position? где как и зачем??
+
+    */
+
 }
 <!DOCTYPE html>
 
@@ -131,27 +140,100 @@
 
         .portfolio {
             margin: 4em 0;
-            /*ДЛЯ ЧЕГО???*/ position: relative;
+            position: relative;
         }
 
-        .portfolio h1{
-            color:#F97300;
-            margin:2em;
+            .portfolio h1 {
+                color: #F97300;
+                margin: 2em;
+            }
+
+            .portfolio img {
+                height: 15rem;
+                width: 100%;
+                margin: 1em;
+            }
+
+        .blog {
+            margin: 4em 0;
+            position: relative;
         }
 
-        .portfolio img{
-            height:15rem;
-            width:100%;
-            margin:1em;
+            .blog h1 {
+                color: #F97300;
+                margin: 2em;
+            }
+
+            .blog .card {
+                box-shadow: 0 0 20px #ccc;
+            }
+
+                .blog .card img {
+                    width: 100%;
+                    height: 12em;
+                }
+
+            .blog .card-title {
+                color: #F97300;
+            }
+
+            .blog .card-body {
+                padding: 1em;
+            }
+
+        .team {
+            margin: 4em 0;
+            position: relative;
         }
 
+            .team h1 {
+                color: #F97300;
+                margin: 2em;
+            }
 
+            .team .item {
+                position: relative;
+            }
+
+            .team .des {
+                background: #F97300;
+                color: #fff;
+                text-align: center;
+                border-bottom-left-radius: 93%;
+                transition: .3s ease-in-out;
+            }
+
+            .team .item:hover .des {
+                height: 100%;
+                background: #f973007d;
+                position: absolute;
+                width: 89%;
+                padding: 5em;
+                top: 0;
+                border-bottom-left-radius: 0;
+            }
+            .form{
+                margin:6em 0;
+                position:relative;
+            }
+                .form h2 {
+                    padding: 2em 1px;
+                    color: #F97300;
+                }
+        .form .right {
+            max-width: 600px;
+        }
+        .form .right .btn-primary {
+            background: #F97300;
+            color: #fff;
+            border: 0;
+        }
     </style>
 </head>
-<body>
+<body id="homePage">
 
     <nav class="navbar navbar-expand-lg fixed-top navbar-light">
-        <a class="navbar-brand" href="#">MikoProduction</a>
+        <a class="navbar-brand" href="#" data-value="homePage">MikoProduction</a>
         <button class="navbar-toggler" type="button"
                 data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -160,15 +242,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-4">
-                <li class="nav-item"><a class="nav-link" href="#">Обо мне</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Учеба</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Где работал</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Что умею</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" data-value="about" >Обо мне</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" data-value="portfolio">Учеба</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" data-value="blog">Где работал</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" data-value="team">Что умею</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" data-value="form">Контакты</a></li>
             </ul>
         </div>
 
     </nav>
+    
     <header class="header">
         <div class="overlay"></div>
         <div class="container">
@@ -186,7 +269,7 @@
         </div>
     </header>
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <h1 class="text-center">Обо мне</h1>
             <div class="row">
@@ -195,7 +278,7 @@
                     <span class="text-justify">S.Web Developer</span>
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-12 desc">
-                    <h3>D.John</h3>
+                    <h3>Mico</h3>
                     <p>
                         ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -209,7 +292,7 @@
         </div>
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="container">
             <h1 class="text-center">Портфолио</h1>
             <div class="row">
@@ -235,15 +318,125 @@
         </div>
     </section>
 
-    <section class="blog">
+    <section class="blog" id="blog">
         <div class="container">
             <h1 class="text-center">Блог</h1>
+            <div class="row">
+                <div class="col-md-4 col-lg-4 col-sm-12">
+                    <div class="card">
+                        <div class="card-img">
+                            <img class="img-fluid" src="https://res.cloudinary.com/teepublic/image/private/s--Umc3rImi--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_fffffe,e_outline:48/co_fffffe,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1498317468/production/designs/1690895_1.jpg" />
+                        </div>
+                        <div class="card-body">
+                            <h4>Post Title</h4>
+                            <p class="card-text">
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="" class="card-link">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-12">
+                    <div class="card">
+                        <div class="card-img">
+                            <img class="img-fluid" src="https://res.cloudinary.com/teepublic/image/private/s--Umc3rImi--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_fffffe,e_outline:48/co_fffffe,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1498317468/production/designs/1690895_1.jpg" />
+                        </div>
+                        <div class="card-body">
+                            <h4>Post Title</h4>
+                            <p class="card-text">
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="" class="card-link">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-12">
+                    <div class="card">
+                        <div class="card-img">
+                            <img class="img-fluid" src="https://res.cloudinary.com/teepublic/image/private/s--Umc3rImi--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_fffffe,e_outline:48/co_fffffe,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1498317468/production/designs/1690895_1.jpg" />
+                        </div>
+                        <div class="card-body">
+                            <h4>Post Title</h4>
+                            <p class="card-text">
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="" class="card-link">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team" id="team">
+        <div class="container">
+            <h1 class="text-center">Команда</h1>
+            <div class="row">
+                <div class="col-sm-12 col-md-3 col-lg-3 item">
+                    <img class="img-fluid" src="https://res.cloudinary.com/teepublic/image/private/s--Umc3rImi--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_fffffe,e_outline:48/co_fffffe,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1498317468/production/designs/1690895_1.jpg" />
+                    <div class="des">Миша</div>
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-3 item">
+                    <img class="img-fluid" src="https://res.cloudinary.com/teepublic/image/private/s--Umc3rImi--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_fffffe,e_outline:48/co_fffffe,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1498317468/production/designs/1690895_1.jpg" />
+                    <div class="des">Миша</div>
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-3 item">
+                    <img class="img-fluid" src="https://res.cloudinary.com/teepublic/image/private/s--Umc3rImi--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_fffffe,e_outline:48/co_fffffe,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1498317468/production/designs/1690895_1.jpg" />
+                    <div class="des">Миша</div>
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-3 item">
+                    <img class="img-fluid" src="https://res.cloudinary.com/teepublic/image/private/s--Umc3rImi--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_fffffe,e_outline:48/co_fffffe,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1498317468/production/designs/1690895_1.jpg" />
+                    <div class="des">Миша</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="form" id="form">
+        <div class="container">
+            <form>
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <h2>
+                            Get in Touch
+                        </h2>
+                    </div>
+                    <div class="col-sm-12 col-md-8 col-lg-8 right">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="You Name" />
+                        </div>
+                        <div class="form-group">
+                            @*<label for="exampleInputEmail1">Email address</label>*@
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="You Enter email">
+                            @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Text"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </div>
+
+                </div>
+            </form>
         </div>
     </section>
 
     <script>
         $(document).ready(function () {
             $('header').height($(window).height());
+        })
+
+        $(".navbar a").click(function () {
+            $("body,html").animate({
+                scrollTop: $("#" + $(this).data('value')).offset().top
+            }, 1000)
+
         })
     </script>
 </body>

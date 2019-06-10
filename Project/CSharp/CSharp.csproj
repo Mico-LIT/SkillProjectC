@@ -139,6 +139,9 @@
     <Compile Include="Base\Threads\Thread7.cs" />
     <Compile Include="Base\Threads\Thread8.cs" />
     <Compile Include="Base\Threads\Thread9.cs" />
+    <Compile Include="Base\Threads\TPL\_001_TPL.cs" />
+    <Compile Include="Base\Threads\TPL\_002_TPL.cs" />
+    <Compile Include="Base\Threads\TPL\_003_TPL.cs" />
     <Compile Include="Games\Car.cs" />
     <Compile Include="Games\CarBody.cs" />
     <Compile Include="Games\EngineBMW.cs" />

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Routing.Constraints;
 
 namespace WebApplication1
 {
@@ -15,9 +16,23 @@ namespace WebApplication1
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
+                name: "ActionRoute",
+                routeTemplate: "api/{controller}/{action}",
+                constraints: new
+                {
+                    action = new AlphaRouteConstraint()
+                },
+                defaults: new { }
+                );
+
+            config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                defaults: new { },
+                constraints: new
+                {
+                    id = new IntRouteConstraint()
+                }
             );
         }
     }

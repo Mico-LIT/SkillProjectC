@@ -9,6 +9,7 @@ namespace WebApplication1.Controllers.Api
 {
     public class ValuesController : ApiController
     {
+        [Authorize]
         public string GetValue()
         {
             return "getValue";

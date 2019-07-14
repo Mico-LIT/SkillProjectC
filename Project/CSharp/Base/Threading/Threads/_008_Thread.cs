@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CSharp.Base.Threads.Thread8
+namespace CSharp.Base.Threading.Threads
 {
-    class Thread8
+    class _008_Thread
     {
         //[ThreadStatic]
         static public int counter;
 
-        public Thread8()
+        public _008_Thread()
         {
             Console.WriteLine("Главный поток {0}",Thread.CurrentThread.GetHashCode());
 

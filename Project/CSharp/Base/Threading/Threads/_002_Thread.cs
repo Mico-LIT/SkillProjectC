@@ -5,28 +5,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace CSharp.Base.Threads.Thread3
+namespace CSharp.Base.Threading.Threads
 {
-    class Thread3
+    class _002_Thread
     {
-        public Thread3()
+        public _002_Thread()
         {
-            Thread thread = new Thread(new ParameterizedThreadStart(method));
-            thread.Start('2');
+            Thread thread = new Thread(new ThreadStart(Count));
+            thread.Start();
 
             for (int i = 0; i < 20; i++)
             {
-                Console.WriteLine("1");
+                Console.WriteLine("Thread 1");
                 Thread.Sleep(300);
             }
         }
 
-        void method(object s)
+        void Count()
         {
-            char ch = (char)s;
             for (int i = 0; i < 20; i++)
             {
-                Console.WriteLine(new string(ch, 20));
+                Console.WriteLine(new string(' ',10)+"Thread 2");
                 Thread.Sleep(400);
             }
         }

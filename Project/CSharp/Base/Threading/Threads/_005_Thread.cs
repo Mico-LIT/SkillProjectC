@@ -5,16 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace CSharp.Base.Threads.Thread5
+namespace CSharp.Base.Threading.Threads
 {
     // Синхронизация потоков
-    class Thread5
+    class _005_Thread
     {
         static int x = 0;
 
         // Разделяемый ресурс
         static object locker = new object();
-        public Thread5()
+        public _005_Thread()
         {
             for (int i = 0; i < 5; i++)
             {

@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace CSharp.Base.Threads.Thread4
+namespace CSharp.Base.Threading.Threads
 {
-    class Thread4
+    class _004_Thread
     {
-        public Thread4()
+        public _004_Thread()
         {
             Counter count = new Counter(1,1);
             Thread thred = new Thread(count.Method);

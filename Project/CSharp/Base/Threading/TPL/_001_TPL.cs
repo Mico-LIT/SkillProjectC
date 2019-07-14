@@ -5,26 +5,25 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CSharp.Base.Threads.TPL
+namespace CSharp.Base.Threading.TPL
 {
-    public class _002_TPL
+    /// <summary>
+    /// В контексте одного потока
+    /// </summary>
+    public class _001_TPL
     {
-        public _002_TPL()
+        public _001_TPL()
         {
-            Console.WriteLine($"{this.GetType().Name} запущен в потоке: {Thread.CurrentThread.ManagedThreadId}");
-
-            // SlowOperation() Запускается в отдельном потоке
-            Task<int> task = Task.Factory.StartNew<int>(SlowOperation);
+            // синхронный вызов метода SlowOperation()
+            int result = SlowOperation();
 
             for (int i = 0; i < 10; i++)
             {
                 Console.WriteLine(i);
             }
 
-            // ожидание результата task.Result
-            Console.WriteLine($"результат выполнения медленной операции {task.Result}");
+            Console.WriteLine($"результат выполнения медленной операции {result}");
             Console.WriteLine($"{this.GetType().Name} Завершил работу в потоке {Thread.CurrentThread.ManagedThreadId}");
-
         }
 
         private int SlowOperation()

@@ -5,36 +5,40 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CSharp.Base.Threads.TPL
+namespace CSharp.Base.Threading.TPL
 {
-    /// <summary>
-    /// В контексте одного потока
-    /// </summary>
-    public class _001_TPL
+    public class _003_TPL_AsyncAwait
     {
-        public _001_TPL()
+        public _003_TPL_AsyncAwait()
         {
-            // синхронный вызов метода SlowOperation()
-            int result = SlowOperation();
+            Console.WriteLine($"{this.GetType().Name} запущен в потоке: {Thread.CurrentThread.ManagedThreadId}");
+
+            // SlowOperation() первичный поток зайдет в метод и будет выполняться
+            // до ключ слова await и вернется сюда
+            Task<int> task = SlowOperation();
 
             for (int i = 0; i < 10; i++)
             {
                 Console.WriteLine(i);
             }
 
-            Console.WriteLine($"результат выполнения медленной операции {result}");
+            // ожидание результата task.Result
+            Console.WriteLine($"результат выполнения медленной операции {task.Result}");
             Console.WriteLine($"{this.GetType().Name} Завершил работу в потоке {Thread.CurrentThread.ManagedThreadId}");
+
+
         }
 
-        private int SlowOperation()
+        private async Task<int> SlowOperation()
         {
             Console.WriteLine($" медл операция запущена в потоке {Thread.CurrentThread.ManagedThreadId}");
 
-            Thread.Sleep(2000);
+            await Task.Delay(2000);
 
             Console.WriteLine($" медл операция запущена в потоке {Thread.CurrentThread.ManagedThreadId} завершина ");
 
             return 123;
         }
+
     }
 }

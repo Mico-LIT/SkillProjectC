@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace CSharp.Base.Threads.Thread1
+namespace CSharp.Base.Threading.Threads
 {
-    class Thread1
+    class _001_Thread
     {
-        public Thread1()
+        public _001_Thread()
         {
             //текущий поток
             Thread thread = Thread.CurrentThread;

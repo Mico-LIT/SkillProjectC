@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CSharp.Base.Threads.Thread9
+namespace CSharp.Base.Threading.Threads
 {
-    class Thread9
+    class _009_Thread
     {
         void Procedure()
         {
@@ -19,7 +19,7 @@ namespace CSharp.Base.Threads.Thread9
             Console.WriteLine("\n Завершение вторичного потока");
         }
 
-        public Thread9()
+        public _009_Thread()
         {
             var thread = new Thread(Procedure);
 

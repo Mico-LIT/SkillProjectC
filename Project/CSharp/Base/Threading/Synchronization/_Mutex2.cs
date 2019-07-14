@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace CSharp.Base.Threads.Synchronization
+namespace CSharp.Base.Threading.Synchronization
 {
     /// <summary>
     /// Рекурсивное запирание

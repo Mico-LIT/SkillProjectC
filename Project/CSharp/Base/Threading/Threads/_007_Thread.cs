@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CSharp.Base.Threads.Thread7
+namespace CSharp.Base.Threading.Threads
 {
-    class Thread7
+    class _007_Thread
     {
         object obj = new object();
 
@@ -24,7 +24,7 @@ namespace CSharp.Base.Threads.Thread7
             }
         }
 
-        public Thread7()
+        public _007_Thread()
         {
             Thread task = new Thread(Method);
             task.Start();

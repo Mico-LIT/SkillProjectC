@@ -7,11 +7,11 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CSharp.Base.Threads.Thread6
+namespace CSharp.Base.Threading.Threads
 {
-    class Thread6
+    class _006_Thread
     {
-        public Thread6()
+        public _006_Thread()
         {
             bool existed;
 

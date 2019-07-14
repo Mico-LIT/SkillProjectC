@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharp.Base.Threads
+namespace CSharp.Base.Threading.TPL
 {
-    class InterLocked 
+    public class _014_TPL_Return
     {
+        public _014_TPL_Return()
+        {
+        }
     }
 }

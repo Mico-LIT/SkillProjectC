@@ -153,6 +153,8 @@
     <Compile Include="Base\Threading\TPL\_012_TPL_Lambda.cs" />
     <Compile Include="Base\Threading\TPL\_013_TPL_Continuation.cs" />
     <Compile Include="Base\Threading\TPL\_014_TPL_Return.cs" />
+    <Compile Include="Base\Threading\TPL\_015_TPL_Exception.cs" />
+    <Compile Include="Base\Threading\TPL\_016_TPL_Cancellation.cs" />
     <Compile Include="Games\Car.cs" />
     <Compile Include="Games\CarBody.cs" />
     <Compile Include="Games\EngineBMW.cs" />

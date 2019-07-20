@@ -139,6 +139,8 @@
     <Compile Include="Base\Threading\Threads\_007_Thread.cs" />
     <Compile Include="Base\Threading\Threads\_008_Thread.cs" />
     <Compile Include="Base\Threading\Threads\_009_Thread.cs" />
+    <Compile Include="Base\Threading\TPL\_Parallel\_002_For.cs" />
+    <Compile Include="Base\Threading\TPL\_Parallel\_003_ForEach.cs" />
     <Compile Include="Base\Threading\TPL\_001_TPL.cs" />
     <Compile Include="Base\Threading\TPL\_002_TPL_TaskFactory.cs" />
     <Compile Include="Base\Threading\TPL\_003_TPL_AsyncAwait.cs" />
@@ -155,6 +157,8 @@
     <Compile Include="Base\Threading\TPL\_014_TPL_Return.cs" />
     <Compile Include="Base\Threading\TPL\_015_TPL_Exception.cs" />
     <Compile Include="Base\Threading\TPL\_016_TPL_Cancellation.cs" />
+    <Compile Include="Base\Threading\TPL\_017_TPL_ContinuationOptions.cs" />
+    <Compile Include="Base\Threading\TPL\_PLINQ\_001_PLINQ.cs" />
     <Compile Include="Games\Car.cs" />
     <Compile Include="Games\CarBody.cs" />
     <Compile Include="Games\EngineBMW.cs" />
@@ -257,6 +261,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <Compile Include="Base\Threading\TPL\_Parallel\_001_Invoke.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

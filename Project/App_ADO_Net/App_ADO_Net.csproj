@@ -72,6 +72,8 @@
     <Compile Include="_002_SqlCommand\_008_Parametrized.cs" />
     <Compile Include="_002_SqlCommand\_009_Parametrized2.cs" />
     <Compile Include="_002_SqlCommand\_010_ParametrizedProcReturnValue.cs" />
+    <Compile Include="_003_DataSet\_001_DataSet.cs" />
+    <Compile Include="_004_SqlDataAdapter\_001_SqlDataAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

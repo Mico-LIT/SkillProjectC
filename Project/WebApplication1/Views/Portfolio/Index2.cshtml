@@ -8,10 +8,81 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index2</title>
+    <title>MicoGroup</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <style>
+        .home {
+            background-image: url(http://cvresumetemplate.com/maha-personal-cv-resume-html-template/assets/images/home-bg-img.jpg)
+        }
+
+        .img-color-overlay {
+            background-color: rgb(255, 255, 255,0.9);
+        }
+
+        address {
+            display: inline-block;
+            margin:0px;
+        }
+
+        .border-img {
+            border: 20px solid rgb(2, 2, 2,0.1);
+            border-radius: 32%;
+            width:350px;
+        }
+
+        .border-img img {
+            border: 20px solid rgb(128, 128, 128,0.17);
+            border-radius: 30%;
+        }
+    </style>
 </head>
 <body>
-    <div> 
-    </div>
+    <header></header>
+
+    <section class="home">
+        <div class="img-color-overlay">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <h1>Боровик Михаил</h1>
+                        <h2>Developer C#</h2>
+
+                        <ul>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="collto:">+7(923)188-08-45</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope"></i>
+                                <a href="mailto:">redgame0@gmail.com</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-map-marker"></i>
+                                <address>
+                                    Новосибирск, Россия
+                                </address>
+                            </li>
+                            <li>
+                                <i class="fa fa-server"></i>
+                                <a href="https://github.com/Mico-LIT">Github</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <div class="border-img">
+                            <img src="https://avatars0.githubusercontent.com/u/13939762?s=460&v=4" class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 </body>
 </html>

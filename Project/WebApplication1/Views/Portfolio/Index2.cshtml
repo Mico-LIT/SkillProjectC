@@ -15,41 +15,73 @@
           integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
     <style>
+
+        .section-seporator {
+            padding: 100px 0px;
+        }
+
+        ul {
+            margin: 0px;
+            padding: 0px;
+        }
+
+            ul li {
+                list-style-type: none;
+            }
+
         .home {
             background-image: url(http://cvresumetemplate.com/maha-personal-cv-resume-html-template/assets/images/home-bg-img.jpg)
         }
 
         .img-color-overlay {
-            background-color: rgb(255, 255, 255,0.9);
+            background-color: rgb(255, 255, 255, 0.9);
+        }
+
+        .img-bg {
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0 auto;
+            background-position: center center;
         }
 
         address {
             display: inline-block;
-            margin:0px;
+            margin: 0px;
         }
 
         .border-img {
-            border: 20px solid rgb(2, 2, 2,0.1);
+            border: 20px solid rgb(2, 2, 2, 0.1);
             border-radius: 32%;
-            width:350px;
+            width: 350px;
         }
 
-        .border-img img {
-            border: 20px solid rgb(128, 128, 128,0.17);
-            border-radius: 30%;
+            .border-img img {
+                border: 20px solid rgb(128, 128, 128, 0.17);
+                border-radius: 30%;
+            }
+
+        .home-padding {
+            padding: 180px 0px;
+        }
+
+        .about-inner ul > li {
+            display: inline-block;
+            border: 1px solid #8cff8c;
+            padding: 4px 10px;
+            border-radius: 4px;
         }
     </style>
 </head>
 <body>
     <header></header>
 
-    <section class="home">
-        <div class="img-color-overlay">
+    <section class="home img-bg">
+        <div class="img-color-overlay home-padding">
 
             <div class="container">
                 <div class="row">
                     <div class="col-6">
-                        <h1>Боровик Михаил</h1>
+                        @*<h1>Боровик Михаил</h1>*@
                         <h2>Developer C#</h2>
 
                         <ul>
@@ -68,19 +100,82 @@
                                 </address>
                             </li>
                             <li>
-                                <i class="fa fa-server"></i>
+                                <i class="fab fa-github"></i>
                                 <a href="https://github.com/Mico-LIT">Github</a>
+                            </li>
+                            <li>
+                                <i class="fab fa-instagram"></i>
+                                <a href="https://www.instagram.com/micom_">Micom_</a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-6">
                         <div class="border-img">
-                            <img src="https://avatars0.githubusercontent.com/u/13939762?s=460&v=4" class="img-fluid" />
+                            @*<img src="https://avatars0.githubusercontent.com/u/13939762?s=460&v=4" class="img-fluid" />*@
+                            <img src="https://avatars0.githubusercontent.com/u/13939761?s=460&v=4" class="img-fluid" />
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+
+    <section class="about section-seporator">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <img src="http://cvresumetemplate.com/maha-personal-cv-resume-html-template/assets/images/ab-img.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <div class="about-inner">
+                        <h2>Обо мне</h2>
+                        <p>Привет! я ... Web-Debeloper</p>
+                        <div>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JS</li>
+                                <li>C#</li>
+                                <li>JS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service section-seporator">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="text-center">Что я делаю</h2>
+                </div>
+                <div class="col-sm-4">
+                    <div>
+                        <i class="fas fa-phone"></i>
+                        <h3>info</h3>
+                        <p>..................................................</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div>
+                        <i class="fas fa-phone"></i>
+                        <h3>info</h3>
+                        <p>..................................................</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div>
+                        <i class="fas fa-phone"></i>
+                        <h3>info</h3>
+                        <p>..................................................</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </section>
 
 

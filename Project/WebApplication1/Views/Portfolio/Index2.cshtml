@@ -14,10 +14,18 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
           integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
     <style>
 
         .section-seporator {
             padding: 100px 0px;
+        }
+
+        .section-seporator-title{
+             margin-bottom: 60px;
         }
 
         ul {
@@ -29,8 +37,12 @@
                 list-style-type: none;
             }
 
-        .home {
+        .core-img {
             background-image: url(http://cvresumetemplate.com/maha-personal-cv-resume-html-template/assets/images/home-bg-img.jpg)
+        }
+
+        .core-bg-white{
+            background-color:white;
         }
 
         .img-color-overlay {
@@ -70,18 +82,23 @@
             padding: 4px 10px;
             border-radius: 4px;
         }
+
+        .service i {
+            font-size: 35px;
+        }
+
     </style>
 </head>
 <body>
     <header></header>
 
-    <section class="home img-bg">
+    <section class="core-img img-bg">
         <div class="img-color-overlay home-padding">
 
             <div class="container">
                 <div class="row">
-                    <div class="col-6">
-                        @*<h1>Боровик Михаил</h1>*@
+                    <div class="col-sm-6">
+                        <h1>Боровик Михаил</h1>
                         <h2>Developer C#</h2>
 
                         <ul>
@@ -109,10 +126,10 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-6">
+                    <div class="col-sm-6">
                         <div class="border-img">
-                            @*<img src="https://avatars0.githubusercontent.com/u/13939762?s=460&v=4" class="img-fluid" />*@
-                            <img src="https://avatars0.githubusercontent.com/u/13939761?s=460&v=4" class="img-fluid" />
+                            <img src="https://avatars0.githubusercontent.com/u/13939762?s=460&v=4" class="img-fluid" />
+                            @*<img src="https://avatars0.githubusercontent.com/u/13939761?s=460&v=4" class="img-fluid" />*@
                         </div>
                     </div>
                 </div>
@@ -149,35 +166,202 @@
     <section class="service section-seporator">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
-                    <h2 class="text-center">Что я делаю</h2>
+                <div class="col-sm-12 section-seporator-title">
+                    <h2 class="text-center ">Что я делаю</h2>
                 </div>
                 <div class="col-sm-4">
-                    <div>
-                        <i class="fas fa-phone"></i>
-                        <h3>info</h3>
-                        <p>..................................................</p>
+                    <div class="service-box-shadow shadow p-5">
+                        <i class="fas fa-bullseye"></i>
+                        <h3>UI Дизайн</h3>
+                        <p>
+                            сфера нашей активности в значительной степени обуславливает создание соответствующий условий активизации. 
+                            Разнообразный и богатый опыт укрепление и развитие структуры требуют от нас анализа существенных финансовых и административных условий.
+                        </p>
                     </div>
                 </div>
                 <div class="col-sm-4">
-                    <div>
-                        <i class="fas fa-phone"></i>
-                        <h3>info</h3>
-                        <p>..................................................</p>
+                    <div class="shadow p-5">
+                        <i class="fas fa-code"></i>
+                        <h3>Веб-Разработка</h3>
+                        <p>
+                            сфера нашей активности в значительной степени обуславливает создание соответствующий условий активизации.
+                            Разнообразный и богатый опыт укрепление и развитие структуры требуют от нас анализа существенных финансовых и административных условий.
+                        </p>
                     </div>
                 </div>
                 <div class="col-sm-4">
-                    <div>
-                        <i class="fas fa-phone"></i>
-                        <h3>info</h3>
-                        <p>..................................................</p>
+                    <div class="shadow p-5">
+                        <i class="fas fa-object-ungroup"></i>
+                        <h3>App-Разработка</h3>
+                        <p>
+                            сфера нашей активности в значительной степени обуславливает создание соответствующий условий активизации.
+                            Разнообразный и богатый опыт укрепление и развитие структуры требуют от нас анализа существенных финансовых и административных условий.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-
     </section>
 
+    <section class="core-img img-bg featured-projects">
+        <div class="img-color-overlay">
+            <div class="container">
+                <div class="row section-seporator">
+                    <div class="col-sm-12 text-center section-seporator-title">
+                        <h3>Пару слов о проетах</h3>
+                    </div>
+
+                    <div class="col-sm-12">
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="col-sm-12">
+                                        <div class="row">
+                                            <div class="col-sm-7">
+                                                <img class="d-block w-100" src="http://cvresumetemplate.com/maha-personal-cv-resume-html-template/assets/images/p-2.png" alt="First slide1">
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <h3>Control views</h3>
+                                                <p>
+                                                    сфера нашей активности в значительной степени обуславливает создание соответствующий условий активизации.
+                                                    Разнообразный и богатый опыт укрепление и развитие структуры требуют от нас анализа существенных финансовых и административных условий.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <div class="col-sm-12">
+                                        <div class="row">
+                                            <div class="col-sm-7">
+                                                <img class="d-block w-100" src="http://cvresumetemplate.com/maha-personal-cv-resume-html-template/assets/images/p-2.png" alt="First slide23">
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <h3>Hi</h3>
+                                                <p>
+                                                    сфера нашей активности в значительной степени обуславливает создание соответствующий условий активизации.
+                                                    Разнообразный и богатый опыт укрепление и развитие структуры требуют от нас анализа существенных финансовых и административных условий.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills section-seporator">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 section-seporator-title text-center">
+                    <h2>Навыки</h2>
+                </div>
+
+                <div class="col-sm-6">
+                    <p class="text-center h3">Технические</p>
+
+                    <div class="skills-item">
+                        <p class="h6">ADO.net</p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                                 aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">75%</div>
+                        </div>
+                    </div>
+                    <div class="skills-item">
+                        <p class="h6">LINQ</p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                                 aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 35%">35%</div>
+                        </div>
+                    </div>
+                    <div class="skills-item">
+                        <p class="h6">MVC</p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                                 aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 25%">25%</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-6">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="core-img img-bg experience">
+        <div class="img-color-overlay">
+            <div class="container">
+                <div class="row section-seporator">
+                    <div class="col-sm-12">
+                        @*<h3>Опыт</h3>*@
+                    </div>
+                    <div class="col-sm-6">
+                        <h3 class="section-seporator-title">Образование</h3>
+
+                        <div class="core-bg-white shadow p-3">
+                            <p class="h5">СГУПС</p>
+                            <p>2013-2017</p>
+                            <p>
+                                сфера нашей активности в значительной степени обуславливает создание соответствующий условий активизации.
+                                Разнообразный и богатый опыт укрепление и развитие структуры требуют от нас анализа существенных финансовых и административных условий.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <h3 class="section-seporator-title">Опыт работы</h3>
+
+                        <div class="core-bg-white shadow p-3">
+                            <p class="h5">СГУПС</p>
+                            <p>2013-2017</p>
+                            <p>
+                                сфера нашей активности в значительной степени обуславливает создание соответствующий условий активизации.
+                                Разнообразный и богатый опыт укрепление и развитие структуры требуют от нас анализа существенных финансовых и административных условий.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="request section-seporator">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>Заинтересованы в работе?</h3>
+                    <p>
+                        сфера нашей активности в значительной степени обуславливает создание соответствующий условий активизации.
+                        Разнообразный и богатый опыт укрепление и развитие структуры требуют от нас анализа существенных финансовых и административных условий.
+                    </p>
+                    <button type="button" class="btn btn-primary">Оставить контакты</button> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="core-img img-bg pricing">
+        <div class="img-color-overlay">
+            <div class="container section-seporator">
+                <div class="row"></div>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>

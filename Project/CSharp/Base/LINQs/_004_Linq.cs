@@ -21,9 +21,9 @@ namespace CSharp.Base.LINQs.LINQ_
         }
     }
 
-    class Linq_4
+    class _004_Linq
     {
-        public Linq_4()
+        public _004_Linq()
         {
             int[] numbers = { 1, 2, 3, 4, 5 };
 

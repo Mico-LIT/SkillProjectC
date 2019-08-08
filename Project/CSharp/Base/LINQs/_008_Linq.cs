@@ -10,16 +10,16 @@ using System.Threading.Tasks;
 
 namespace CSharp.Base.LINQs
 {
-    public class Employee
+    class _008_Linq
     {
-        public string LastName { get; set; }
-        public string FirstNmae { get; set; }
-        public string Nationality { get; set; }
-    }
+        public class Employee
+        {
+            public string LastName { get; set; }
+            public string FirstNmae { get; set; }
+            public string Nationality { get; set; }
+        }
 
-    class Linq_8
-    {
-        public Linq_8()
+        public _008_Linq()
         {
             List<Employee> emp = new List<Employee>()
             {

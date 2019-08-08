@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharp.Base.LINQs
 {
-    class Linq_3
+    class _001_Linq
     {
         class Employee
         {
@@ -16,7 +16,7 @@ namespace CSharp.Base.LINQs
             public decimal Salary { get; set; }
         }
 
-        public Linq_3()
+        public _001_Linq()
         {
             List<Employee> employee = new List<Employee>() {
                 new Employee()
@@ -49,20 +49,14 @@ namespace CSharp.Base.LINQs
                 }
             };
 
-            // Выражение запроса. (Использование вызовов статических методов)
-            var query = // переменная диапазона
-                Enumerable.Select(
-                    Enumerable.OrderBy(
-                        Enumerable.OrderBy(
-                            Enumerable.Where(
-                                employee, t => t.Salary > 20000), 
-                                t => t.LastName),
-                                t => t.FirstName),
-                                t => new
-                                {
-                                    lastName = t.LastName,
-                                    FirstName = t.LastName
-                                });
+            var query = from t in employee // from - обьявляет переменную диапазона employee
+                        where t.Salary > 20000
+                        orderby t.LastName
+                        select new // select - Операция проекции
+                        {
+                            lastName = t.LastName,
+                            FirstName = t.LastName
+                        };
 
             Console.WriteLine("Высокооплачиваемый сотрудник");
 

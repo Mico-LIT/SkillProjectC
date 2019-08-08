@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace CSharp.Base.LINQs
 {
-    class Linq_6
+    class _006_Linq
     {
-        public Linq_6()
+        public _006_Linq()
         {
             ArrayList list = new ArrayList();
             list.Add(1);

@@ -11,9 +11,9 @@ using System.Threading.Tasks;
 
 namespace CSharp.Base.LINQs
 {
-    class Linq_11
+    class _011_Linq
     {
-        public Linq_11()
+        public _011_Linq()
         {
             var query = from x in Enumerable.Range(1, 10)
                         let numbers = Enumerable.Range(1, 10)

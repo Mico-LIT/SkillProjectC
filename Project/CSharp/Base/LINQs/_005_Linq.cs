@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CSharp.Base.LINQs
 {
-    class Linq_5
+    class _005_Linq
     {
-        public Linq_5()
+        public _005_Linq()
         {
             // Конструкция From похожа на оператор foreach
             // Использование нескольких конструкций from, аналогично вложенным операторам foreach

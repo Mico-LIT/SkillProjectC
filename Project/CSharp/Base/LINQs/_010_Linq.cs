@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharp.Base.LINQs
 {
-    class Linq_10
+    class _010_Linq
     {
         public class EmployeeID
         {
@@ -14,7 +14,7 @@ namespace CSharp.Base.LINQs
             public string Name { get; set; }
         }
 
-        public Linq_10()
+        public _010_Linq()
         {
             // сотрудники
             List<EmployeeID> employees = new List<EmployeeID>

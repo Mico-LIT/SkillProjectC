@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharp.Base.LINQs
 {
-    class Linq_9
+    class _009_Linq
     {
         class Result
         {
@@ -19,7 +19,7 @@ namespace CSharp.Base.LINQs
             }
         }
 
-        public Linq_9()
+        public _009_Linq()
         {
 
             int[] numbers = { 1, 2, 3, 4 };

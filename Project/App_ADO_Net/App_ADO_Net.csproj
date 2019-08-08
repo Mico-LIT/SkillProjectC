@@ -61,6 +61,11 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="_001_SqlConnection\_001_SqlConnection.cs" />
     <Compile Include="_001_SqlConnection\_002_Pooling.cs" />
     <Compile Include="_002_SqlCommand\_001_SqlCommand.cs" />
@@ -75,9 +80,33 @@
     <Compile Include="_002_SqlCommand\_010_ParametrizedProcReturnValue.cs" />
     <Compile Include="_003_DataSet\_001_DataSet.cs" />
     <Compile Include="_004_SqlDataAdapter\_001_SqlDataAdapter.cs" />
+    <Compile Include="_005_DataSetStrictlyType\DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_005_DataSetStrictlyType\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_005_DataSetStrictlyType\_001_.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="_005_DataSetStrictlyType\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_005_DataSetStrictlyType\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="_005_DataSetStrictlyType\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

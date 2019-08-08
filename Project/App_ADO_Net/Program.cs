@@ -10,7 +10,7 @@ namespace App_ADO_Net
     {
         static void Main(string[] args)
         {
-            //new _002_SqlCommand._010_ParametrizedProcReturnValue();
+            new _005_DataSetStrictlyType._001_();
         }
     }
 }

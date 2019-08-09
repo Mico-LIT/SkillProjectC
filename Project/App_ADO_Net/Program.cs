@@ -10,7 +10,7 @@ namespace App_ADO_Net
     {
         static void Main(string[] args)
         {
-            new _005_DataSetStrictlyType._001_();
+            //new _005_DataSetStrictlyType._001_();
         }
     }
 }

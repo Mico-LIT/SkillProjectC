@@ -12,5 +12,7 @@ namespace EF_CodeFirst.Models.User
         public int Id { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }
+
+        public virtual ICollection<PersonalDocument> PersonalDocuments { get; set; }
     }
 }

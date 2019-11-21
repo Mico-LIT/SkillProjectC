@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,11 +24,17 @@ namespace EF_CodeFirst
             //Database.Delete();
             //Database.SetInitializer(new MigrateDatabaseToLatestVersion<UserContext, DataContextConfiguration>());
 
-            Database.SetInitializer(new CustomDropCreateDatabaseAlways());
+            if (ConfigurationManager.AppSettings["InitNewDB"].ToUpper() == bool.TrueString.ToUpper())
+                Database.SetInitializer(new CustomDropCreateDatabaseAlways());
+            else
+                Database.SetInitializer(new CreateDatabaseIfNotExists<TrainintDBContext>());
+
         }
 
         public DbSet<User> Users { get; set; }
-        public DbSet<Airplane> Airplanes { get; set; }              
+        public DbSet<Airplane> Airplanes { get; set; }
+        public DbSet<PersonalDocument> PersonalDocuments { get; set; }
+
 
     }
 
@@ -49,6 +56,16 @@ namespace EF_CodeFirst
             });
 
             context.SaveChanges();
+
+            context.PersonalDocuments.Add(new Models.User.PersonalDocument()
+            {
+                UserId = 1,
+                Description = "INN",
+                Type = PersonalDocument.TypeDocument.INN
+            });
+
+            context.SaveChanges();
+
 
             //base.Seed(context);
         }

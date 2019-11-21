@@ -44,6 +44,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -54,8 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Examples\_001_SelectInfo\_001_Info.cs" />
-    <Compile Include="Examples\_002_Loadings\_001_Loading.cs" />
+    <Compile Include="Examples\_002_Loadings\_001_Eager.cs" />
     <Compile Include="Models\Other\Airplane.cs" />
+    <Compile Include="Models\User\PersonalDocument.cs" />
     <Compile Include="Models\User\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

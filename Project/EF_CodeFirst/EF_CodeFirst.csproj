@@ -56,6 +56,8 @@
   <ItemGroup>
     <Compile Include="Examples\_001_SelectInfo\_001_Info.cs" />
     <Compile Include="Examples\_002_Loadings\_001_Eager.cs" />
+    <Compile Include="Examples\_002_Loadings\_002_Explicit.cs" />
+    <Compile Include="Examples\_002_Loadings\_003_Lazy.cs" />
     <Compile Include="Models\Other\Airplane.cs" />
     <Compile Include="Models\User\PersonalDocument.cs" />
     <Compile Include="Models\User\User.cs" />

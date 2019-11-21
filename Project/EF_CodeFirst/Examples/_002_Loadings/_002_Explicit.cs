@@ -1,23 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
-using  System.Data.Entity;
+using EF_CodeFirst.Models.User;
 
 namespace EF_CodeFirst.Examples._002_Loadings
 {
     /// <summary>
-    /// Жадная загрузка
+    /// Явная загрузка
     /// </summary>
-    public class _001_Eager
+    public class _002_Explicit
     {
-        public _001_Eager()
+        public _002_Explicit()
         {
             using (var db = new TrainintDBContext())
             {
-                var users = db.Users.Include(p => p.PersonalDocuments).ToList();
+                var doc = db.PersonalDocuments.FirstOrDefault();
+                db.Entry(doc).Reference("User").Load();
+
             }
         }
     }

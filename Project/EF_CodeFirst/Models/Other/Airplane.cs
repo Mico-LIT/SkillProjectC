@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EF_CodeFirst.Models.User
+namespace EF_CodeFirst.Models.Other
 {
-    public class UserTMP
+    public class Airplane
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public int Age { get; set; }
+        public int Year { get; set; }
+        public int CountWheel { get; set; }
     }
 }

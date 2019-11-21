@@ -53,11 +53,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\User\Airplane.cs" />
-    <Compile Include="Models\User\UserTMP.cs" />
+    <Compile Include="Examples\_001_SelectInfo\_001_Info.cs" />
+    <Compile Include="Examples\_002_Loadings\_001_Loading.cs" />
+    <Compile Include="Models\Other\Airplane.cs" />
+    <Compile Include="Models\User\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserContext.cs" />
+    <Compile Include="TrainintDBContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

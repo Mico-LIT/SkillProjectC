@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EF_CodeFirst.Models.Other;
 using EF_CodeFirst.Models.User;
+using EF_CodeFirst.Examples;
 
 namespace EF_CodeFirst
 {
@@ -11,22 +13,9 @@ namespace EF_CodeFirst
     {
         static void Main(string[] args)
         {
-            using (var db = new UserContext())
-            {
-                db.Users.Add(new Models.User.UserTMP()
-                {
-                    Age = 12,
-                    Name = "Jon"
-                });
+            //new Examples._001_SelectInfo._001_Info();
 
-                db.Airplanes.Add(new Airplane()
-                {
-                    Name = "123",
-                    Year = 123
-                });
-
-                db.SaveChanges();
-            }
+            Console.ReadLine();
         }
     }
 }

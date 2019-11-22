@@ -33,9 +33,10 @@ namespace EF_CodeFirst
 
         public DbSet<User> Users { get; set; }
         public DbSet<Airplane> Airplanes { get; set; }
-        public DbSet<UserDocument> PersonalDocuments { get; set; }
+        public DbSet<UserDocument> UserDocument { get; set; }
         public DbSet<Team> Teams { get; set; }
         public DbSet<Player> Players { get; set; }
+        public DbSet<UserProfile> UserProfiles { get; set; }
 
 
     }
@@ -44,11 +45,20 @@ namespace EF_CodeFirst
     {
         protected override void Seed(TrainintDBContext context)
         {
-            context.Users.Add(new Models.User.User()
+            var user = new Models.User.User()
             {
                 Age = 23,
                 Name = "Jon"
-            });
+            };
+
+            var userTwo = new Models.User.User()
+            {
+                Age = 50,
+                Name = "Dima"
+            };
+
+            context.Users.Add(user);
+            context.Users.Add(userTwo);
 
             context.Airplanes.Add(new Airplane()
             {
@@ -59,11 +69,18 @@ namespace EF_CodeFirst
 
             context.SaveChanges();
 
-            context.PersonalDocuments.Add(new Models.User.UserDocument()
+            context.UserDocument.Add(new Models.User.UserDocument()
             {
                 UserId = 1,
                 Description = "INN",
                 Type = UserDocument.TypeDocument.INN
+            });
+
+            context.UserProfiles.Add(new UserProfile()
+            {
+                Id = user.Id,
+                Height = 180,
+                Weight = 80
             });
 
             context.SaveChanges();

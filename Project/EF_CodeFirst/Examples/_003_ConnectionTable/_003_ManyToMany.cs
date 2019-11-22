@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace EF_CodeFirst.Examples._003_ConnectionTable
 {
-    class _003_ManyToMany
+    public class _003_ManyToMany
     {
+        public _003_ManyToMany()
+        {
+
+        }
     }
 }

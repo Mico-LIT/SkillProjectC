@@ -26,7 +26,7 @@ namespace EF_CodeFirst.Examples._002_Loadings
 
                 }
 
-                foreach (var doc in db.PersonalDocuments.ToList())
+                foreach (var doc in db.UserDocument.ToList())
                 {
                     Console.WriteLine($"{doc.User.Name} {doc.Type.ToString()}");
                 }

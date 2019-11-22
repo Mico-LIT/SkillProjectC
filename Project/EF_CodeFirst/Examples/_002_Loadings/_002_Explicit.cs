@@ -16,7 +16,7 @@ namespace EF_CodeFirst.Examples._002_Loadings
         {
             using (var db = new TrainintDBContext())
             {
-                var doc = db.PersonalDocuments.FirstOrDefault();
+                var doc = db.UserDocument.FirstOrDefault();
                 db.Entry(doc).Reference("User").Load();
 
                 if (doc.User != null)

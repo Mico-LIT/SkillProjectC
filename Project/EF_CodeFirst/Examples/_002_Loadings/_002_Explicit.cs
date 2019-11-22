@@ -19,6 +19,11 @@ namespace EF_CodeFirst.Examples._002_Loadings
                 var doc = db.PersonalDocuments.FirstOrDefault();
                 db.Entry(doc).Reference("User").Load();
 
+                if (doc.User != null)
+                {
+                    Console.WriteLine(doc.Id);
+                }
+
             }
         }
     }

@@ -33,7 +33,9 @@ namespace EF_CodeFirst
 
         public DbSet<User> Users { get; set; }
         public DbSet<Airplane> Airplanes { get; set; }
-        public DbSet<PersonalDocument> PersonalDocuments { get; set; }
+        public DbSet<UserDocument> PersonalDocuments { get; set; }
+        public DbSet<Team> Teams { get; set; }
+        public DbSet<Player> Players { get; set; }
 
 
     }
@@ -57,11 +59,11 @@ namespace EF_CodeFirst
 
             context.SaveChanges();
 
-            context.PersonalDocuments.Add(new Models.User.PersonalDocument()
+            context.PersonalDocuments.Add(new Models.User.UserDocument()
             {
                 UserId = 1,
                 Description = "INN",
-                Type = PersonalDocument.TypeDocument.INN
+                Type = UserDocument.TypeDocument.INN
             });
 
             context.SaveChanges();

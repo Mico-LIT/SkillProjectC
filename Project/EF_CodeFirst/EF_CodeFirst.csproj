@@ -59,7 +59,9 @@
     <Compile Include="Examples\_002_Loadings\_002_Explicit.cs" />
     <Compile Include="Examples\_002_Loadings\_003_Lazy.cs" />
     <Compile Include="Models\Other\Airplane.cs" />
-    <Compile Include="Models\User\PersonalDocument.cs" />
+    <Compile Include="Models\Other\Player.cs" />
+    <Compile Include="Models\Other\Team.cs" />
+    <Compile Include="Models\User\UserDocument.cs" />
     <Compile Include="Models\User\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

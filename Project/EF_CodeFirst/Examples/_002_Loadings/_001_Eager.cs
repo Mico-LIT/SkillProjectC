@@ -17,7 +17,7 @@ namespace EF_CodeFirst.Examples._002_Loadings
         {
             using (var db = new TrainintDBContext())
             {
-                var users = db.Users.Include(p => p.PersonalDocuments).ToList();
+                var users = db.Users.Include(p => p.Documents).ToList();
             }
         }
     }

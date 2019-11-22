@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace EF_CodeFirst.Examples._002_Loadings
 {
     /// <summary>
-    /// Ленивая загрузка
+    /// Ленивая загрузка (Нужно указать в свойствах virtual)
     /// </summary>
     public class _003_Lazy
     {
@@ -19,7 +19,7 @@ namespace EF_CodeFirst.Examples._002_Loadings
                 {
                     Console.WriteLine("User:"+user.Name);
                     Console.WriteLine("Docs:");
-                    foreach (var document in user.PersonalDocuments)
+                    foreach (var document in user.Documents)
                     {
                         Console.WriteLine(document.Type.ToString());
                     }

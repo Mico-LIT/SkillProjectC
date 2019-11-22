@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EF_CodeFirst.Models.User
+namespace EF_CodeFirst.Models.Other
 {
-    public class User
+    public class Player
     {
         public int Id { get; set; }
+        public int TeamId{ get; set; }
         public string Name { get; set; }
-        public int Age { get; set; }
-
-        public ICollection<UserDocument> Documents { get; set; }
+        public int Position { get; set; }
+        public Team Team { get; set; }
     }
 }

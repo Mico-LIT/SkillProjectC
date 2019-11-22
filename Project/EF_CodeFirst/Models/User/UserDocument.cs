@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace EF_CodeFirst.Models.User
 {
-    public class PersonalDocument
+    public class UserDocument
     {
         public int Id { get; set; }
         public int UserId { get; set; }
         public TypeDocument Type { get; set; }
         public string Description { get; set; }
 
-        public virtual User User { get; set; }
+        public User User { get; set; }
 
         public enum TypeDocument
         {

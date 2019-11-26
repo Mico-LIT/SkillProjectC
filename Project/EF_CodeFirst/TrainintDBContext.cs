@@ -37,6 +37,7 @@ namespace EF_CodeFirst
         public DbSet<Team> Teams { get; set; }
         public DbSet<Player> Players { get; set; }
         public DbSet<UserProfile> UserProfiles { get; set; }
+        public DbSet<Phone> Phones { get; set; }  
 
 
     }

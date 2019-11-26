@@ -15,5 +15,6 @@ namespace EF_CodeFirst.Models.User
         public UserProfile UserProfile { get; set; }
 
         public ICollection<UserDocument> Documents { get; set; }
+        public virtual ICollection<Phone> Phones { get; set; }
     }
 }

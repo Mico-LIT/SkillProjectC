@@ -64,6 +64,7 @@
     <Compile Include="Models\Other\Airplane.cs" />
     <Compile Include="Models\Other\Player.cs" />
     <Compile Include="Models\Other\Team.cs" />
+    <Compile Include="Models\User\Phone.cs" />
     <Compile Include="Models\User\UserDocument.cs" />
     <Compile Include="Models\User\User.cs" />
     <Compile Include="Models\User\UserProfile.cs" />

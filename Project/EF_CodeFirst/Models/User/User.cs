@@ -12,6 +12,10 @@ namespace EF_CodeFirst.Models.User
         public int Id { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }
+
+        // Используется во избежании параллелизма 
+        [Timestamp]
+        public byte[] RowVersion { get; set; }
         public UserProfile UserProfile { get; set; }
 
         public ICollection<UserDocument> Documents { get; set; }

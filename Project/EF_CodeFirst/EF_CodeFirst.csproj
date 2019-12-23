@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Examples\ToDoExample.cs" />
     <Compile Include="Examples\_001_SelectInfo\_001_Info.cs" />
     <Compile Include="Examples\_002_Loadings\_001_Eager.cs" />
     <Compile Include="Examples\_002_Loadings\_002_Explicit.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="Examples\_003_ConnectionTable\_001_OneToOne.cs" />
     <Compile Include="Examples\_003_ConnectionTable\_003_ManyToMany.cs" />
     <Compile Include="Examples\_004_Transaction\_001_Transaction.cs" />
+    <Compile Include="Examples\_005_LINQToEntities\_001_Linq.cs" />
     <Compile Include="Models\Other\Airplane.cs" />
     <Compile Include="Models\Other\Player.cs" />
     <Compile Include="Models\Other\Team.cs" />

@@ -64,6 +64,8 @@
     <Compile Include="Examples\_003_ConnectionTable\_003_ManyToMany.cs" />
     <Compile Include="Examples\_004_Transaction\_001_Transaction.cs" />
     <Compile Include="Examples\_005_LINQToEntities\_001_Linq.cs" />
+    <Compile Include="Examples\_006_Sql\SqlScripts\Init.cs" />
+    <Compile Include="Examples\_006_Sql\_001_.cs" />
     <Compile Include="Models\Other\Airplane.cs" />
     <Compile Include="Models\Other\Player.cs" />
     <Compile Include="Models\Other\Team.cs" />
@@ -79,7 +81,12 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\_006_Sql\SqlScripts\ProcGetUserByPhoneNumber.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\_006_Sql\SqlScripts\FuncGetPhones.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

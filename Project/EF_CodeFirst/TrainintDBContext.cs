@@ -6,6 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using System.Data.Entity.Migrations;
+using System.IO;
+using System.Reflection;
+using EF_CodeFirst.Examples._006_Sql.SqlScripts;
 using EF_CodeFirst.Models.Other;
 using EF_CodeFirst.Models.User;
 
@@ -28,6 +31,12 @@ namespace EF_CodeFirst
                 Database.SetInitializer(new CustomDropCreateDatabaseAlways());
             else
                 Database.SetInitializer(new CreateDatabaseIfNotExists<TrainintDBContext>());
+
+            // Init SqlScripts
+            var resourceName = Init.GetSqlTexts();
+
+            foreach (var sqlText in resourceName)
+                Database.ExecuteSqlCommand(sqlText);
 
         }
 

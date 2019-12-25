@@ -13,7 +13,7 @@ namespace EF_CodeFirst
     {
         static void Main(string[] args)
         {
-            //new Examples._001_SelectInfo._001_Info();
+            new Examples._006_Sql._001_();
 
             Console.ReadLine();
         }

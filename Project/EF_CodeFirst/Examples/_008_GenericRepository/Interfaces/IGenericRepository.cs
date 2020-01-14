@@ -12,7 +12,7 @@ namespace EF_CodeFirst.Examples._008_GenericRepository.Interfaces
         void Update(TEntity entity);
         void Remove(TEntity entity);
         TEntity GetById(int id);
-        IEnumerable<TEntity> GetAll(int id);
+        IEnumerable<TEntity> GetAll();
         IEnumerable<TEntity> Get(Func<TEntity,bool> predicate);
     }
 }

@@ -81,7 +81,7 @@ namespace EF_CodeFirst
 
             context.UserDocument.Add(new Models.User.UserDocument()
             {
-                UserId = 1,
+                UserId = user.Id,
                 Description = "INN",
                 Type = UserDocument.TypeDocument.INN
             });

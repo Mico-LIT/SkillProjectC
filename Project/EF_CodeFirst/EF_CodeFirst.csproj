@@ -54,7 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Examples\ToDoExample.cs" />
+    <Compile Include="Examples\_009_Migrations\ToDoExample.cs" />
     <Compile Include="Examples\_001_SelectInfo\_001_Info.cs" />
     <Compile Include="Examples\_002_Loadings\_001_Eager.cs" />
     <Compile Include="Examples\_002_Loadings\_002_Explicit.cs" />

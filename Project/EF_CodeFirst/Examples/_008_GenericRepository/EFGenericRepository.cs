@@ -31,7 +31,7 @@ namespace EF_CodeFirst.Examples._008_GenericRepository
             return dbSet.AsNoTracking().Where(predicate).ToList();
         }
 
-        public IEnumerable<TEntity> GetAll(int id)
+        public IEnumerable<TEntity> GetAll()
         {
             return dbSet.AsNoTracking().ToList();
         }
@@ -53,17 +53,29 @@ namespace EF_CodeFirst.Examples._008_GenericRepository
             dbContext.SaveChanges();
         }
 
+        #region Expression
 
+        public IEnumerable<TEntity> GetWithInclude(params Expression<Func<TEntity, object>>[] includeProperties)
+        {
+            return Include(includeProperties).ToList();
+        }
 
+        public IEnumerable<TEntity> GetWithInclude(Func<TEntity,bool> predicate, params Expression<Func<TEntity,object>>[] includeProperties)
+        {
+            var query = Include(includeProperties);
 
-        IQueryable<TEntity> Include(params Expression<Func<TEntity, object>>[] includeProps)
+            return query.Where(predicate).ToList();
+        }
+
+        private IQueryable<TEntity> Include(params Expression<Func<TEntity, object>>[] includeProps)
         {
             IQueryable<TEntity> query = dbSet.AsNoTracking();
 
             return includeProps
                 .Aggregate(query, (current, includeProp) => current.Include(includeProp));
         }
-        
+
+        #endregion
 
         ~EFGenericRepository()
         {

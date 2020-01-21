@@ -6,16 +6,16 @@ using System.Text;
 using System.Threading.Tasks;
 using EF_CodeFirst.Models.User;
 
-namespace EF_CodeFirst
+namespace EF_CodeFirst.FluentApi
 {
-    public class FluentApiCondext : DbContext
+    public class FluentApiBaseCondext : DbContext
     {
-        static FluentApiCondext()
+        static FluentApiBaseCondext()
         {
             // Вот эта штука по Default не проставляется в Console application. Их App.config
             AppDomain.CurrentDomain.SetData("DataDirectory", System.IO.Directory.GetCurrentDirectory());
         }
-        public FluentApiCondext() : base("FluentApiCondext") { }
+        public FluentApiBaseCondext() : base("FluentApiCondext") { }
 
         public DbSet<Phone> Phones { get; set; }
         public DbSet<User> Users { get; set; }

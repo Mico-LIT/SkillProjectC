@@ -70,7 +70,7 @@
     <Compile Include="Examples\_008_GenericRepository\EFGenericRepository.cs" />
     <Compile Include="Examples\_008_GenericRepository\Interfaces\IGenericRepository.cs" />
     <Compile Include="Examples\_008_GenericRepository\_001_GenericRepository.cs" />
-    <Compile Include="FluentApiCondext.cs" />
+    <Compile Include="FluentApi\FluentApiBaseCondext.cs" />
     <Compile Include="Models\Other\Airplane.cs" />
     <Compile Include="Models\Other\Player.cs" />
     <Compile Include="Models\Other\Team.cs" />

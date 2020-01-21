@@ -4,18 +4,34 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using EF_CodeFirst.Models.User;
 
 namespace EF_CodeFirst.FluentApi
 {
-    public class FluentApiBaseCondext : DbContext
+    public class FluentApiBaseContext : DbContext
     {
-        static FluentApiBaseCondext()
+        public class Phone
+        {
+            public int Id { get; set; }
+            public string Number { get; set; }
+            public int Discount { get; set; }
+            public decimal Price { get; set; }
+
+            public virtual ICollection<User> Users { get; set; }
+        }
+
+        public class User
+        {
+            public int Id { get; set; }
+            public string Name { get; set; }
+            public int Age { get; set; }
+        }
+
+        static FluentApiBaseContext()
         {
             // Вот эта штука по Default не проставляется в Console application. Их App.config
             AppDomain.CurrentDomain.SetData("DataDirectory", System.IO.Directory.GetCurrentDirectory());
         }
-        public FluentApiBaseCondext() : base("FluentApiCondext") { }
+        public FluentApiBaseContext() : base("FluentApiCondext") { }
 
         public DbSet<Phone> Phones { get; set; }
         public DbSet<User> Users { get; set; }

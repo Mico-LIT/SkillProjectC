@@ -70,6 +70,11 @@
     <Compile Include="Examples\_008_GenericRepository\EFGenericRepository.cs" />
     <Compile Include="Examples\_008_GenericRepository\Interfaces\IGenericRepository.cs" />
     <Compile Include="Examples\_008_GenericRepository\_001_GenericRepository.cs" />
+    <Compile Include="Examples\_010_Annotation\_001_Annotation.cs" />
+    <Compile Include="Examples\_011_ComplexType\_001_ComplexType.cs" />
+    <Compile Include="Examples\_012_OperationWithProcedure\_001_OWP.cs" />
+    <Compile Include="Examples\_013_ConfigModels\_001_ConfigModel.cs" />
+    <Compile Include="Examples\_014_Convention\_001_Convention.cs" />
     <Compile Include="FluentApi\ConnectionTableContext.cs" />
     <Compile Include="FluentApi\FluentApiBaseContext.cs" />
     <Compile Include="Models\Other\Airplane.cs" />
@@ -93,6 +98,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Examples\_006_Sql\SqlScripts\FuncGetPhones.sql" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

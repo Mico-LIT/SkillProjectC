@@ -1,443 +1,519 @@
 ﻿
 @{
     Layout = null;
-    //TODO Bootstrap to make
-    /*
-
-    Что делать дальше?
-    1) Заполнить нормальным текстом
-    2) CSS Position? где как и зачем??
-
-    */
-
 }
+
 <!DOCTYPE html>
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <meta charset="utf-8" />
-    <title>Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MicoGroup</title>
 
-    <!-- Latest compiled and minified CSS -->
-    @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">*@
-    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
-    <!-- jQuery library -->
-    @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>*@
-    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
-
-    <!-- Popper JS -->
-    @*<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>*@
-    <script src="~/Scripts/umd/popper.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    @*<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>*@
-    <script src="~/Scripts/bootstrap.min.js"></script>
+    @*<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>*@
+    @*<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>*@
+    @*<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>*@
 
     <style>
-        .navbar {
-            background: #F97300;
+
+        .section-seporator {
+            padding: 100px 0px;
         }
 
-        .nav-link, .navbar-brand {
-            color: #f4f4f4;
-            cursor: pointer;
+        ul {
+            margin: 0px;
+            padding: 0px;
         }
 
-        .nav-link {
-            margin-right: 1em !important;
-        }
-
-            .nav-link:hover {
-                color: rgba(245, 245, 247, 0.99) !important;
+            ul li {
+                list-style-type: none;
             }
 
-        .navbar-collapse {
-            justify-content: flex-end;
-        }
-
-        .navbar-toggler {
-            background: #fff !important;
-        }
-
-        header {
-            background-image: url(https://cdn.pixabay.com/photo/2018/03/27/21/43/startup-3267505_960_720.jpg);
-            background-attachment: fixed;
+        .core-img {
+            background-image: url(http://cvresumetemplate.com/maha-personal-cv-resume-html-template/assets/images/home-bg-img.jpg);
             background-size: cover;
-            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0 auto;
+            background-position: center center;
         }
 
-        .overlay {
-            position: absolute;
-            min-width: 100%;
-            min-height: 100%;
-            top: 0;
-            left: 0;
-            background: rgba(252, 252, 252, 0.70);
+        .core-img-map {
+            background-image: url(http://cvresumetemplate.com/maha-personal-cv-resume-html-template/assets/images/map-color-overlay.png);
         }
 
-        .description {
-            position: absolute;
-            top: 30%;
-            margin: auto;
-            padding: 2em;
+        .core-bg-white {
+            background-color: white;
         }
 
-            .description h1 {
-                color: #F97300;
-            }
-
-            .description p {
-                color: #666;
-                font-size: 20px;
-                width: 50%;
-                line-height: 1.5;
-            }
-
-            .description button {
-                border: 1px solid #F97300;
-                background: #F97300;
-                color: #fff;
-            }
-
-        .about {
-            margin: 4em 0;
-            padding: 1em;
-            position: relative;
+        .img-color-overlay {
+            background-color: rgb(255, 255, 255, 0.9);
         }
 
-            .about h1 {
-                color: #F97300;
-                margin: 2em;
-            }
-
-            .about img {
-                height: 100%;
-                width: 100%;
-                border-radius: 10%
-            }
-
-            .about span {
-                display: block;
-                color: #888;
-                position: absolute;
-                left: 115px;
-            }
-
-            .about .desc {
-                padding: 2em;
-                border-left: 4px solid #10828C;
-            }
-
-                .about .desc h3 {
-                    color: #10828C;
-                }
-
-                .about .desc p {
-                    line-height: 2;
-                    color: #888;
-                }
-
-        .portfolio {
-            margin: 4em 0;
-            position: relative;
+        address {
+            display: inline-block;
+            margin: 0px;
         }
 
-            .portfolio h1 {
-                color: #F97300;
-                margin: 2em;
-            }
-
-            .portfolio img {
-                height: 15rem;
-                width: 100%;
-                margin: 1em;
-            }
-
-        .blog {
-            margin: 4em 0;
-            position: relative;
+        .border-img {
+            border: 20px solid rgb(2, 2, 2, 0.1);
+            border-radius: 32%;
+            min-width: 250px;
+            max-width: 350px;
         }
 
-            .blog h1 {
-                color: #F97300;
-                margin: 2em;
+            .border-img img {
+                border: 20px solid rgb(128, 128, 128, 0.17);
+                border-radius: 30%;
             }
 
-            .blog .card {
-                box-shadow: 0 0 20px #ccc;
-            }
-
-                .blog .card img {
-                    width: 100%;
-                    height: 12em;
-                }
-
-            .blog .card-title {
-                color: #F97300;
-            }
-
-            .blog .card-body {
-                padding: 1em;
-            }
-
-        .team {
-            margin: 4em 0;
-            position: relative;
+        .home-padding {
+            padding: 180px 0px;
         }
 
-            .team h1 {
-                color: #F97300;
-                margin: 2em;
-            }
-
-            .team .item {
-                position: relative;
-            }
-
-            .team .des {
-                background: #F97300;
-                color: #fff;
-                text-align: center;
-                border-bottom-left-radius: 93%;
-                transition: .3s ease-in-out;
-            }
-
-            .team .item:hover .des {
-                height: 100%;
-                background: #f973007d;
-                position: absolute;
-                width: 89%;
-                padding: 5em;
-                top: 0;
-                border-bottom-left-radius: 0;
-            }
-            .form{
-                margin:6em 0;
-                position:relative;
-            }
-                .form h2 {
-                    padding: 2em 1px;
-                    color: #F97300;
-                }
-        .form .right {
-            max-width: 600px;
+        .about-inner ul > li {
+            display: inline-block;
+            border: 1px solid #8cff8c;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin: 1px;
         }
-        .form .right .btn-primary {
-            background: #F97300;
-            color: #fff;
-            border: 0;
+
+            .about-inner ul > li:hover {
+                background-color: #f5ab359e;
+            }
+
+        .core-fs-35 {
+            font-size: 35px;
+        }
+
+        .core-fs-65 {
+            font-size: 65px;
         }
     </style>
 </head>
-<body id="homePage">
+<body>
 
-    <nav class="navbar navbar-expand-lg fixed-top navbar-light">
-        <a class="navbar-brand" href="#" data-value="homePage">MikoProduction</a>
-        <button class="navbar-toggler" type="button"
-                data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-4">
-                <li class="nav-item"><a class="nav-link" href="#" data-value="about" >Обо мне</a></li>
-                <li class="nav-item"><a class="nav-link" href="#" data-value="portfolio">Учеба</a></li>
-                <li class="nav-item"><a class="nav-link" href="#" data-value="blog">Где работал</a></li>
-                <li class="nav-item"><a class="nav-link" href="#" data-value="team">Что умею</a></li>
-                <li class="nav-item"><a class="nav-link" href="#" data-value="form">Контакты</a></li>
-            </ul>
+    <header></header>
+
+    <section class="headerMain">
+        <div class="core-img">
+            <div class="img-color-overlay home-padding">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <h1>Привет👋 <br>Я Боровик Михаил</h1>
+                            <h2>Full Stack Web Developer С#</h2>
+
+                            <ul>
+                                <li>
+                                    <i class="fas fa-phone"></i>
+                                    <a href="tel:+7(923)188-08-45">+7(923)188-08-45</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-envelope"></i>
+                                    <a href="mailto:redgame0@gmail.com?subject='Сотрудничество MicoGroup'">redgame0@gmail.com</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-map-marker"></i>
+                                    <address>
+                                        Новосибирск, Россия
+                                    </address>
+                                </li>
+                                <li>
+                                    <i class="fab fa-github"></i>
+                                    <a href="https://github.com/Mico-LIT">Github</a>
+                                </li>
+                                <li>
+                                    <i class="fab fa-instagram"></i>
+                                    <a href="https://www.instagram.com/micom_">Micom_</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-6 align-self-center">
+                            <div class="border-img">
+                                <img src="https://avatars0.githubusercontent.com/u/13939762?s=460&v=4" class="img-fluid" />
+                                @*<img src="https://avatars0.githubusercontent.com/u/13939761?s=460&v=4" class="img-fluid" />*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <div class="row pt-5 pb-5">
+                <div class="col-sm-12 col-md-6">
+                    <img src="http://cvresumetemplate.com/maha-personal-cv-resume-html-template/assets/images/ab-img.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <div class="about-inner">
+                        <h2>Обо мне</h2>
+                        <p>
+                            Привет! я ... Web-Debeloper
+                            Личные качества: внимательность, ответственность, уверенность в себе, порядочность, упорство, стремление развиваться, желание работать, решительность.
+                            Спорт: баскетбол, волейбол, плавание, теннис.
+                            Дополнительная информация:
+                            Черпаю знания из книг и интернет ресурса <a href="https://itvdn.com/ru">ITVDN</a>
+                            Огромное желание и рвевение изучить "экосистему .NET"
+                        </p>
+                        <div>
+                            <ul>
+                                <li>Atlassian Jira, TFS</li>
+                                <li>.NET Framework</li>
+                                <li>ADO.NET</li>
+                                <li>ООП</li>
+                                <li>SQL</li>
+                                <li>Java</li>
+                                <li>ASP.NET</li>
+                                <li>MVC</li>
+                                <li>Git</li>
+                                <li>JSON</li>
+                                <li>Работа с Oktell</li>
+                                <li>WebAPI REST</li>
+                                <li>Hibernate ORM</li>
+                                <li>Dapper ORM</li>
+                                <li>Entity Framework (EF) ORM</li>
+                                <li>Transact-SQL, DDL & DML</li>
+                                <li>LINQ to SQL, LINQ to Object</li>
+                                <li>WPF | XAML</li>
+                                <li>HTML</li>
+                                <li>Bootstrap</li>
+                                <li>HTML</li>
+
+
+                                <li>HTML</li>
+
+                                <li>AngularJS</li>
+                                <li>Vue.js</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>jQuery</li>
+                                <li>Ajax</li>
+
+                                <li>Amazon AWS</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="text-center mt-5 mb-5">Что я делаю</h2>
+                </div>
+                <div class="col-sm-4 p-2">
+                    <div class="shadow p-5 h-100 text-center">
+                        <i class="fas fa-bullseye core-fs-35"></i>
+                        <h3>UI Дизайн</h3>
+                        <p>
+                            сфера нашей активности в значительной степени обуславливает создание соответствующий условий активизации.
+                            Разнообразный и богатый опыт укрепление и развитие структуры требуют от нас анализа существенных финансовых и административных условий.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-4 p-2">
+                    <div class="shadow p-5 h-100 text-center">
+                        <i class="fas fa-code core-fs-35"></i>
+                        <h3>Веб-Разработка</h3>
+                        <p>
+                            сфера нашей активности в значительной степени обуславливает создание соответствующий условий активизации.
+                            Разнообразный и богатый опыт укрепление и развитие структуры требуют от нас анализа существенных финансовых и административных условий.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-4 p-2">
+                    <div class="shadow p-5 h-100 text-center">
+                        <i class="fas fa-object-ungroup core-fs-35"></i>
+                        <h3>App-Разработка</h3>
+                        <p>
+                            сфера нашей активности в значительной степени обуславливает создание соответствующий условий активизации.
+                            Разнообразный и богатый опыт укрепление и развитие структуры требуют от нас анализа существенных финансовых и административных условий.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 p-5"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="core-img">
+            <div class="img-color-overlay">
+                <div class="container">
+                    <div class="row pt-5">
+                        <div class="col-sm-12 text-center">
+                            <h3 class="mt-5 mb-5">Пару слов о проетах</h3>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="col-sm-12">
+                                            <div class="row">
+                                                <div class="col-sm-7">
+                                                    <img class="d-block w-100" src="http://cvresumetemplate.com/maha-personal-cv-resume-html-template/assets/images/p-2.png" alt="First slide1">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <h3>Control views</h3>
+                                                    <p>
+                                                        сфера нашей активности в значительной степени обуславливает создание соответствующий условий активизации.
+                                                        Разнообразный и богатый опыт укрепление и развитие структуры требуют от нас анализа существенных финансовых и административных условий.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <div class="col-sm-12">
+                                            <div class="row">
+                                                <div class="col-sm-7">
+                                                    <img class="d-block w-100" src="http://cvresumetemplate.com/maha-personal-cv-resume-html-template/assets/images/p-2.png" alt="First slide23">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <h3>Hi</h3>
+                                                    <p>
+                                                        сфера нашей активности в значительной степени обуславливает создание соответствующий условий активизации.
+                                                        Разнообразный и богатый опыт укрепление и развитие структуры требуют от нас анализа существенных финансовых и административных условий.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-    </nav>
-    
-    <header class="header">
-        <div class="overlay"></div>
+    </section>
+
+    <section class="skills">
         <div class="container">
-            <div class="description">
-                <h1>
-                    Hi my name is Misha
+            <div class="row">
+                <div class="col-12 p-5"></div>
+                <div class="col-sm-12 pb-4 text-center">
+                    <h2>Навыки</h2>
+                </div>
+
+                <div class="col-sm-6 p-2">
+                    <p class="text-center h3">BACKEND</p>
+
+                    <div class="skills-item">
+                        <p class="h6">ADO.net</p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                                 aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">75%</div>
+                        </div>
+                    </div>
+                    <div class="skills-item">
+                        <p class="h6">LINQ</p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                                 aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 80%">80%</div>
+                        </div>
+                    </div>
+                    <div class="skills-item">
+                        <p class="h6">MVC</p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                                 aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 80%">80%</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-6 p-2">
+                    <p class="text-center h3">FRONTEND</p>
+
+                    <div class="skills-item">
+                        <p class="h6">JavaScript</p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                                 aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">40%</div>
+                        </div>
+                    </div>
+                    <div class="skills-item">
+                        <p class="h6">Vue.js</p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                                 aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 60%">60%</div>
+                        </div>
+                    </div>
+                    <div class="skills-item">
+                        <p class="h6">jQuery</p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                                 aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 30%">30%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 p-5"></div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="experience">
+        <div class="core-img">
+            <div class="img-color-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 p-5"></div>
+
+                        @*<div class="col-sm-12">  <h3>Опыт</h3> </div>*@
+
+                        <div class="col-sm-6 pb-5">
+                            <h3 class="pb-5 text-center">Образование</h3>
+
+                            <div class="core-bg-white shadow p-3">
+                                <p class="h5">
+                                    Сибирский государственный университет путей сообщения (СГУПС), Новосибирск
+                                    Факультет "Бизнес-информатика", Информационные системы и технологии
+                                </p>
+                                <p>2013-2017</p>
+                                <p>
+                                    сфера нашей активности в значительной степени обуславливает создание соответствующий условий активизации.
+                                    Разнообразный и богатый опыт укрепление и развитие структуры требуют от нас анализа существенных финансовых и административных условий.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+
+                            <h3 class="pb-5 text-center">Опыт работы</h3>
+
+                            <div class="core-bg-white shadow p-3">
+                                <p class="h5">СГУПС</p>
+                                <p>2013-2017</p>
+                                <p>
+                                    сфера нашей активности в значительной степени обуславливает создание соответствующий условий активизации.
+                                    Разнообразный и богатый опыт укрепление и развитие структуры требуют от нас анализа существенных финансовых и административных условий.
+                                </p>
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-12 p-5"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="request">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 p-5"></div>
+
+                <div class="col-sm-12 text-center">
+                    <h3>Заинтересованы в работе?</h3>
                     <p>
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        сфера нашей активности в значительной степени обуславливает создание соответствующий условий активизации.
+                        Разнообразный и богатый опыт укрепление и развитие структуры требуют от нас анализа существенных финансовых и административных условий.
                     </p>
-                    <button class="btn btn-outline-secondary">Смотреть дальше</button>
-                </h1>
-            </div>
-
-        </div>
-    </header>
-
-    <section class="about" id="about">
-        <div class="container">
-            <h1 class="text-center">Обо мне</h1>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <img class="img-fluid" src="https://res.cloudinary.com/teepublic/image/private/s--Umc3rImi--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_fffffe,e_outline:48/co_fffffe,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1498317468/production/designs/1690895_1.jpg" />
-                    <span class="text-justify">S.Web Developer</span>
+                    <button type="button" class="btn btn-primary">Оставить контакты</button>
                 </div>
-                <div class="col-lg-8 col-md-8 col-sm-12 desc">
-                    <h3>Mico</h3>
-                    <p>
-                        ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
+
+                <div class="col-12 p-5"></div>
+
             </div>
         </div>
     </section>
 
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-            <h1 class="text-center">Портфолио</h1>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <img class="img-fluid" src="https://res.cloudinary.com/teepublic/image/private/s--Umc3rImi--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_fffffe,e_outline:48/co_fffffe,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1498317468/production/designs/1690895_1.jpg" />
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <img class="img-fluid" src="https://res.cloudinary.com/teepublic/image/private/s--Umc3rImi--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_fffffe,e_outline:48/co_fffffe,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1498317468/production/designs/1690895_1.jpg" />
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <img class="img-fluid" src="https://res.cloudinary.com/teepublic/image/private/s--Umc3rImi--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_fffffe,e_outline:48/co_fffffe,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1498317468/production/designs/1690895_1.jpg" />
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <img class="img-fluid" src="https://res.cloudinary.com/teepublic/image/private/s--Umc3rImi--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_fffffe,e_outline:48/co_fffffe,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1498317468/production/designs/1690895_1.jpg" />
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <img class="img-fluid" src="https://res.cloudinary.com/teepublic/image/private/s--Umc3rImi--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_fffffe,e_outline:48/co_fffffe,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1498317468/production/designs/1690895_1.jpg" />
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <img class="img-fluid" src="https://res.cloudinary.com/teepublic/image/private/s--Umc3rImi--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_fffffe,e_outline:48/co_fffffe,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1498317468/production/designs/1690895_1.jpg" />
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="pricing">
+        <div class="core-img">
+            <div class="img-color-overlay">
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 text-center">
+                            <p class="h3 mt-5 mb-5">Цены</p>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4 p-3">
+                            <div class="p-4 shadow core-bg-white text-center h-100">
+                                <i class="fas fa-calendar core-fs-35"></i>
+                                <h4>Полное время работы</h4>
+                                <p>
+                                    сфера нашей активности в значительной степени обуславливает создание соответствующий условий активизации.
+                                </p>
+                                <h5>от 1100$</h5>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4 p-3">
+                            <div class="p-4 shadow core-bg-white text-center h-100">
+                                <i class="fas fa-file core-fs-35"></i>
+                                <h4>Проектная работа</h4>
+                                <p>
+                                    сфера нашей активности в значительной степени обуславливает создание соответствующий условий активизации.
+                                </p>
+                                <h5>$20-500$</h5>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4 p-3">
+                            <div class="p-4 shadow core-bg-white text-center h-100">
+                                <i class="fas fa-hourglass core-fs-35"></i>
+                                <h4>Час работы</h4>
+                                <p>
+                                    сфера нашей активности в значительной степени обуславливает создание соответствующий условий активизации.
+                                </p>
+                                <h5>$10</h5>
+                            </div>
+                        </div>
 
-    <section class="blog" id="blog">
-        <div class="container">
-            <h1 class="text-center">Блог</h1>
-            <div class="row">
-                <div class="col-md-4 col-lg-4 col-sm-12">
-                    <div class="card">
-                        <div class="card-img">
-                            <img class="img-fluid" src="https://res.cloudinary.com/teepublic/image/private/s--Umc3rImi--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_fffffe,e_outline:48/co_fffffe,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1498317468/production/designs/1690895_1.jpg" />
-                        </div>
-                        <div class="card-body">
-                            <h4>Post Title</h4>
-                            <p class="card-text">
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="" class="card-link">Read more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-12">
-                    <div class="card">
-                        <div class="card-img">
-                            <img class="img-fluid" src="https://res.cloudinary.com/teepublic/image/private/s--Umc3rImi--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_fffffe,e_outline:48/co_fffffe,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1498317468/production/designs/1690895_1.jpg" />
-                        </div>
-                        <div class="card-body">
-                            <h4>Post Title</h4>
-                            <p class="card-text">
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="" class="card-link">Read more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-12">
-                    <div class="card">
-                        <div class="card-img">
-                            <img class="img-fluid" src="https://res.cloudinary.com/teepublic/image/private/s--Umc3rImi--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_fffffe,e_outline:48/co_fffffe,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1498317468/production/designs/1690895_1.jpg" />
-                        </div>
-                        <div class="card-body">
-                            <h4>Post Title</h4>
-                            <p class="card-text">
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="" class="card-link">Read more</a>
-                        </div>
+                        <div class="col-12 p-5"></div>
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="team" id="team">
-        <div class="container">
-            <h1 class="text-center">Команда</h1>
-            <div class="row">
-                <div class="col-sm-12 col-md-3 col-lg-3 item">
-                    <img class="img-fluid" src="https://res.cloudinary.com/teepublic/image/private/s--Umc3rImi--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_fffffe,e_outline:48/co_fffffe,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1498317468/production/designs/1690895_1.jpg" />
-                    <div class="des">Миша</div>
-                </div>
-                <div class="col-sm-12 col-md-3 col-lg-3 item">
-                    <img class="img-fluid" src="https://res.cloudinary.com/teepublic/image/private/s--Umc3rImi--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_fffffe,e_outline:48/co_fffffe,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1498317468/production/designs/1690895_1.jpg" />
-                    <div class="des">Миша</div>
-                </div>
-                <div class="col-sm-12 col-md-3 col-lg-3 item">
-                    <img class="img-fluid" src="https://res.cloudinary.com/teepublic/image/private/s--Umc3rImi--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_fffffe,e_outline:48/co_fffffe,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1498317468/production/designs/1690895_1.jpg" />
-                    <div class="des">Миша</div>
-                </div>
-                <div class="col-sm-12 col-md-3 col-lg-3 item">
-                    <img class="img-fluid" src="https://res.cloudinary.com/teepublic/image/private/s--Umc3rImi--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_fffffe,e_outline:48/co_fffffe,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1498317468/production/designs/1690895_1.jpg" />
-                    <div class="des">Миша</div>
+    <section class="contactMy">
+        <div class="core-img-map">
+            <div class="container">
+                <div class="row justify-content-sm-center">
+                    <div class="col-sm-12 text-center">
+                        <p class="h3 mb-5">Свяжитесь со мной</p>
+                    </div>
+                    <div class="col-sm-12 text-center">
+                        <span class="p-2">
+                            <a href="https://www.instagram.com/micom_" style="color:#000000;" title="instagram"><i class="fab fa-instagram core-fs-65"></i></a>
+                        </span>
+                        <span class="p-2">
+                            <a href="https://vk.com/micom" style="color:#000000;" title="VK"><i class="fab fa-vk core-fs-65"></i></a>
+                        </span>
+                        <span class="p-2">
+                            <a href="tel:+79231880845" style="color:#000000;"><i class="fas fa-phone core-fs-65"></i></a>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="form" id="form">
-        <div class="container">
-            <form>
-                <div class="row">
-                    <div class="col-sm-12 col-md-4 col-lg-4">
-                        <h2>
-                            Get in Touch
-                        </h2>
-                    </div>
-                    <div class="col-sm-12 col-md-8 col-lg-8 right">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="You Name" />
-                        </div>
-                        <div class="form-group">
-                            @*<label for="exampleInputEmail1">Email address</label>*@
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="You Enter email">
-                            @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" placeholder="Text"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send</button>
-                    </div>
 
-                </div>
-            </form>
-        </div>
-    </section>
-
-    <script>
-        $(document).ready(function () {
-            $('header').height($(window).height());
-        })
-
-        $(".navbar a").click(function () {
-            $("body,html").animate({
-                scrollTop: $("#" + $(this).data('value')).offset().top
-            }, 1000)
-
-        })
-    </script>
 </body>
 </html>

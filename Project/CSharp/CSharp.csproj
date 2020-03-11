@@ -167,6 +167,7 @@
     <Compile Include="Games\ICarBody.cs" />
     <Compile Include="Games\IEngine.cs" />
     <Compile Include="Games\Road.cs" />
+    <Compile Include="Helpers\RenameFile.cs" />
     <Compile Include="InterviewDeveloper\Task_1.cs" />
     <Compile Include="InterviewDeveloper\Task_2.cs" />
     <Compile Include="InterviewDeveloper\Task_3.cs" />

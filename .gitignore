@@ -145,6 +145,7 @@ publish/
 # passwords
 #*.pubxml
 *.publishproj
+**/imickey/Properties/PublishProfiles/*.pubxml
 
 # NuGet Packages
 *.nupkg
@@ -157,6 +158,7 @@ publish/
 # NuGet v3's project.json files produces more ignoreable files
 *.nuget.props
 *.nuget.targets
+**/imickey/wwwroot/lib/*
 
 # Microsoft Azure Build Output
 csx/

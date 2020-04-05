@@ -73,6 +73,7 @@
     <Compile Include="Base\Collections\Collections3.cs" />
     <Compile Include="Base\Collections\Collections4.cs" />
     <Compile Include="Base\Collections\Collections5.cs" />
+    <Compile Include="Base\Collections\Collections6.cs" />
     <Compile Include="Base\Collections\UserCollections\Element.cs" />
     <Compile Include="Base\Collections\UserCollections\TestGo.cs" />
     <Compile Include="Base\Collections\UserCollections\UserCollection.cs" />

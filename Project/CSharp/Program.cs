@@ -11,6 +11,9 @@ namespace CSharp
         static void Main(string[] args)
         {
             //Game();
+
+
+            Console.Read();
         }
 
         void Game()

@@ -135,6 +135,8 @@
     <Compile Include="Base\StructureData\LinkedList\_003_LinkedListNode.cs" />
     <Compile Include="Base\StructureData\LinkedList\_004_LinkedListNode_Doubly.cs" />
     <Compile Include="Base\StructureData\LinkedList\_005_LinkedList.cs" />
+    <Compile Include="Base\StructureData\Queue\_001_Queue.cs" />
+    <Compile Include="Base\StructureData\Stack\_001_Stack.cs" />
     <Compile Include="Base\Threading\Synchronization\_Mutex.cs" />
     <Compile Include="Base\Threading\Synchronization\_Mutex2.cs" />
     <Compile Include="Base\Threading\Synchronization\_Semaphore.cs" />
@@ -278,10 +280,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Base\StructureData\Array\" />
     <Folder Include="Base\StructureData\HashTable\" />
-    <Folder Include="Base\StructureData\Queue\" />
-    <Folder Include="Base\StructureData\Stack\" />
     <Folder Include="Base\StructureData\Trees\" />
   </ItemGroup>
   <ItemGroup>

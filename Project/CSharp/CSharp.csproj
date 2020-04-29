@@ -136,7 +136,11 @@
     <Compile Include="Base\StructureData\LinkedList\_004_LinkedListNode_Doubly.cs" />
     <Compile Include="Base\StructureData\LinkedList\_005_LinkedList.cs" />
     <Compile Include="Base\StructureData\Queue\_001_Queue.cs" />
+    <Compile Include="Base\StructureData\Queue\_002_DeQueue.cs" />
+    <Compile Include="Base\StructureData\Queue\_003_Queue.cs" />
+    <Compile Include="Base\StructureData\Queue\_004_DeQueue_On_BaseArray.cs" />
     <Compile Include="Base\StructureData\Stack\_001_Stack.cs" />
+    <Compile Include="Base\StructureData\Stack\_002_Stack.cs" />
     <Compile Include="Base\Threading\Synchronization\_Mutex.cs" />
     <Compile Include="Base\Threading\Synchronization\_Mutex2.cs" />
     <Compile Include="Base\Threading\Synchronization\_Semaphore.cs" />

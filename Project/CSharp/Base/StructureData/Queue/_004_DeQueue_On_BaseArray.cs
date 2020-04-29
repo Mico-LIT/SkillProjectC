@@ -129,6 +129,7 @@ namespace CSharp.Base.StructureData.Queue
             }
 
             // TODO _004_DeQueue_On_BaseArray
+            // Урок 3. Стеки и очереди -> time 40:38
             // DeQueueFirst and DeQueueLast
             public T DeQueueFirst()
             {

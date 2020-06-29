@@ -1,0 +1,39 @@
+﻿
+        <div>
+                <ul>
+                    <li>Atlassian Jira, TFS</li>
+                    <li>.NET Framework</li>
+                    <li>ADO.NET</li>
+                    <li>ООП</li>
+                    <li>SQL</li>
+                    <li>Java</li>
+                    <li>ASP.NET</li>
+                    <li>MVC</li>
+                    <li>Git</li>
+                    <li>JSON</li>
+                    <li>Работа с Oktell</li>
+                    <li>WebAPI REST</li>
+                    <li>Hibernate ORM</li>
+                    <li>Dapper ORM</li>
+                    <li>Entity Framework (EF) ORM</li>
+                    <li>Transact-SQL, DDL & DML</li>
+                    <li>LINQ to SQL, LINQ to Object</li>
+                    <li>WPF | XAML</li>
+                    <li>HTML</li>
+                    <li>Bootstrap</li>
+                    <li>HTML</li>
+
+
+                    <li>HTML</li>
+
+                    <li>AngularJS</li>
+                    <li>Vue.js</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>jQuery</li>
+                    <li>Ajax</li>
+
+                    <li>Amazon AWS</li>
+
+                </ul>
+            </div>

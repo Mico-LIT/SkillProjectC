@@ -1,11 +1,4 @@
-﻿using CSharp.Base.Threading.Synchronization;
-using CSharp.Base.Threading.TPL;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 
 namespace CSharp.Base.StructureData.Queue
 {
@@ -25,9 +18,13 @@ namespace CSharp.Base.StructureData.Queue
 
             public int Count => _size;
 
-            private void allocateNewArr(int startIndex)
+            private void allocateNewArr(int startIndex, bool reduceLength = false)
             {
-                int newLength = _size == 0 ? 4 : _size * 2;
+                int newLength = 0;
+                if (!reduceLength)
+                    newLength = _size == 0 ? 4 : _size * 2;
+                else
+                    newLength = _size;
 
                 T[] newArr = new T[newLength];
 
@@ -72,44 +69,28 @@ namespace CSharp.Base.StructureData.Queue
 
             public void EnqueueFirst(T item)
             {
-                if (_items.Length == _size)
-                {
-                    allocateNewArr(1);
-                }
+                if (_items.Length == _size) allocateNewArr(1);
 
                 if (_head > 0)
-                {
                     _head--;
-                }
                 else
-                {
                     _head = _items.Length - 1;
-                }
 
                 _items[_head] = item;
                 _size++;
-
             }
 
             public void EnqueueLast(T item)
             {
-                if (_items.Length == _size)
-                {
-                    allocateNewArr(0);
-                }
+                if (_items.Length == _size) allocateNewArr(0);
 
                 if (_tail == _items.Length - 1)
-                {
                     _tail = 0;
-                }
                 else
-                {
                     _tail++;
-                }
 
                 _items[_tail] = item;
                 _size++;
-
             }
 
             public T PeekFirst()
@@ -133,16 +114,14 @@ namespace CSharp.Base.StructureData.Queue
             // DeQueueFirst and DeQueueLast
             public T DeQueueFirst()
             {
-                if (_size == 0)
-                    throw new InvalidOperationException("Queue empty");
+                if (_size == 0) throw new InvalidOperationException("Queue empty");
 
-                var result = _items[_head];
+                if ((_items.Length / 2) == _size) allocateNewArr(0, true);
 
-                System.Array.Copy(_items, _head + 1, _items, _head + 1, (_items.Length - 1) - _head);
+                if (_head >= _items.Length) _head = 0;
+
                 _size--;
-                _head = 1;
-
-                return result;
+                return _items[_head++];
             }
 
             //public T DeQueueLast()
@@ -156,11 +135,40 @@ namespace CSharp.Base.StructureData.Queue
         {
             DeQue<int> instance = new DeQue<int>();
 
-            instance.EnqueueLast(1);
-            instance.EnqueueLast(2);
-            //instance.EnqueueLast(3);
+            if (true)
+            {
+                instance.EnqueueLast(1);
+                instance.EnqueueLast(2);
+                instance.EnqueueLast(3);
+                instance.EnqueueLast(4);
+                instance.EnqueueLast(5);
+                instance.EnqueueLast(6);
+                instance.EnqueueLast(7);
+
+                instance.EnqueueFirst(8);
+                instance.EnqueueFirst(9);
+                instance.EnqueueFirst(10);
+                instance.EnqueueFirst(11);
+                instance.EnqueueFirst(12);
+                instance.EnqueueFirst(13);
+                instance.EnqueueFirst(14);
+                instance.EnqueueFirst(15);
+                instance.EnqueueFirst(16);
+            }
+
+            for (int i = 0; i < 20; i++)
+            {
+                Console.WriteLine("DeQueueFirst {0}", instance.DeQueueFirst());
+            }
+
+
 
             Console.WriteLine("PeekFirst {0}", instance.PeekFirst());
+
+
+            instance.EnqueueFirst(6);
+            instance.EnqueueFirst(7);
+            instance.EnqueueFirst(8);
 
 
             Console.WriteLine("PeekFirst {0}", instance.PeekFirst());

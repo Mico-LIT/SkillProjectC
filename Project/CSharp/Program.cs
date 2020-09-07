@@ -10,19 +10,9 @@ namespace CSharp
     {
         static void Main(string[] args)
         {
-            //Game();
-
+            // Start method
 
             Console.Read();
-        }
-
-        void Game()
-        {
-            Console.SetWindowSize(100, 50);
-            Games.Game asd = new Games.Game();
-            asd.Run();
-            ///Console.CursorVisible = true;
-            Console.ReadLine();
         }
     }
 }

@@ -14,17 +14,20 @@ namespace CSharp.Games
 
         public Game()
         {
-            car = new Car(
-                new EngineBMW(),
-                new CarBody(40, 20)
-                );
+            Console.SetWindowSize(100, 50);
+            car = new Car(new EngineBMW(), new CarBody(40, 20));
             road = new Road();
+
+            ///Console.CursorVisible = true;
+            this.Run();
+            Console.ReadLine();
         }
 
         public void Run()
         {
             car.Show();
             road.Movie();
+
             while (true)
             {
                 try

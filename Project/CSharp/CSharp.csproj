@@ -143,6 +143,8 @@
     <Compile Include="Base\StructureData\Queue\_004_DeQueue_On_BaseArray.cs" />
     <Compile Include="Base\StructureData\Stack\_001_Stack.cs" />
     <Compile Include="Base\StructureData\Stack\_002_Stack.cs" />
+    <Compile Include="Base\StructureData\Trees\_001_TreeNode.cs" />
+    <Compile Include="Base\StructureData\Trees\_002_BinaryTree.cs" />
     <Compile Include="Base\Threading\Synchronization\_Mutex.cs" />
     <Compile Include="Base\Threading\Synchronization\_Mutex2.cs" />
     <Compile Include="Base\Threading\Synchronization\_Semaphore.cs" />
@@ -287,7 +289,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Base\StructureData\HashTable\" />
-    <Folder Include="Base\StructureData\Trees\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

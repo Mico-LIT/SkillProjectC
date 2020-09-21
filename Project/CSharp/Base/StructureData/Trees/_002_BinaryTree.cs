@@ -16,6 +16,7 @@ namespace CSharp.Base.StructureData.Trees
             int _count;
             public int Count => _count;
 
+            // Adde item
             public void Add(T item)
             {
                 if (_head == null)

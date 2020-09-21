@@ -145,6 +145,7 @@
     <Compile Include="Base\StructureData\Stack\_002_Stack.cs" />
     <Compile Include="Base\StructureData\Trees\_001_TreeNode.cs" />
     <Compile Include="Base\StructureData\Trees\_002_BinaryTree.cs" />
+    <Compile Include="Base\StructureData\Trees\_003_BinaryTree.cs" />
     <Compile Include="Base\Threading\Synchronization\_Mutex.cs" />
     <Compile Include="Base\Threading\Synchronization\_Mutex2.cs" />
     <Compile Include="Base\Threading\Synchronization\_Semaphore.cs" />

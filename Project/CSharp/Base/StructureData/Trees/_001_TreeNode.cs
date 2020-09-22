@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CSharp.Base.StructureData.Trees
 {
+    /// <summary>
+    /// Кости TreeNode
+    /// </summary>
     class _001_TreeNode
     {
         public class BineryTreeNode<TNode> : IComparable<TNode> where TNode : IComparable<TNode>

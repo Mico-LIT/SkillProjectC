@@ -8,9 +8,14 @@ using System.Threading.Tasks;
 namespace CSharp.Base.StructureData.Trees
 {
     /// <summary>
-    /// Реализован метод поиска
+    /// 'Реализован метод удаления'
+    /// 
+    /// Первый вариант: удаляемый узел не имеет правого потомка
+    /// Второй вариант: удаляемый узел имеет правого потомка, у которого нет левого потомка
+    /// Третий вариант: удаляемый узел имеет правого потомка у которого есть левый потомок
+    /// 
     /// </summary>
-    class _003_BinaryTree
+    class _004_BinaryTree
     {
         class BinaryTree<T> : IEnumerable<T> where T : IComparable<T>
         {
@@ -32,6 +37,51 @@ namespace CSharp.Base.StructureData.Trees
             {
                 _001_TreeNode.BineryTreeNode<T> parent;
                 return FindWithParent(value, out parent) != null;
+            }
+
+            bool Remove(T value)
+            {
+                _001_TreeNode.BineryTreeNode<T> current;
+                _001_TreeNode.BineryTreeNode<T> parent;
+
+                current = this.FindWithParent(value, out parent);
+                if (current == null) return false;
+
+                Count--;
+
+                // 1 вариант
+                if (current.Rigth == null)
+                {
+                    if (parent == null) _head = current.Left;
+                    else
+                    {
+                        var result = parent.CompareNode(current);
+
+                        if (result > 0) parent.Left = current.Left;
+                        else
+                        if (result < 0) parent.Rigth = current.Left;
+                    }
+                }
+                // 2 вариант
+                else if(current.Rigth.Left == null)
+                {
+                    current.Rigth.Left = current.Left;
+
+                    if (parent == null) _head = current.Rigth;
+                    else
+                    {
+
+                    }
+
+                }
+
+                // 3 вариант
+
+
+
+
+
+                return true;
             }
 
             //Find
@@ -90,21 +140,8 @@ namespace CSharp.Base.StructureData.Trees
             }
         }
 
-
-        public _003_BinaryTree()
+        public _004_BinaryTree()
         {
-            var binaryTree = new BinaryTree<int>();
-
-            binaryTree.Add(1);
-            binaryTree.Add(3);
-            binaryTree.Add(5);
-            binaryTree.Add(2);
-            binaryTree.Add(8);
-
-            Console.WriteLine($"Contains: {binaryTree.Contains(2)}");
-            Console.WriteLine($"Contains: {binaryTree.Contains(12)}");
-
-            Console.Read();
         }
     }
 }

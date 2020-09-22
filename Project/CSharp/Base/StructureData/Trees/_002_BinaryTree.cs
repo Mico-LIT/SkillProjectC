@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace CSharp.Base.StructureData.Trees
 {
+    /// <summary>
+    /// Реализован метод добавления
+    /// </summary>
     class _002_BinaryTree
     {
         class BinaryTree<T> : IEnumerable<T> where T : IComparable<T>

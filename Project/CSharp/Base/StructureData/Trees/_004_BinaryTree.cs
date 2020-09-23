@@ -49,7 +49,7 @@ namespace CSharp.Base.StructureData.Trees
 
                 Count--;
 
-                // 1 вариант
+                // Первый вариант: удаляемый узел не имеет правого потомка 
                 if (current.Rigth == null)
                 {
                     if (parent == null) _head = current.Left;
@@ -62,20 +62,27 @@ namespace CSharp.Base.StructureData.Trees
                         if (result < 0) parent.Rigth = current.Left;
                     }
                 }
-                // 2 вариант
-                else if(current.Rigth.Left == null)
+                // Второй вариант: удаляемый узел имеет правого потомка, у которого нет левого потомка
+                else if (current.Rigth.Left == null)
                 {
                     current.Rigth.Left = current.Left;
 
                     if (parent == null) _head = current.Rigth;
                     else
                     {
-
+                        var result = parent.CompareTo(value);
+                        if (result > 0)
+                            parent.Left = current.Rigth;
+                        else
+                            parent.Rigth = current.Rigth;
                     }
 
                 }
+                // Третий вариант: удаляемый узел имеет правого потомка у которого есть левый потомок
+                else
+                {
 
-                // 3 вариант
+                }
 
 
 

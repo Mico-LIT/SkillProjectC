@@ -71,6 +71,7 @@ namespace CSharp.Base.StructureData.Trees
                     else
                     {
                         var result = parent.CompareTo(value);
+
                         if (result > 0)
                             parent.Left = current.Rigth;
                         else
@@ -81,12 +82,32 @@ namespace CSharp.Base.StructureData.Trees
                 // Третий вариант: удаляемый узел имеет правого потомка у которого есть левый потомок
                 else
                 {
+                    _001_TreeNode.BineryTreeNode<T> leftmost = current.Rigth.Left;
+                    _001_TreeNode.BineryTreeNode<T> leftmostParent = current.Rigth;
 
+                    while (leftmost != null)
+                    {
+                        leftmostParent = leftmost;
+                        leftmost = leftmost.Left;
+                    }
+                    // правое поддерево крайнего левого узла, становится левым поддеревом его родительского узла
+                    leftmostParent.Left = leftmost.Rigth;
+
+                    leftmost.Rigth = current.Rigth;
+                    leftmost.Left = current.Left;
+
+
+                    if (parent == null) _head = leftmost;
+                    else
+                    {
+                        var result = parent.CompareTo(current.Value);
+
+                        if (result > 0)
+                            parent.Left = leftmost;
+                        else
+                            parent.Rigth = leftmost;                        
+                    }
                 }
-
-
-
-
 
                 return true;
             }
@@ -149,6 +170,15 @@ namespace CSharp.Base.StructureData.Trees
 
         public _004_BinaryTree()
         {
+
+
+
+
+
+
+
+
+
         }
     }
 }

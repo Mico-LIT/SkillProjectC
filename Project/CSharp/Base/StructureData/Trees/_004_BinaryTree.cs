@@ -39,7 +39,7 @@ namespace CSharp.Base.StructureData.Trees
                 return FindWithParent(value, out parent) != null;
             }
 
-            bool Remove(T value)
+            public bool Remove(T value)
             {
                 _001_TreeNode.BineryTreeNode<T> current;
                 _001_TreeNode.BineryTreeNode<T> parent;
@@ -170,14 +170,19 @@ namespace CSharp.Base.StructureData.Trees
 
         public _004_BinaryTree()
         {
+            var binaryTree = new BinaryTree<int>();
+
+            binaryTree.Add(10);
+            binaryTree.Add(11);
+            binaryTree.Add(18);
+            binaryTree.Add(14);
+            binaryTree.Add(7);
+            binaryTree.Add(3);
+            binaryTree.Add(5);
 
 
-
-
-
-
-
-
+            Console.WriteLine($"{binaryTree.Remove(3)}");
+            Console.WriteLine($"{binaryTree.Remove(3)}");
 
         }
     }

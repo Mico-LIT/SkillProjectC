@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\Algorithms\BubbleSort.cs" />
+    <Compile Include="Base\Algorithms\InsertionSort.cs" />
     <Compile Include="Base\Boxing\Boxing1.cs" />
     <Compile Include="Base\Boxing\Boxing2.cs" />
     <Compile Include="Base\Boxing\Boxing3.cs" />

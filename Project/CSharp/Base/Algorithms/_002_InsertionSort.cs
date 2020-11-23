@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace CSharp.Base.Algorithms
 {
-    class InsertionSort
+    class _002_InsertionSort
     {
-        public InsertionSort()
+        public _002_InsertionSort()
         {
             //int[] arr = { 5, 4, 3, 2, 1, 77, 3, 11 };
             int[] arr = { 2,4,1,3,7,9,5 };

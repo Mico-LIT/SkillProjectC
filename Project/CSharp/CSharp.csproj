@@ -59,8 +59,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base\Algorithms\BubbleSort.cs" />
-    <Compile Include="Base\Algorithms\InsertionSort.cs" />
+    <Compile Include="Base\Algorithms\_001_BubbleSort.cs" />
+    <Compile Include="Base\Algorithms\_002_InsertionSort.cs" />
+    <Compile Include="Base\Algorithms\_003_SelectedSort.cs" />
+    <Compile Include="Base\Algorithms\_004_MergeSort.cs" />
     <Compile Include="Base\Boxing\Boxing1.cs" />
     <Compile Include="Base\Boxing\Boxing2.cs" />
     <Compile Include="Base\Boxing\Boxing3.cs" />

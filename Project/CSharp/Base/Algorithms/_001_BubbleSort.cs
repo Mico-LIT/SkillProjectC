@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CSharp.Base.Algorithms
 {
-    class BubbleSort
+    class _001_BubbleSort
     {
-        public BubbleSort()
+        public _001_BubbleSort()
         {
             int[] arr = { 5, 4, 3, 2, 1, 77, 3, 11 };
             Display(arr);

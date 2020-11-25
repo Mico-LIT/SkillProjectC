@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharp.Base.StructureData.Trees
 {
-    // TODO Урок 4. Структура данных - дерево (1:06:00) обход дерева!
+    // TODO 01:06:00 - Урок 4. Структура данных - дерево обход дерева!
     class _005_InOrderTraversal
     {
     }

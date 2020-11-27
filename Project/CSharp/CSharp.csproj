@@ -136,6 +136,10 @@
     <Compile Include="Base\StructureData\Array\_001_ArrayList.cs" />
     <Compile Include="Base\StructureData\HashSet\_001_Set.cs" />
     <Compile Include="Base\StructureData\HashSet\_002_HashSet.cs" />
+    <Compile Include="Base\StructureData\HashTable\_002_HashTableArrayNode.cs" />
+    <Compile Include="Base\StructureData\HashTable\_001_HashTableNodePair.cs" />
+    <Compile Include="Base\StructureData\HashTable\_003_HashTableArray.cs" />
+    <Compile Include="Base\StructureData\HashTable\_005_HashTable.cs" />
     <Compile Include="Base\StructureData\LinkedList\_001_Singly_List.cs" />
     <Compile Include="Base\StructureData\LinkedList\_002_LinkedListNode.cs" />
     <Compile Include="Base\StructureData\LinkedList\_003_LinkedListNode.cs" />
@@ -295,9 +299,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Base\StructureData\HashTable\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>

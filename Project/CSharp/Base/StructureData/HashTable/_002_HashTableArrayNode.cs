@@ -18,15 +18,15 @@ namespace CSharp.Base.StructureData.HashTable
 
             instanse.Update("22", "22");
 
-            if (instanse.TryGetValue("2", out var result))            
+            if (instanse.TryGetValue("2", out var result))
                 Console.WriteLine($"result: {result}");
-            
+
 
             foreach (var item in instanse)
                 Console.WriteLine(item);
         }
 
-        class HashTableArrayNode<TKey, TValue>
+        public class HashTableArrayNode<TKey, TValue>
         {
             LinkedList<_001_HashTableNodePair<TKey, TValue>> _items;
 
@@ -83,6 +83,35 @@ namespace CSharp.Base.StructureData.HashTable
                 return found;
             }
 
+            public bool Remove(TKey key)
+            {
+                bool removed = false;
+
+                if (_items != null)
+                {
+                    var curr = _items.First;
+                    while (curr != null)
+                    {
+                        if (curr.Value.Key.Equals(key))
+                        {
+                            _items.Remove(curr);
+                            removed = true;
+                            break;
+                        }
+                        curr = curr.Next;
+                    }
+                }
+
+                return removed;
+            }
+
+            public void Clear()
+            {
+                if (_items != null)
+                    _items.Clear();
+
+            }
+
             public System.Collections.Generic.IEnumerator<TKey> GetEnumerator()
             {
                 if (_items != null)
@@ -92,7 +121,19 @@ namespace CSharp.Base.StructureData.HashTable
                 }
             }
 
-        }
 
+            public IEnumerable<_001_HashTableNodePair<TKey, TValue>> Items
+            {
+                get
+                {
+                    if (_items != null)
+                    {
+                        foreach (_001_HashTableNodePair<TKey, TValue> node in _items)
+                            yield return node;
+                    }
+                }
+            }
+
+        }
     }
 }

@@ -10,7 +10,7 @@ namespace CSharp.InterviewDeveloper
     class Task_3
     {
         /// <summary>
-        /// Не решенный вопрос!!!!!!!!!!
+        /// TODO Не решенный вопрос!!!!!!!!!!
         /// </summary>
         public void Process()
         {

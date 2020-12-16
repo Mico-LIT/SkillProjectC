@@ -8,20 +8,20 @@ namespace CSharp.InterviewDeveloper
 {
     class Task_6
     {
-            private static Object syncObject = new Object();
-            private static void Write()
+        private static Object syncObject = new Object();
+        private static void Write()
+        {
+            lock (syncObject)
             {
-                lock (syncObject)
-                {
-                    Console.WriteLine("test");
-                }
+                Console.WriteLine("test");
             }
-            public void Main()
+        }
+        public void Main()
+        {
+            lock (syncObject)
             {
-                lock (syncObject)
-                {
-                    Write();
-                }
+                Write();
             }
+        }
     }
 }

@@ -198,6 +198,7 @@
     <Compile Include="Base\Threading\TPL\_016_TPL_Cancellation.cs" />
     <Compile Include="Base\Threading\TPL\_017_TPL_ContinuationOptions.cs" />
     <Compile Include="Base\Threading\TPL\_PLINQ\_001_PLINQ.cs" />
+    <Compile Include="Base\UniversalTemplate\CircularBuffer\_001_CircularBuffer.cs" />
     <Compile Include="Games\Car.cs" />
     <Compile Include="Games\CarBody.cs" />
     <Compile Include="Games\EngineBMW.cs" />

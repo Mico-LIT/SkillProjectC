@@ -8,5 +8,10 @@ namespace CSharp.Base.UniversalTemplate.Collections.ImmutableColl
 {
     class _001_Class1
     {
+        public _001_Class1()
+        {
+            // Потокобезопасные создают новые коллекции
+            // See System.Collections.Immutable
+        }
     }
 }

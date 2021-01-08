@@ -13,6 +13,9 @@ namespace CSharp.Base.UniversalTemplate.Collections
         {
             ObservableCollection<int> ts = new ObservableCollection<int>();
             ts.CollectionChanged += Ts_CollectionChanged;
+
+            ts.Add(1);
+            ts[0] = 2;
         }
 
         private void Ts_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
@@ -20,10 +23,14 @@ namespace CSharp.Base.UniversalTemplate.Collections
             switch (e.Action)
             {
                 case System.Collections.Specialized.NotifyCollectionChangedAction.Add:
+                    Console.WriteLine("add {0}", (int)e.NewItems[0]);
                     break;
                 case System.Collections.Specialized.NotifyCollectionChangedAction.Remove:
                     break;
                 case System.Collections.Specialized.NotifyCollectionChangedAction.Replace:
+                    int v1 = (int)e.OldItems[0];
+                    int v2 = (int)e.NewItems[0];
+                    Console.WriteLine($"{v1} Replace on {v2}");
                     break;
                 case System.Collections.Specialized.NotifyCollectionChangedAction.Move:
                     break;

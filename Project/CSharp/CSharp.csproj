@@ -198,6 +198,8 @@
     <Compile Include="Base\Threading\TPL\_016_TPL_Cancellation.cs" />
     <Compile Include="Base\Threading\TPL\_017_TPL_ContinuationOptions.cs" />
     <Compile Include="Base\Threading\TPL\_PLINQ\_001_PLINQ.cs" />
+    <Compile Include="Base\UniversalTemplate\CircularBuffer\IBuffer.cs" />
+    <Compile Include="Base\UniversalTemplate\CircularBuffer\_002_Buffer.cs" />
     <Compile Include="Base\UniversalTemplate\Collections\ConcurrentColl\_001_Class1.cs" />
     <Compile Include="Base\UniversalTemplate\Collections\EmployeeModel.cs" />
     <Compile Include="Base\UniversalTemplate\Collections\ImmutableColl\_001_Class1.cs" />

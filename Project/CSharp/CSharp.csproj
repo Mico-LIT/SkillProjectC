@@ -199,7 +199,7 @@
     <Compile Include="Base\Threading\TPL\_017_TPL_ContinuationOptions.cs" />
     <Compile Include="Base\Threading\TPL\_PLINQ\_001_PLINQ.cs" />
     <Compile Include="Base\UniversalTemplate\CircularBuffer\IBuffer.cs" />
-	<Compile Include="Base\UniversalTemplate\CircularBuffer\_003_CircularBuffer.cs" />
+    <Compile Include="Base\UniversalTemplate\CircularBuffer\_003_CircularBuffer.cs" />
     <Compile Include="Base\UniversalTemplate\CircularBuffer\_002_Buffer.cs" />
     <Compile Include="Base\UniversalTemplate\Collections\ConcurrentColl\_001_Class1.cs" />
     <Compile Include="Base\UniversalTemplate\Collections\EmployeeModel.cs" />
@@ -215,6 +215,7 @@
     <Compile Include="Base\UniversalTemplate\Collections\_007_SortedSet.cs" />
     <Compile Include="Base\UniversalTemplate\Collections\_008_SortedList.cs" />
     <Compile Include="Base\UniversalTemplate\Collections\_009_SortedDictionary.cs" />
+    <Compile Include="Base\UniversalTemplate\CollectitModels\_001_.cs" />
     <Compile Include="Games\Car.cs" />
     <Compile Include="Games\CarBody.cs" />
     <Compile Include="Games\EngineBMW.cs" />

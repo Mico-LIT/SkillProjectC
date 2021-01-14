@@ -21,9 +21,9 @@ namespace CSharp.Base.UniversalTemplate.CircularBuffer
             this.capacity = count;
         }
 
-        public void Write(T value)
+        public override void Write(T value)
         {
-            Write(value);
+            base.Write(value);
 
             if (items.Count > capacity)            
                 items.Dequeue();

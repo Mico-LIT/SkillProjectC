@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CSharp.Base.UniversalTemplate.CircularBuffer
 {
-    class _002_Buffer<T> : IBuffer<T>, IEnumerable<T>
+    class _002_Buffer<T> : IBuffer<T>
     {
         protected Queue<T> items = new Queue<T>();
         public virtual bool IsEmpty => items.Count == 0;
@@ -30,6 +30,16 @@ namespace CSharp.Base.UniversalTemplate.CircularBuffer
         public IEnumerator<T> GetEnumerator()
         {
             return items.GetEnumerator();
+        }
+
+        public IEnumerable<TOutput> AsEnumerableOf<TOutput>()
+        {
+            var convertor = System.ComponentModel.TypeDescriptor.GetConverter(typeof(T));
+            foreach (var item in items)
+            {
+                var result = convertor.ConvertTo(item, typeof(TOutput));
+                yield return (TOutput)result;
+            }
         }
     }
 }

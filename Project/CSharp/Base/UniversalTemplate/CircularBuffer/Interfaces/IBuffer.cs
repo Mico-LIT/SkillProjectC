@@ -1,4 +1,4 @@
-﻿namespace CSharp.Base.UniversalTemplate.CircularBuffer
+﻿namespace CSharp.Base.UniversalTemplate.CircularBuffer.Interfaces
 {
     using System.Collections.Generic;
     interface IBuffer<T> : IEnumerable<T>

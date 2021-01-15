@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSharp.Base.UniversalTemplate.CircularBuffer.Interfaces;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;

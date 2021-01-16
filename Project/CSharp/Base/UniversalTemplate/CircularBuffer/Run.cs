@@ -20,9 +20,12 @@ namespace CSharp.Base.UniversalTemplate.CircularBuffer
 
             Converter<double, string> converter = (x) => { return x.ToString(); };
 
-            var buffer = new CSharp.Base.UniversalTemplate.CircularBuffer._003_CircularBuffer<double>();
+            var buffer = new CSharp.Base.UniversalTemplate.CircularBuffer._003_CircularBuffer<double>(3);
+            buffer.ItemDiscardedEvent += Buffer_ItemDiscardedEvent;
+
             buffer.Write(1.2);
             buffer.Write(1.8);
+            buffer.Write(2.3);
             buffer.Write(2.3);
 
             buffer.Print();            
@@ -36,6 +39,11 @@ namespace CSharp.Base.UniversalTemplate.CircularBuffer
 
             foreach (var item in itemsMapString)
                 Console.WriteLine(item);
+        }
+
+        private void Buffer_ItemDiscardedEvent(object sender, _003_CircularBuffer<double>.ItemDiscardedEventEargs<double> e)
+        {
+            Console.WriteLine($"{e.ItemDiscarded} | new -> {e.NewItem}");
         }
     }
 }

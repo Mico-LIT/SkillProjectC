@@ -218,6 +218,7 @@
     <Compile Include="Base\UniversalTemplate\Collections\_008_SortedList.cs" />
     <Compile Include="Base\UniversalTemplate\Collections\_009_SortedDictionary.cs" />
     <Compile Include="Base\UniversalTemplate\CollectitModels\_001_.cs" />
+    <Compile Include="Base\UniversalTemplate\EF_Core_Example\_001_Model.cs" />
     <Compile Include="Games\Car.cs" />
     <Compile Include="Games\CarBody.cs" />
     <Compile Include="Games\EngineBMW.cs" />

@@ -12,12 +12,45 @@ namespace EF_Core_UniversalTemplate
         {
             Console.WriteLine("Hello World!");
 
-            using (var sqlRepository = new SqlRepository<_001_Model.Employee>(new CompanyDb()))
+            using (_001_Model.IRepository<_001_Model.Employee> sqlRepository =
+                    new SqlRepository<_001_Model.Employee>(new CompanyDb()))
             {
-                sqlRepository.Add(new _001_Model.Employee() { Name = "1234" });
-                sqlRepository.Commit();
-                var employees = sqlRepository.FindAll().ToListAsync().Result;
+                AddEmployee(sqlRepository);
+                CountEmployee(sqlRepository);
+                QueryEmployee(sqlRepository);
+                DumpPeople(sqlRepository);
             }
+
+            Console.ReadLine();
+        }
+
+        private static void DumpPeople(_001_Model.IRepository<_001_Model.Employee> sqlRepository)
+        {
+            var emps = sqlRepository.FindAll();
+            foreach (var item in emps)
+            {
+                Console.WriteLine(item.Name);
+            }
+        }
+
+        private static void QueryEmployee(_001_Model.IRepository<_001_Model.Employee> sqlRepository)
+        {
+            var emp = sqlRepository.FindById(1);
+            Console.WriteLine(emp.Name);
+        }
+
+        private static void CountEmployee(_001_Model.IRepository<_001_Model.Employee> sqlRepository)
+        {
+            var countEmp = sqlRepository.FindAll().Count();
+            Console.WriteLine(countEmp);
+        }
+
+        private static void AddEmployee(_001_Model.IRepository<_001_Model.Employee> sqlRepository)
+        {
+            sqlRepository.Add(new _001_Model.Employee() { Name = "Misha" });
+            sqlRepository.Add(new _001_Model.Employee() { Name = "Vika" });
+            sqlRepository.Add(new _001_Model.Employee() { Name = "Ira" });
+            sqlRepository.Commit();
         }
     }
 }

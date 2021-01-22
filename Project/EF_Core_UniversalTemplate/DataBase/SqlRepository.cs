@@ -26,7 +26,7 @@ namespace EF_Core_UniversalTemplate.DataBase
 
         public void Add(T item)
         {
-            if (item.IsValid())
+            if (item.IsValid)
             {
                 dbSet.Add(item);
             }

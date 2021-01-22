@@ -8,23 +8,35 @@ namespace CSharp.Base.UniversalTemplate.EF_Core_Example
 {
     public class _001_Model
     {
-        public interface IEntity
+        public class Person
         {
-            int Id { get; set; }
-            bool IsValid();
+            public string Name { get; set; }
         }
 
-        public class Employee : IEntity
+        public class Employee : Person, IEntity
         {
             public int Id { get; set; }
-            public string Name { get; set; }
+            public bool IsValid => true;
 
-            public bool IsValid()
+            public virtual void DoWork()
             {
-                return true;
+                Console.WriteLine("doing real work");
             }
         }
 
+        public class Manager : Employee
+        {
+            public override void DoWork()
+            {
+                Console.WriteLine("create meeting");
+            }
+        }
+
+        public interface IEntity
+        {
+            int Id { get; set; }
+            bool IsValid { get; }
+        }
 
         public interface IRepository<T> : IDisposable
         {

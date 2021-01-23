@@ -13,10 +13,16 @@ namespace CSharp.Base.OOP.Полиморфизм
         /// </summary>
         class A :B
         {
+
+#pragma warning disable 0108
+
             public void Display1()
             {
                 Console.WriteLine("Class A Display1");
             }
+
+#pragma warning restore 0108
+
         }
 
         class B

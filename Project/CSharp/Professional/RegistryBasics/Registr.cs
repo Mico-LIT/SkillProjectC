@@ -11,32 +11,34 @@ namespace CSharp.Professional.RegistryBasics
     {
         public Registr()
         {
-            if (false)
-            {
-            // Создаем
-            RegistryKey key = Registry.CurrentUser;
-            RegistryKey wkey = key.OpenSubKey("Software",true);
-            try
-            {
-                wkey.CreateSubKey("d12");
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-            finally
-            {
-                wkey.Close();
-            };
+            bool forTest = false;
 
-            // Записываем
-            RegistryKey subkey = key.OpenSubKey("Software",true);
-            RegistryKey subsubkey = subkey.OpenSubKey("D12",true);
-            subsubkey.SetValue("t1", 123);
-            subsubkey.SetValue("str", "1234");
-            subsubkey.SetValue("t2", 333,RegistryValueKind.String);
-            subkey.Close();
-            subsubkey.Close();
+            if (forTest)
+            {
+                // Создаем
+                RegistryKey key = Registry.CurrentUser;
+                RegistryKey wkey = key.OpenSubKey("Software", true);
+                try
+                {
+                    wkey.CreateSubKey("d12");
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    wkey.Close();
+                };
+
+                // Записываем
+                RegistryKey subkey = key.OpenSubKey("Software", true);
+                RegistryKey subsubkey = subkey.OpenSubKey("D12", true);
+                subsubkey.SetValue("t1", 123);
+                subsubkey.SetValue("str", "1234");
+                subsubkey.SetValue("t2", 333, RegistryValueKind.String);
+                subkey.Close();
+                subsubkey.Close();
             }
             // Читаем
 

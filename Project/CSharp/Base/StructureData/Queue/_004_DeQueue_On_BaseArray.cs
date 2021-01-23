@@ -138,8 +138,9 @@ namespace CSharp.Base.StructureData.Queue
         public _004_DeQueue_On_BaseArray()
         {
             DeQue<int> instance = new DeQue<int>();
+            bool forTest = true;
 
-            if (true)
+            if (forTest)
             {
                 instance.EnqueueLast(1);
                 instance.EnqueueLast(2);

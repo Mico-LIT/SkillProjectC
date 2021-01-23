@@ -35,7 +35,7 @@ namespace App_ADO_Net._002_SqlCommand
             catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
             finally
             {

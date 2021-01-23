@@ -66,7 +66,7 @@ namespace CSharp.Base.OOP.Examples
                     pf2 = (List<PersonFix>)xml.Deserialize(fs);
 
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     throw new Exception("ERROR");
                 }

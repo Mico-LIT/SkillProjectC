@@ -30,6 +30,7 @@ namespace EF_CodeFirst.Examples._004_Transaction
                     }
                     catch (Exception ex)
                     {
+                        Console.WriteLine(ex.ToString());
                         bt.Rollback();
                     }
                 }

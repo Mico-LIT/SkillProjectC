@@ -28,12 +28,13 @@ namespace App_ADO_Net._002_SqlCommand
 
                 Console.WriteLine($"Processing rows INSERT: {insert.ExecuteNonQuery()}");
 
-                throw new Exception("Error");
+                //throw new Exception("Error"); // For Test!
 
                 insert.Transaction.Commit();
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.ToString());
                 insert.Transaction.Rollback();
             }
             finally

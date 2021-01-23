@@ -38,7 +38,7 @@ namespace CSharp.Base.Threading.TPL
         {
             Console.WriteLine("Running task");
 
-            throw new Exception();
+            // throw new Exception(); // For Test
 
             Console.WriteLine("Is Completed task");
         }

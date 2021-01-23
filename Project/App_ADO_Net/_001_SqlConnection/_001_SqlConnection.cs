@@ -26,7 +26,7 @@ namespace App_ADO_Net._001_SqlConnection
                 catch (Exception ex)
                 {
 
-                    throw;
+                    throw ex;
                 }
             }
 

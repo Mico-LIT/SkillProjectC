@@ -41,17 +41,18 @@ namespace CSharp.Base.UniversalTemplate.CircularBuffer
                 ItemDiscardedEvent(this, new ItemDiscardedEventEargs<T>(oldValue, value));            
         }
 
-        public class ItemDiscardedEventEargs<T> : EventArgs
+    }
+
+    public class ItemDiscardedEventEargs<T> : EventArgs
+    {
+        public ItemDiscardedEventEargs(T itemDiscarded, T newItem)
         {
-            public ItemDiscardedEventEargs(T itemDiscarded, T newItem)
-            {
-                ItemDiscarded = itemDiscarded;
-                NewItem = newItem;
-            }
-
-            public T ItemDiscarded { get; set; }
-            public T NewItem { get; set; }
-
+            ItemDiscarded = itemDiscarded;
+            NewItem = newItem;
         }
+
+        public T ItemDiscarded { get; set; }
+        public T NewItem { get; set; }
+
     }
 }

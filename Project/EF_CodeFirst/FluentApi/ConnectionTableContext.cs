@@ -36,8 +36,10 @@ namespace EF_CodeFirst.FluentApi
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             #region OneToZeroOrOne modelBuilder
+            
+            var forTest = false;
 
-            if (false)
+            if (forTest)
             {
                 modelBuilder.Entity<OneToZeroOrOne.Phone>()
                     .HasRequired(c => c.Company)

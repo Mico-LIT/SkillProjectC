@@ -68,10 +68,16 @@ namespace CSharp.Base.OOP.Полиморфизм
             {
                 Console.WriteLine("ClassA BBB");
             }
+
+#pragma warning disable 0114
+
             public void CCC()
             {
                 Console.WriteLine("ClassA CCC");
             }
+
+#pragma warning restore 0114
+
         }
 
         public InheritanceAndPolymorphismV2()
@@ -135,10 +141,14 @@ namespace CSharp.Base.OOP.Полиморфизм
         /// </summary>
         class ClassA : ClassB
         {
+#pragma warning disable 0108
+
             public virtual void AAA()
             {
                 Console.WriteLine("ClassA AAA");
             }
+
+#pragma warning restore 0108
 
             public new void BBB()
             {
@@ -156,11 +166,14 @@ namespace CSharp.Base.OOP.Полиморфизм
             {
                 Console.WriteLine("ClassC AAA");
             }
-            
+
+#pragma warning disable 0114
             public void CCC()
             {
                 Console.WriteLine("ClassC CCC");
             }
+#pragma warning restore 0114
+
         }
 
         public InheritanceAndPolymorphismV2_1()

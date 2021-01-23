@@ -28,10 +28,15 @@ namespace CSharp.Base.OOP.OverrideMethods
         {
             public Derived() { }
 
+#pragma warning disable 0108
+
             public void Function1()
             {
                 Console.WriteLine("Derived-Fun 1");
             }
+
+#pragma warning restore 0108
+
             public override void Function2()
             {
                 Console.WriteLine("Derived-Fun 2");

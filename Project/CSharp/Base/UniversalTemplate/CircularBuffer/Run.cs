@@ -41,7 +41,7 @@ namespace CSharp.Base.UniversalTemplate.CircularBuffer
                 Console.WriteLine(item);
         }
 
-        private void Buffer_ItemDiscardedEvent(object sender, _003_CircularBuffer<double>.ItemDiscardedEventEargs<double> e)
+        private void Buffer_ItemDiscardedEvent(object sender, ItemDiscardedEventEargs<double> e)
         {
             Console.WriteLine($"{e.ItemDiscarded} | new -> {e.NewItem}");
         }

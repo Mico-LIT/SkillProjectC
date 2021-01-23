@@ -14,7 +14,9 @@ namespace CSharp.Professional.XMLandConfigFile.Config
         public void ConfigurationBasic1()
         {
             //1 Устарел
-            string value = ConfigurationSettings.AppSettings["Foo"];
+            //string value = ConfigurationSettings.AppSettings["Foo"];
+
+            string value = ConfigurationManager.AppSettings["Foo"];
             Console.WriteLine(value);
             Console.WriteLine(new string('-',20));
 

@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharp.Games
+namespace CSharp.TasksByOOP
 {
-    interface ICarBody
+    class Run
     {
-        void Draw();
-
+        // TODO ООП Задачи для общего развития
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CSharp.Games
+namespace CSharp.TasksByOOP.Games
 {
     class Game
     {

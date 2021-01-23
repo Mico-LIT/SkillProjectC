@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharp.Games
+namespace CSharp.TasksByOOP.Games
 {
     interface IEngine
     {

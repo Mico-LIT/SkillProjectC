@@ -219,14 +219,13 @@
     <Compile Include="Base\UniversalTemplate\Collections\_009_SortedDictionary.cs" />
     <Compile Include="Base\UniversalTemplate\CollectitModels\_001_.cs" />
     <Compile Include="Base\UniversalTemplate\EF_Core_Example\_001_Model.cs" />
-    <Compile Include="Games\Car.cs" />
-    <Compile Include="Games\CarBody.cs" />
-    <Compile Include="Games\EngineBMW.cs" />
-    <Compile Include="Games\Game.cs" />
-    <Compile Include="Games\ICarBody.cs" />
-    <Compile Include="Games\IEngine.cs" />
-    <Compile Include="Games\Road.cs" />
-    <Compile Include="Helpers\RenameFile.cs" />
+    <Compile Include="TasksByOOP\Games\Car.cs" />
+    <Compile Include="TasksByOOP\Games\CarBody.cs" />
+    <Compile Include="TasksByOOP\Games\EngineBMW.cs" />
+    <Compile Include="TasksByOOP\Games\Game.cs" />
+    <Compile Include="TasksByOOP\Games\ICarBody.cs" />
+    <Compile Include="TasksByOOP\Games\IEngine.cs" />
+    <Compile Include="TasksByOOP\Games\Road.cs" />
     <Compile Include="InterviewDeveloper\Task_1.cs" />
     <Compile Include="InterviewDeveloper\Task_2.cs" />
     <Compile Include="InterviewDeveloper\Task_3.cs" />
@@ -313,13 +312,13 @@
     <Compile Include="Professional\XMLandConfigFile\XML\XMLExample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tasks\Class1.cs" />
-    <Compile Include="Tasks\Unit1\Book.cs" />
-    <Compile Include="Tasks\Unit1\library.cs" />
-    <Compile Include="Tasks\Unit1\libraryBase.cs" />
-    <Compile Include="Tasks\Unit1\Task.cs" />
-    <Compile Include="Tasks\Unit1\User.cs" />
-    <Compile Include="Tasks\Unit1\UserBook.cs" />
+    <Compile Include="TasksByOOP\Run.cs" />
+    <Compile Include="TasksByOOP\Unit1\Book.cs" />
+    <Compile Include="TasksByOOP\Unit1\library.cs" />
+    <Compile Include="TasksByOOP\Unit1\libraryBase.cs" />
+    <Compile Include="TasksByOOP\Unit1\Task.cs" />
+    <Compile Include="TasksByOOP\Unit1\User.cs" />
+    <Compile Include="TasksByOOP\Unit1\UserBook.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -347,7 +346,7 @@
   <ItemGroup>
     <Content Include="Base\OOP\Examples\condition.txt" />
     <Content Include="Professional\XMLandConfigFile\XML\XMLFile1.xml" />
-    <Content Include="Tasks\condition.txt" />
+    <Content Include="TasksByOOP\condition.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharp.Tasks.Unit1
+namespace CSharp.TasksByOOP.Unit1
 {
     public class Task
     {

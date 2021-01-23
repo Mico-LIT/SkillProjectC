@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace CSharp.Games
+namespace CSharp.TasksByOOP.Games
 {
     class CarBody : ICarBody
     {

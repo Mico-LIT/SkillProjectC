@@ -3,6 +3,8 @@ using System;
 using CSharp.Base.UniversalTemplate.EF_Core_Example;
 using System.Linq;
 using EF_Core_UniversalTemplate.DataBase;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace EF_Core_UniversalTemplate
 {
@@ -16,6 +18,7 @@ namespace EF_Core_UniversalTemplate
                     new SqlRepository<_001_Model.Employee>(new CompanyDb()))
             {
                 AddEmployee(sqlRepository);
+                AddManager(sqlRepository);
                 CountEmployee(sqlRepository);
                 QueryEmployee(sqlRepository);
                 DumpPeople(sqlRepository);
@@ -24,7 +27,15 @@ namespace EF_Core_UniversalTemplate
             Console.ReadLine();
         }
 
-        private static void DumpPeople(_001_Model.IRepository<_001_Model.Employee> sqlRepository)
+        private static void AddManager(_001_Model.IWriteOnlyRepository<_001_Model.Manager> sqlRepository)
+        {
+            sqlRepository.Add(new _001_Model.Manager() { Name = "Misha_Manager" });
+            sqlRepository.Add(new _001_Model.Manager() { Name = "Vika_Manager" });
+            sqlRepository.Add(new _001_Model.Manager() { Name = "Ira_Manager" });
+            sqlRepository.Commit();
+        }
+
+        private static void DumpPeople(_001_Model.IReadOnlyRepository<_001_Model.Person> sqlRepository)
         {
             var emps = sqlRepository.FindAll();
             foreach (var item in emps)
@@ -45,7 +56,7 @@ namespace EF_Core_UniversalTemplate
             Console.WriteLine(countEmp);
         }
 
-        private static void AddEmployee(_001_Model.IRepository<_001_Model.Employee> sqlRepository)
+        private static void AddEmployee(_001_Model.IWriteOnlyRepository<_001_Model.Employee> sqlRepository)
         {
             sqlRepository.Add(new _001_Model.Employee() { Name = "Misha" });
             sqlRepository.Add(new _001_Model.Employee() { Name = "Vika" });

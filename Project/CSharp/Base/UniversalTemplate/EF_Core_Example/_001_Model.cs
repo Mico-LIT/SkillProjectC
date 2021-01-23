@@ -37,14 +37,26 @@ namespace CSharp.Base.UniversalTemplate.EF_Core_Example
             int Id { get; set; }
             bool IsValid { get; }
         }
+        
+        //Ковариантность
+        public interface IReadOnlyRepository<out T> : IDisposable
+        {
+            T FindById(int id);
+            IQueryable<T> FindAll();
+        }
 
-        public interface IRepository<T> : IDisposable
+        // Контравариантность
+        public interface IWriteOnlyRepository<in T> : IDisposable
         {
             void Add(T item);
             void Deleted(T item);
-            T FindById(int id);
-            IQueryable<T> FindAll();
             int Commit();
+        }
+
+        // Инвариантность
+        public interface IRepository<T> : IReadOnlyRepository<T>, IWriteOnlyRepository<T>, IDisposable
+        {
+
         }
     }
 }

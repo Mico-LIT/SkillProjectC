@@ -29,7 +29,7 @@ namespace CSharp.Base.OOP.Полиморфизм
     {
         public abstract class ClassA
         {
-            public int a;
+            public int a = 0;
             public void XXX() { }
             public abstract void YYY();
         }

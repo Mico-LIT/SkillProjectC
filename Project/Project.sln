@@ -43,8 +43,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App_ADO_Net", "App_ADO_Net\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_CodeFirst", "EF_CodeFirst\EF_CodeFirst.csproj", "{905196BA-69FA-4046-89F5-AABE7E76AC1C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Training", "Training", "{30E06B14-8E22-4AA2-A3F0-5CFAA09EE6F9}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DatasLayer", "DatasLayer", "{90F7E2EE-00A5-4590-B87E-E2AC8F09724B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "imickey", "imickey\imickey.csproj", "{99B219FA-9339-40FF-BCDD-049F39BA3D2C}"
@@ -105,7 +103,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Others", "Others", "{6729F8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_MySite", "_MySite", "{0C6D67C3-0370-4CAA-B6FC-DDBF56AE8729}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OthersCode", "Others\OthersCode\OthersCode.csproj", "{8F19336A-857D-464E-9DB2-27DE9E8ACE3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OthersCode", "Others\OthersCode\OthersCode.csproj", "{8F19336A-857D-464E-9DB2-27DE9E8ACE3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

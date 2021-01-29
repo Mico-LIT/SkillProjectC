@@ -23,7 +23,7 @@ namespace Reflection
             return new ContainerBuilder(this, type);
         }
 
-        public object Resolve<TSourse>()
+        public TSourse Resolve<TSourse>()
         {
             return (TSourse)this.Resolve(typeof(TSourse));
         }
@@ -34,6 +34,16 @@ namespace Reflection
             {
                 var destinationsType = _map[type];
                 return CreateInstance(destinationsType);
+            }
+            else if (type.IsGenericType && _map.ContainsKey(type.GetGenericTypeDefinition()))
+            {
+                var destinanion = _map[type.GetGenericTypeDefinition()];
+                var clouseDestination = destinanion.MakeGenericType(type.GetGenericArguments());
+                return CreateInstance(clouseDestination);
+            }
+            else if (!type.IsAbstract)
+            {
+                return CreateInstance(type);
             }
             else
             {

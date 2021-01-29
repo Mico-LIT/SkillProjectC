@@ -49,4 +49,9 @@ namespace Reflection
             Console.WriteLine(typeof(T).Name);
         }
     }
+
+    public class Customer
+    {
+
+    }
 }

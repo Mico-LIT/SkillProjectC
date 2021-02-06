@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Network_programming", "Network_programming\Network_programming.csproj", "{EB837ADE-8F08-4590-8F9A-26004F031848}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Network_programming", "Web\NetWork\Network_programming\Network_programming.csproj", "{EB837ADE-8F08-4590-8F9A-26004F031848}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{6C5C438B-18B3-460B-BFF5-AD3C12DE4417}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Web\NetWork\Client-Server\Server\Server.csproj", "{6C5C438B-18B3-460B-BFF5-AD3C12DE4417}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SClient", "SClient\SClient.csproj", "{AFD033A7-28BC-4429-9B4D-4D561B01540E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SClient", "Web\NetWork\Client-Server\SClient\SClient.csproj", "{AFD033A7-28BC-4429-9B4D-4D561B01540E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationOAuth", "WebApplication\WebApplicationOAuth.csproj", "{B6FE84F1-B8DD-4E4F-9E7F-514F5354E349}"
 EndProject
@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp", "CSharp\CSharp.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{5217E41D-438B-4536-87E8-489FF7B894C0}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web APIs", "Web APIs", "{28459528-835E-4BB0-8B71-161ED1227A5C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebAPIs", "WebAPIs", "{28459528-835E-4BB0-8B71-161ED1227A5C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetWork", "NetWork", "{C5DEEBF2-BD03-48C2-862E-EDFEECD92DC7}"
 EndProject

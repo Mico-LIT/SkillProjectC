@@ -9,13 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Web\NetWork\Clien
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SClient", "Web\NetWork\Client-Server\SClient\SClient.csproj", "{AFD033A7-28BC-4429-9B4D-4D561B01540E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationOAuth", "WebApplication\WebApplicationOAuth.csproj", "{B6FE84F1-B8DD-4E4F-9E7F-514F5354E349}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationOAuth", "Web\ASP\WebApplication\WebApplicationOAuth.csproj", "{B6FE84F1-B8DD-4E4F-9E7F-514F5354E349}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQL_Server_Base", "DatasLayer\SQL\MSSqlServer\SQL_Server_Base\SQL_Server_Base.csproj", "{79861ED8-448E-4C12-8E56-4E2C3342465A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp", "CSharp\CSharp.csproj", "{5F6B917E-54DF-40DE-AC21-5CE2688A6B62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{5217E41D-438B-4536-87E8-489FF7B894C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "Web\ASP\WebApplication1\WebApplication1.csproj", "{5217E41D-438B-4536-87E8-489FF7B894C0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebAPIs", "WebAPIs", "{28459528-835E-4BB0-8B71-161ED1227A5C}"
 EndProject
@@ -29,9 +29,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ASP", "ASP", "{D9084984-8B2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVC", "MVC", "{B290F39E-F5BB-4764-A87D-73091FC25C2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksAPI", "BooksAPI\BooksAPI.csproj", "{A550222C-992E-4398-B8FD-81CB8D137357}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksAPI", "Web\ASP\BooksAPI\BooksAPI.csproj", "{A550222C-992E-4398-B8FD-81CB8D137357}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebASPIdentityWithZeroByOWIN", "WebASPIdentityWithZeroByOWIN\WebASPIdentityWithZeroByOWIN.csproj", "{55CD0B9D-91BA-4678-9034-65796DDD57A2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebASPIdentityWithZeroByOWIN", "Web\ASP\WebASPIdentityWithZeroByOWIN\WebASPIdentityWithZeroByOWIN.csproj", "{55CD0B9D-91BA-4678-9034-65796DDD57A2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NT_Services", "NT_Services", "{0EEFB52D-9D02-4EE4-B653-46FF33A54537}"
 EndProject
@@ -43,9 +43,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App_ADO_Net", "DatasLayer\A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DatasLayer", "DatasLayer", "{90F7E2EE-00A5-4590-B87E-E2AC8F09724B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "imickey", "imickey\imickey.csproj", "{99B219FA-9339-40FF-BCDD-049F39BA3D2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "imickey", "Web\ASP\imickey\imickey.csproj", "{99B219FA-9339-40FF-BCDD-049F39BA3D2C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebASPCoreMVC", "WebASPCoreMVC\WebASPCoreMVC.csproj", "{A9A0E1D7-AE44-4ADB-AC28-A8FDB9CA2120}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebASPCoreMVC", "Web\ASP\WebASPCoreMVC\WebASPCoreMVC.csproj", "{A9A0E1D7-AE44-4ADB-AC28-A8FDB9CA2120}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NoSQL", "NoSQL", "{D082CBAE-C936-4BCA-B5BB-4C6B6ABED867}"
 EndProject
@@ -113,7 +113,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTesting", "UnitTesting"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Code", "UnitTesting\Code\Code.csproj", "{3C323B44-3638-4D16-A9E1-6E869D65CAF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_CodeFirst", "EF_CodeFirst\EF_CodeFirst.csproj", "{905196BA-69FA-4046-89F5-AABE7E76AC1C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_CodeFirst", "DatasLayer\ORM\EF_CodeFirst\EF_CodeFirst.csproj", "{905196BA-69FA-4046-89F5-AABE7E76AC1C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

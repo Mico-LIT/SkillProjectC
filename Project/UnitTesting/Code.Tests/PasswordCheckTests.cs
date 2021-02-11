@@ -12,7 +12,7 @@ namespace Code.Tests
     public class PasswordCheckTests
     {
         [TestMethod()]
-        public void GetPasswordStrength_c_result5Ballov()
+        public void GetPasswordStrength_AllChars_Result5Ballov()
         {
             //Arrange
             string pass = "Pasv123!";

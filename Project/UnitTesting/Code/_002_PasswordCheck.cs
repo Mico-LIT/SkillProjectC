@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Code
 {
-    public class PasswordCheck
+    public class _002_PasswordCheck
     {
         public int GetPasswordStrength(string password)
         {

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Code.Tests
+namespace Code.Tests.PasswordCheck
 {
     [TestClass]
     public class PasswordCheckTests
@@ -19,7 +19,7 @@ namespace Code.Tests
             string pass = "Pasv123!";
             int result = 5;
             //Act
-            int strengthPass = new PasswordCheck().GetPasswordStrength(pass);
+            int strengthPass = new _002_PasswordCheck().GetPasswordStrength(pass);
 
 
             //Assert
@@ -33,7 +33,7 @@ namespace Code.Tests
             string pass = "1qaz2wsx3edc";
             int result = 3;
             //Act
-            var sthrenthPass = new PasswordCheck().GetPasswordStrength(pass);
+            var sthrenthPass = new _002_PasswordCheck().GetPasswordStrength(pass);
             //Assert
             Debug.WriteLine(sthrenthPass);
             Assert.AreEqual(sthrenthPass, result);

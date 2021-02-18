@@ -26,6 +26,12 @@ namespace Code.Tests.ShopingCard
 
             card = new _001_ShopingCard();
             card.Add(item);
+
+            card.Add(new _001_ShopingCard.Item()
+            {
+                Name = "Page3",
+                Quantity =3
+            });
         }
 
         // Запускается после завершения последнего тестирущего метода (один раз)
@@ -37,16 +43,16 @@ namespace Code.Tests.ShopingCard
         }
 
         [TestMethod]
-        public void ShopingCard_CheckOut_ContainsIten()
+        public void ShopingCard_CheckOut_ContainsItem()
         {
             CollectionAssert.Contains(card.Items, card.Items.First());
         }
 
         [TestMethod]
-        public void ShopingCard_RemoveItems_Empty()
+        public void ShopingCard_RemoveItems_CollectionEqualOneElement()
         {
             //Arrange
-            int expected = 0;
+            int expected = 1;
             //Act
             card.Removed(0);
             //Assert

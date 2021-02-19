@@ -17,4 +17,10 @@
     <ProjectReference Include="..\Code\Code.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="UserManager\DataUsers.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

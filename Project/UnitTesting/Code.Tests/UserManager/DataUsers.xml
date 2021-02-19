@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<UserDetails>
+  <User UserId="Micom-111"  Phone="+78546521546"  Email="test@ggg.com"></User>
+  <User UserId="Egor_55"    Phone="11123"         Email="test@ggg.com"></User>
+  <User UserId="Wikiuuu8"   Phone="1222"          Email="test@ggg.com"></User>
+</UserDetails>

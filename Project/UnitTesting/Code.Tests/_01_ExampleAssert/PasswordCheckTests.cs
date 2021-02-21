@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Code.Tests.PasswordCheck
+namespace Code.Tests._01_ExampleAssert
 {
     [TestClass]
     public class PasswordCheckTests

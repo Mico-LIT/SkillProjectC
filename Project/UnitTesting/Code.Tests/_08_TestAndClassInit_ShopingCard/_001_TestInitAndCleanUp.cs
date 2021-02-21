@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Code.Tests.ShopingCard
+namespace Code.Tests._08_TestAndClassInit_ShopingCard
 {
     [TestClass]
     public class _001_TestInitAndCleanUp

@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 namespace Code.Tests._07_InternalClass
 {
     [TestClass]
-    public class _01_ExampleTest
+    public class _01_InternalClassExampleTest
     {
         [TestMethod]
-        public void TestExample()
+        public void TestExample_Tmp()
         {
-            var example = new InternalClassTest._001_Example();
+            var example = new _006_InternalClassExample();
             bool result = example.Tmp();
 
             Assert.IsTrue(result);

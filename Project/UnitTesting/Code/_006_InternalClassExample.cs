@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 // которая определена в параметрах.
 [assembly: InternalsVisibleTo("Code.Tests")]
 
-namespace Code.InternalClassTest
+namespace Code
 {
-    // по умолчанию типа доступа Internal (Доступна в текущей сборки)
-    class _001_Example
+    class _006_InternalClassExample
     {
+        // по умолчанию типа доступа Internal (Доступна в текущей сборки)
         public bool Tmp()
         {
             return true;

@@ -27,6 +27,16 @@ namespace _001_Example
                 app.UseDeveloperExceptionPage();
             }
 
+            app.Run(async (context) =>
+            {
+                var log = loggerFactory.CreateLogger("RequestInfo");
+                log.LogInformation("step 1");
+                log.LogError("step 2");
+                log.LogWarning("step 3");
+
+                await context.Response.WriteAsync("Hi");
+            });
+
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>

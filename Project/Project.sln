@@ -123,7 +123,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_002_Middleware", "Web\ASP\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_003_ConfigurationType", "Web\ASP\_003_ConfigurationType\_003_ConfigurationType.csproj", "{CE1FA042-ABBA-47B6-AA7D-AB6D66DCDC3F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_004_Services", "_004_Services\_004_Services.csproj", "{2C063050-C6DF-45F3-A6E9-34ADEA8D5E6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_004_Services", "Web\ASP\_004_Services\_004_Services.csproj", "{2C063050-C6DF-45F3-A6E9-34ADEA8D5E6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

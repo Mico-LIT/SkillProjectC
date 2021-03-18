@@ -117,13 +117,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_CodeFirst", "DatasLayer\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Code.Tests", "UnitTesting\Code.Tests\Code.Tests.csproj", "{9928743C-3ABB-4C61-A4E7-F6F2F4C8DB95}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_001_Example", "Web\ASP\_001_Example\_001_Example.csproj", "{8323F80A-3918-4F71-A8FB-6BEB9ED55B20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_001_StartupConfigure", "Web\ASP\_001_StartupConfigure\_001_StartupConfigure.csproj", "{8323F80A-3918-4F71-A8FB-6BEB9ED55B20}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_002_Example", "Web\ASP\_002_Example\_002_Example.csproj", "{F7F23FC5-DF11-4001-BEBB-146F607FB9F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_002_Middleware", "Web\ASP\_002_Middleware\_002_Middleware.csproj", "{F7F23FC5-DF11-4001-BEBB-146F607FB9F0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_003_ConfigurationType", "Web\ASP\_003_ConfigurationType\_003_ConfigurationType.csproj", "{CE1FA042-ABBA-47B6-AA7D-AB6D66DCDC3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_004_Services", "_004_Services\_004_Services.csproj", "{2C063050-C6DF-45F3-A6E9-34ADEA8D5E6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_004_Services", "_004_Services\_004_Services.csproj", "{2C063050-C6DF-45F3-A6E9-34ADEA8D5E6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

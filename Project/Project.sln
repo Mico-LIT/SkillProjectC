@@ -125,6 +125,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_003_ConfigurationType", "W
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_004_Services", "Web\ASP\_004_Services\_004_Services.csproj", "{2C063050-C6DF-45F3-A6E9-34ADEA8D5E6A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_005_Routing", "Web\ASP\_005_Routing\_005_Routing.csproj", "{859D884C-521F-43F0-BB46-8437CCF3DC63}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -227,6 +229,10 @@ Global
 		{2C063050-C6DF-45F3-A6E9-34ADEA8D5E6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C063050-C6DF-45F3-A6E9-34ADEA8D5E6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C063050-C6DF-45F3-A6E9-34ADEA8D5E6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{859D884C-521F-43F0-BB46-8437CCF3DC63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{859D884C-521F-43F0-BB46-8437CCF3DC63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{859D884C-521F-43F0-BB46-8437CCF3DC63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{859D884C-521F-43F0-BB46-8437CCF3DC63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -285,6 +291,7 @@ Global
 		{F7F23FC5-DF11-4001-BEBB-146F607FB9F0} = {28459528-835E-4BB0-8B71-161ED1227A5C}
 		{CE1FA042-ABBA-47B6-AA7D-AB6D66DCDC3F} = {28459528-835E-4BB0-8B71-161ED1227A5C}
 		{2C063050-C6DF-45F3-A6E9-34ADEA8D5E6A} = {28459528-835E-4BB0-8B71-161ED1227A5C}
+		{859D884C-521F-43F0-BB46-8437CCF3DC63} = {28459528-835E-4BB0-8B71-161ED1227A5C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6B107A0A-E116-4081-981F-C1FB7D76123A}

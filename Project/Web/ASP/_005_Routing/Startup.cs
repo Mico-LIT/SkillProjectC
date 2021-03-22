@@ -29,10 +29,13 @@ namespace _005_Routing
                 app.UseDeveloperExceptionPage();
             }
 
-            _01_Example(app, out var routeBuilder);
-            //_02_Example(app);
-            //_03_Example(app);
-            //_04_Example(app);
+            RouteBuilder routeBuilder;
+
+            //_01_Example(app, out routeBuilder);
+            //_02_Example(app, out routeBuilder);
+            //_03_Example(app, out routeBuilder);
+            //_04_Example(app, out routeBuilder);
+            //_05_Example(app, out routeBuilder);
 
             app.UseRouter(routeBuilder.Build());
 
@@ -80,15 +83,27 @@ namespace _005_Routing
 
             });
         }
-        private void _02_Example(IApplicationBuilder app)
+
+        private void _02_Example(IApplicationBuilder app, out RouteBuilder routeBuilder)
+        {
+            routeBuilder = new RouteBuilder(app);
+
+            routeBuilder.MapRoute("{Controller}", async (context) =>
+            {
+                await context.Response.WriteAsync("{Controller} temlpated use");
+            });
+
+            routeBuilder.MapRoute("{Controller}/{Action}", async (context) =>
+            {
+                await context.Response.WriteAsync("{Controller}/{Action} temlpated use");
+            });
+
+        }
+        private void _03_Example(IApplicationBuilder app, out RouteBuilder routeBuilder)
         {
             throw new NotImplementedException();
         }
-        private void _04_Example(IApplicationBuilder app)
-        {
-            throw new NotImplementedException();
-        }
-        private void _03_Example(IApplicationBuilder app)
+        private void _04_Example(IApplicationBuilder app, out RouteBuilder routeBuilder)
         {
             throw new NotImplementedException();
         }

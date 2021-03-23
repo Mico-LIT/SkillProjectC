@@ -99,10 +99,40 @@ namespace _005_Routing
             });
 
         }
+
         private void _03_Example(IApplicationBuilder app, out RouteBuilder routeBuilder)
         {
-            throw new NotImplementedException();
+            routeBuilder = new RouteBuilder(app);
+
+            var routeHandlerHome = new RouteHandler(async (context) =>
+            {
+                await context.Response.WriteAsync("<h1>_03_Example HandlerHome</h1>");
+            });
+
+            var routeHandlerHomeCurrentProducts = new RouteHandler(async (context) =>
+            {
+                await context.Response.WriteAsync("<h1>_03_Example HandlerHomeCurrentProducts</h1>");
+            });
+
+            var routeBuilderHome = new RouteBuilder(app, routeHandlerHome);
+            var routeBuilderHomeCurrentProducts = new RouteBuilder(app, routeHandlerHomeCurrentProducts);
+
+            // определение маршрутов - они должны соответствовать заданным статическим шаблонам
+            routeBuilderHome.MapRoute("default", "Home");
+            routeBuilderHomeCurrentProducts.MapRoute("default", "Home/CurrentProducts");
+
+            app.UseRouter(routeBuilderHome.Build());
+            app.UseRouter(routeBuilderHomeCurrentProducts.Build());
+
+            // В контексте одного routeBuilder заюзать маршрут с одиним и тем же именем нельзя! один и тот же ключ (default)
+            // Исключение NULL
+            //foreach (var item in routeBuilderHome.Routes)
+            //    routeBuilder.Routes.Add(item);
+            //foreach (var item in routeBuilderHomeCurrentProducts.Routes)
+            //    routeBuilder.Routes.Add(item);
+
         }
+
         private void _04_Example(IApplicationBuilder app, out RouteBuilder routeBuilder)
         {
             throw new NotImplementedException();

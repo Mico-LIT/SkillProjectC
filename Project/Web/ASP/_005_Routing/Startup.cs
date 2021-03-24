@@ -135,7 +135,21 @@ namespace _005_Routing
 
         private void _04_Example(IApplicationBuilder app, out RouteBuilder routeBuilder)
         {
-            throw new NotImplementedException();
+            routeBuilder = new RouteBuilder(app);
+
+            // Порядок маршрута важен
+            // Если поменять местами маршрут Test/{Controller}/{Action}/{id} не вызовиться
+            routeBuilder.MapRoute("Test/{Action}/{id}", async (context) =>
+            {
+                await context.Response.WriteAsync("Test/{Controller}/{Action}/{id}");
+            });
+
+            // Общие шаблоны должны обрабатываться в самую последнюю очередь
+            routeBuilder.MapRoute("{Controller=Home}/{Action}/{id}", async (context) =>
+            {
+                await context.Response.WriteAsync("{Controller=Home}/{Action}/{id}");
+            });
         }
+
     }
 }

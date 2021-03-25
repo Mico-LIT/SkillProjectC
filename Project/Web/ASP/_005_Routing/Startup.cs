@@ -151,5 +151,22 @@ namespace _005_Routing
             });
         }
 
+        private void _05_Example(IApplicationBuilder app, out RouteBuilder routeBuilder)
+        {
+            routeBuilder = new RouteBuilder(app);
+
+            // не обязательный параметр {id?}
+            routeBuilder.MapRoute("{Controller}/{Action}/{id?}", async (context) =>
+            {
+                await context.Response.WriteAsync("{Controller}/{Action}/{id?}");
+            });
+
+            // множественные параметры 
+            routeBuilder.MapRoute("{Controller}/{Action}/{id}/{*catchall}", async (context) =>
+            {
+                await context.Response.WriteAsync("{Controller}/{Action}/{id}/{*catchall}");
+            });
+        }
+
     }
 }

@@ -36,6 +36,7 @@ namespace _005_Routing
             //_03_Example(app, out routeBuilder);
             //_04_Example(app, out routeBuilder);
             //_05_Example(app, out routeBuilder);
+			//_06_GetRouteData(app, out routeBuilder);
 
             app.UseRouter(routeBuilder.Build());
 

@@ -168,5 +168,20 @@ namespace _005_Routing
             });
         }
 
+        private void _06_GetRouteData(IApplicationBuilder app, out RouteBuilder routeBuilder)
+        {
+            routeBuilder = new RouteBuilder(app);
+
+            routeBuilder.MapRoute("{Controller}/{Action}/{id?}", async (context) =>
+            {
+                foreach (var item in context.GetRouteData().Values)
+                    await context.Response.WriteAsync(item.ToString());
+
+                string controller = context.GetRouteValue("Controller").ToString();
+                string action = context.GetRouteValue("Action").ToString();
+                string id = context.GetRouteValue("id").ToString();
+            });
+        }
+
     }
 }

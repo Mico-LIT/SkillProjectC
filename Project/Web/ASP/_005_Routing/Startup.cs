@@ -36,7 +36,8 @@ namespace _005_Routing
             //_03_Example(app, out routeBuilder);
             //_04_Example(app, out routeBuilder);
             //_05_Example(app, out routeBuilder);
-			//_06_GetRouteData(app, out routeBuilder);
+            //_06_GetRouteData(app, out routeBuilder);
+            //_07_Constraints(app, out routeBuilder);
 
             app.UseRouter(routeBuilder.Build());
 
@@ -182,6 +183,37 @@ namespace _005_Routing
                 string action = context.GetRouteValue("Action").ToString();
                 string id = context.GetRouteValue("id").ToString();
             });
+        }
+
+        private void _07_Constraints(IApplicationBuilder app, out RouteBuilder routeBuilder)
+        {
+            var handler = new RouteHandler(async (context) =>
+            {
+                await context.Response.WriteAsync("Run _07_Constraints");
+
+                foreach (var item in context.GetRouteData().Values)
+                    await context.Response.WriteAsync(item.ToString());
+            });
+
+            routeBuilder = new RouteBuilder(app, handler);
+
+            routeBuilder.MapRoute(
+                name: "default",
+                template: "{Controller}/{Action}/{id?}",
+                defaults: new { id = Guid.Empty },
+                constraints: new { Controller = "Home" });
+
+            //routeBuilder.MapRoute(
+            //    name: "default",
+            //    template: "{Controller}/{Action}/{id?}",
+            //    null,
+            //    constraints: new { Controller = "^H.*",Id = @"\d{2}" });
+
+            //routeBuilder.MapRoute(
+            //    name: "default",
+            //    template: "{Controller}/{Action}/{id?}",
+            //    null,
+            //    constraints: new { id = new Microsoft.AspNetCore.Routing.Constraints.BoolRouteConstraint() });
         }
 
     }

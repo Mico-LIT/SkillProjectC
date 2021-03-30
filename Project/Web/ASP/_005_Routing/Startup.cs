@@ -38,6 +38,7 @@ namespace _005_Routing
             //_05_Example(app, out routeBuilder);
             //_06_GetRouteData(app, out routeBuilder);
             //_07_Constraints(app, out routeBuilder);
+            _08_HttpVerb(app, out routeBuilder);
 
             app.UseRouter(routeBuilder.Build());
 
@@ -216,5 +217,16 @@ namespace _005_Routing
             //    constraints: new { id = new Microsoft.AspNetCore.Routing.Constraints.BoolRouteConstraint() });
         }
 
+        private void _08_HttpVerb(IApplicationBuilder app, out RouteBuilder routeBuilder)
+        {
+            routeBuilder = new RouteBuilder(app);
+
+            routeBuilder.MapGet("{Controller}/{Action}/{id?}", async (context) => { await context.Response.WriteAsync("Hi"); });
+            routeBuilder.MapPost("{Controller}/{Action}/{id?}", async (context) => { await context.Response.WriteAsync("Hi"); });
+            routeBuilder.MapPut("{Controller}/{Action}/{id?}", async (context) => { await context.Response.WriteAsync("Hi"); });
+            routeBuilder.MapDelete("{Controller}/{Action}/{id?}", async (context) => { await context.Response.WriteAsync("Hi"); });
+            routeBuilder.MapRoute("{Controller}/{Action}/{id?}", async (context) => { await context.Response.WriteAsync("Hi"); });
+            //routeBuilder.MapVerb("{Controller}/{Action}/{id?}", async (context) => { await context.Response.WriteAsync("Hi"); });
+        }
     }
 }

@@ -1,0 +1,20 @@
+﻿@using _006_Models.Models._003_SinglModel
+@{
+    Layout = null;
+}
+@model IEnumerable<Game>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_003_Models</title>
+</head>
+<body>
+    @foreach (var item in Model)
+    {
+        <h5>@item.Name|@item.Platform|@item.Engine</h5>
+    }
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+@model _006_Models.ViewModels.GamesViewModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_004_ViewModel</title>
+</head>
+<body>
+    <h1>PC Games</h1>
+    @foreach (var item in Model.pcGames)
+    {
+        <h5>@item.Name | @item.Lang</h5>
+    }
+
+    <h1>Xbox Games</h1>
+    @foreach (var item in Model.xboxGames)
+    {
+        <h5>@item.Name | @item.Lang</h5>
+    }
+</body>
+</html>

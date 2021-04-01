@@ -60,5 +60,28 @@ namespace _006_Models.Controllers
 
             return View(game);
         }
+
+        public IActionResult _004_ViewModel()
+        {
+            var pcGames = new List<Models._004_ViewModel.PcGame>()
+            {
+                new Models._004_ViewModel.PcGame(){ Name = "Batman: Arkham City" , Lang = "C#"},
+                new Models._004_ViewModel.PcGame(){ Name = "Hitman 3" , Lang = "C++"},
+                new Models._004_ViewModel.PcGame(){ Name = "Ghostrunner" , Lang = "C++"},
+            };
+
+            var xboxGames = new List<Models._004_ViewModel.XboxGame>()
+            {
+                new Models._004_ViewModel.XboxGame(){ Name = "Grand Theft Auto V" , Lang = "C++"},
+                new Models._004_ViewModel.XboxGame(){ Name = "Celeste" , Lang = "C++"},
+                new Models._004_ViewModel.XboxGame(){ Name = "Resident Evil 2" , Lang = "C++"},
+            };
+
+            var resultViewModel = new ViewModels.GamesViewModel();
+            resultViewModel.pcGames = pcGames;
+            resultViewModel.xboxGames = xboxGames;
+
+            return View(resultViewModel);
+        }
     }
 }

@@ -12,6 +12,7 @@ namespace _006_Models.Controllers
         {
             var methodsList = typeof(HomeController).GetMethods()
                 .Where(x => (x.ReturnType == typeof(IActionResult) || x.ReturnType == typeof(string)) && x.IsPublic)
+                .Where(x => x.GetParameters().Length <= 0)
                 .Where(x => !x.Name.Equals("ToString") && !x.Name.Equals("Index"))
                 .Select(x => x.Name)
                 .ToList();
@@ -82,6 +83,23 @@ namespace _006_Models.Controllers
             resultViewModel.xboxGames = xboxGames;
 
             return View(resultViewModel);
+        }
+
+        public IActionResult _005_FormForRegisterView()
+        {
+            return View();
+        }
+
+        public string _005_FormForRegister(string name, string surname, int age)
+        {
+            var user = new Models._005_FormForRegister.User()
+            {
+                Name = name,
+                Surname = surname,
+                Age = age
+            };
+
+            return $"{user.Name}|{user.Surname}|{user.Age}";
         }
     }
 }

@@ -1,0 +1,22 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>_005_FormForRegisterListView</title>
+</head>
+<body>
+    <form method="post" action="~/Home/_005_FormForRegisterList">
+        @for (int i = 0; i < 3; i++)
+        {
+            <div class="User">
+                <h3>User № @(i + 1)</h3>
+                <label>Name</label><br>
+                <input type="text" name="users[@i].name" /> <br>
+                <label>Surname</label><br>
+                <input type="text" name="users[@i].surname" /><br>
+                <label>Age</label><br>
+                <input type="text" name="users[@i].age" /><br>
+            </div>
+        }
+        <input type="submit" value="Register" />
+    </form>
+</body>
+</html>

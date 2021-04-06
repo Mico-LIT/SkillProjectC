@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace _006_Models.Controllers
@@ -100,6 +101,22 @@ namespace _006_Models.Controllers
             };
 
             return $"{user.Name}|{user.Surname}|{user.Age}";
+        }
+
+        public IActionResult _005_FormForRegisterListView()
+        {
+            return View();
+        }
+
+        public string _005_FormForRegisterList(Models._005_FormForRegister.User[] users)
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            foreach (var user in users)
+            {
+                stringBuilder.Append($"{user.Name}|{user.Surname}|{user.Age} {Environment.NewLine}");
+            }
+
+            return stringBuilder.ToString();
         }
     }
 }

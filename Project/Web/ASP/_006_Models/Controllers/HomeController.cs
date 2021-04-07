@@ -118,5 +118,11 @@ namespace _006_Models.Controllers
 
             return stringBuilder.ToString();
         }
+
+        public IActionResult _006_ViewImport()
+        {
+            return View();
+        }
+
     }
 }

@@ -124,5 +124,28 @@ namespace _006_Models.Controllers
             return View();
         }
 
+        public IActionResult _007_ViewDataBag()
+        {
+            ViewData["test"] = "ViewData['test']";
+            ViewBag.DataBag = "ViewBag.DataBag";
+            ViewBag.DataBagTest1 = "ViewBag.DataBagTest1";
+            return View();
+        }
+
+        public IActionResult _008_MasterPage()
+        {
+            return View();
+        }
+
+        public string _009_RequestHeader()
+        {
+            string result = "";
+            var headers = Request.Headers;
+
+            foreach (var item in headers)
+                result += $"{item.Key} = {item.Value} \n";
+
+            return result;
+        }
     }
 }

@@ -15,8 +15,22 @@ namespace _006_Models.Controllers
                 .Where(x => (x.ReturnType == typeof(IActionResult) || x.ReturnType == typeof(string)) && x.IsPublic)
                 .Where(x => x.GetParameters().Length <= 0)
                 .Where(x => !x.Name.Equals("ToString") && !x.Name.Equals("Index"))
-                .Select(x => x.Name)
+                .Select(x => (x.Name, $"Home/{x.Name}"))
                 .ToList();
+
+            var filesControllerMethodsList = typeof(FilesController).GetMethods()
+                .Where(x => (x.ReturnType.BaseType == typeof(FileResult) ||
+                             x.ReturnType == typeof(IActionResult) ||
+                             x.ReturnType == typeof(FileResult)) && x.IsPublic)
+                .Where(x => x.GetParameters().Length <= 0)
+                .Where(x => !x.Name.Equals("ToString") && !x.Name.Equals("Index"))
+                .Select(x => (x.Name, $"Files/{x.Name}"))
+                .ToList();
+
+            filesControllerMethodsList.ForEach(x =>
+            {
+                methodsList.Add((x.Name, x.Item2));
+            });
 
             return View(methodsList);
         }

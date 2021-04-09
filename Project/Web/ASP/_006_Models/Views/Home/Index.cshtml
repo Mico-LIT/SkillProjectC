@@ -3,7 +3,7 @@
     Layout = null;
 }
 
-@model IEnumerable<string>
+@model IEnumerable<(string, string)>
 
 <!DOCTYPE html>
 
@@ -15,7 +15,12 @@
 <body>
     @foreach (var item in Model)
     {
-        <a href="~/Home/@item">@item</a> <br>
+        if (item.Item1.IndexOf("_001_")>=0)
+        {
+            <br>
+        }
+
+        <a href="~/@item.Item2">@item.Item1</a> <br>
     }
 </body>
 </html>

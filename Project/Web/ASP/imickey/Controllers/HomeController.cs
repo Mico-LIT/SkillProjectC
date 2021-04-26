@@ -13,6 +13,11 @@ namespace imickey.Controllers
             return View();
         }
 
+        public IActionResult Index1()
+        {
+            return View();
+        }
+
         public string Error()
         {
             return "Error";

@@ -15,6 +15,10 @@ namespace imickey.Controllers
 
         public IActionResult Index1()
         {
+            var dateStart = new DateTime(2016, 11, 1);
+            double digital = Math.Floor(DateTime.UtcNow.Subtract(dateStart).TotalDays / 365);
+            ViewBag.DateWork = digital;
+
             return View();
         }
 

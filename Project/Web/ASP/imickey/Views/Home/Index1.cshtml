@@ -13,6 +13,34 @@
 
     <style>
 
+        .box {
+            align-self: flex-end;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            transform-origin: bottom;
+        }
+
+        .bounce-1 {
+            animation-name: bounce-1;
+            animation-timing-function: linear;
+        }
+
+        @@keyframes bounce-1 {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+
+
         .section-seporator {
             padding: 100px 0px;
         }
@@ -94,44 +122,48 @@
 </head>
 <body>
     <main>
+
         <div class="welcome">
             <div class="core-img">
                 <div class="img-color-overlay">
                     <div class="container">
                         <div class="home-padding">
                             <div class="row">
-                                <div class="col-12 col-sm-6 text-center pb-5">
-                                    <h1>Welcome👋</h1> <br>
-                                    <h3>Меня зовут Миша,<br>Я занимаюсь разработкой IT </h3>
-                                    <h4>С# Senior Developer, Full Stack</h4>
+                                <div class="col-12 col-sm-6 pb-5 d-flex align-items-center justify-content-center text-center">
+                                    <div>
+                                        <h1>Welcome👋</h1> <br>
+                                        <h3>Меня зовут Миша,<br>Я занимаюсь разработкой IT </h3>
+                                        <h4>С# Senior Developer, Full Stack</h4>
 
-                                    <ul>
-                                        <li>
-                                            <i class="fab fa-github"></i>
-                                            <a href="https://github.com/Mico-LIT">Github</a>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-phone"></i>
-                                            <a href="tel:+7(923)188-08-45">+7(923)188-08-45</a>
-                                        </li>
-                                        <li>
-                                            <i class="fa fa-envelope"></i>
-                                            <a href="mailto:redgame0@gmail.com?subject='Сотрудничество MicoGroup'">redgame0@gmail.com</a>
-                                        </li>
-                                        <li>
-                                            <i class="fab fa-instagram"></i>
-                                            <a href="https://www.instagram.com/micom_">Instagram</a>
+                                        <ul>
+                                            <li>
+                                                <i class="fab fa-github"></i>
+                                                <a href="https://github.com/Mico-LIT">Github</a>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-phone"></i>
+                                                <a href="tel:+7(923)188-08-45">+7(923)188-08-45</a>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-envelope"></i>
+                                                <a href="mailto:redgame0@gmail.com?subject='Сотрудничество MicoGroup'">BorovikMA@icloud.com</a>
+                                            </li>
+                                            <li>
+                                                <i class="fab fa-instagram"></i>
+                                                <a href="https://www.instagram.com/micom_">Instagram</a>
 
-                                            <i class="fab fa-telegram"></i>
-                                            <a href="https://t.me/imickey1">Telegram</a>
+                                                <i class="fab fa-telegram"></i>
+                                                <a href="https://t.me/imickey1">Telegram</a>
 
-                                            <i class="fab fa-vk"></i>
-                                            <a href="https://vk.com/micom">VK</a>
-                                        </li>
-                                    </ul>
+                                                <i class="fab fa-vk"></i>
+                                                <a href="https://vk.com/micom">VK</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="col-12 col-sm-6 ">
-                                    <div class="d-flex justify-content-center">
+
+                                <div class="col-12 col-sm-6 pb-5 d-flex align-items-center justify-content-center">
+                                    <div class="">
                                         <div class="border-img">
                                             <img src="https://avatars0.githubusercontent.com/u/13939762?s=460&v=4" class="img-fluid" />
                                             @*<img src="https://avatars0.githubusercontent.com/u/13939761?s=460&v=4" class="img-fluid" />*@
@@ -147,13 +179,15 @@
 
         <div class="about">
             <div class="container">
-                <div class="row pt-5 pb-5">
+                <div class="row pt-4 pb-5">
+                    <div class="col-12 text-center">
+                        <h2>Обо мне</h2>
+                    </div>
                     <div class="col-sm-12 col-md-6">
                         <img src="http://cvresumetemplate.com/maha-personal-cv-resume-html-template/assets/images/ab-img.png" alt="" class="img-fluid">
                     </div>
                     <div class="col-sm-12 col-md-6">
-                        <div class="about-inner">
-                            <h2>Обо мне</h2>
+                        <div class="about-inner pt-3">
                             <p>
                                 Подсел на эту цифровую иглу 💉 в 20х. Мне удалось зацепить этот момент когда мир начал переходить
                                 из аналогово в цифровую среду! Как помню мой первый компьютер DOS (дисковая операционная система) 💾.
@@ -176,14 +210,117 @@
                     <div class="container">
                         <div class="row pb-5 pt-5">
                             <div class="col-12 pb-5">
-                                <h3 class="pb-5 text-center">🛠Опыт работы🛠</h3>
+                                <h3 class="pb-5 text-center">📚Образование📚</h3>
 
                                 <div class="core-bg-white shadow p-4">
+                                    <p class="h5">
+                                        СГУПС "Сибирский государственный университет путей сообщения",<br>
+                                        Факультет  <a href="https://www.stu.ru/education/index.php?page=176">"Бизнес-информатика"</a>,<br>
+                                        Направление: <span class="font-italic">"Информационные системы и технологии"</span>
+                                    <p>2013-2017</p>
+                                    <p class="m-0">
+                                        Закончил высшее учебное заведение в городе Новосибирск.
+                                        Факультет БИ "Бизнес-информатика" выделялся из всех это была вишенка на торте🍒. Я понимал что мир меняется,
+                                        он становится цифровым и именно Бизнес и Информатика это то что мне нужно!
+                                        В универе был хороший преподавательский состав (большая часть). Универ дал широкий спектр для выбора направления 🧭.
+                                        <ul>
+                                            <li>• Программирование</li>
+                                            <li>• Сопровождение бизнес процессов и корпоративных информационных систем</li>
+                                            <li>• Сетевые технологии</li>
+                                            <li>• Базы данны</li>
+                                            <li>• Интеллектуальные информационные системы</li>
+                                            <li>• Web-технологии</li>
+                                            <li>• Моделирование бизнес-процессов</li>
+                                        </ul>
+                                        Мне больше импонировало что-то создавать, реконструировать сложные объекты, делать связку между разными
+                                        системами и видеть результат. Я выбрал программирование. Универ дал базу и дальше все зависело от меня и
+                                        что важное здесь, главное продолжать учиться! Не останавливаться! Стать лучшим в этом деле!
+                                    </p>
+                                </div>
+
+                                <div class="core-bg-white shadow p-4">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-center">Книги 📚 </h5>
+                                                    <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                            Стив Макконнелл: Совершенный код. Мастер-класс
+                                                            <span class="badge badge-primary badge-pill">35%</span>
+                                                        </li>
+                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                            Приемы объектно-ориентированного проектирования. Паттерны проектирования
+                                                            <span class="badge badge-primary badge-pill">0%</span>
+                                                        </li>
+                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                            Алгоритмы: построение и анализ Книга, Клиффорд Штайн, Рональд Линн Ривест, Томас Кормен, и Чарльз Эрик Лейзерсон
+                                                            <span class="badge badge-primary badge-pill">0%</span>
+                                                        </li>
+                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                            Рефакторинг. Улучшение проекта существующего кода | Фаулер Мартин, Бек Кент
+                                                            <span class="badge badge-primary badge-pill">0%</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-center">Цифровая информация🌐</h5>
+                                                    <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                            <a href="https://itvdn.com/ru">Itvdn "Видеокурсы по программированию"</a>
+                                                            <span class="badge badge-primary badge-pill">60%</span>
+                                                        </li>
+                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                            <a href="http://www.quizful.net/page/about">Quizful сервиса онлайн тестирования</a>
+                                                            <span class="badge badge-primary badge-pill">40%</span>
+                                                        </li>
+                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                            <a href="https://docs.microsoft.com/ru-ru/">Microsoft Docs</a>
+                                                            <span class="badge badge-primary badge-pill">30%</span>
+                                                        </li>
+                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                            <a href="http://www.pskills.org/onlinetest.jsp">Programming skills</a>
+                                                            <span class="badge badge-primary badge-pill">20%</span>
+                                                        </li>
+                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                            <a href="https://www.tutorialspoint.com/index.htm">Tutorialspoint</a>
+                                                            <span class="badge badge-primary badge-pill">20%</span>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="pt-4">
+                                                <h3 class="text-center">
+                                                    📍Портфолио
+                                                    <a href="https://github.com/Mico-LIT"><i class="fab fa-github"></i> Github</a>
+                                                    📍
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-12">
+                                <h3 class="pb-5 text-center">Опыт работы</h3>
+
+                                <div class="core-bg-white shadow p-4">
+                                    <a class="h5" href="https://www.stu.ru">СГУПС "Сибирский государственный университет путей сообщения"</a>
                                     <img src="~/image/logo/Sgups_logo.jpg" alt="1xbet" class="rounded float-right core-img-logo p-2">
-                                    <a class="h5" href="https://www.stu.ru">СГУПС (Сибирский государственный университет путей сообщения)</a>
                                     <p>Дата 01.2017</p>
                                     <p>
-                                        Была поставлена задача в существующем бизнес процессе решить проблему с документом оборотом. Операционист рассказ и показал все процессы и указывал на боли в работе.
+                                        Была поставлена задача в существующем бизнес процессе на предприятии решить проблему с документом оборотом. Операционист рассказ и показал все процессы и указывал на боли в работе.
                                         <br>
                                         Отдел занимался выдачей сертификатов ученикам прошедший тот или оной курс и ведения (протоколирование).
                                         Покупался сертификат + к ним идёт программное обеспечение. При этом операционист выполнял работу с десяток
@@ -227,8 +364,8 @@
                                 </div>
 
                                 <div class="core-bg-white shadow p-4">
+                                    <a class="h5" href="https://www.otlnal.ru/">Отличные наличные "Микрофинансовая компания"</a>
                                     <img src="~/image/logo/OtlNal_logo.png" alt="1xbet" class="rounded float-right  core-img-logo p-2">
-                                    <a class="h5" href="https://www.otlnal.ru/">Отличные наличные (Микрофинансовая компания)</a>
                                     <p>Дата 11.2016 - 07.2018</p>
                                     <p>
                                         В обязанности входило:
@@ -288,8 +425,8 @@
                                 </div>
 
                                 <div class="core-bg-white shadow p-4">
+                                    <a class="h5" href="https://classboom.com/">ClassBoom "Единый абонемент фитнеса"</a>
                                     <img src="~/image/logo/ClassBoom_logo.png" alt="1xbet" class="rounded float-right  core-img-logo p-2">
-                                    <a class="h5" href="https://classboom.com/">ClassBoom (Единый абонемент фитнеса)</a>
                                     <p>Дата 07.2018 - 10.2019</p>
                                     <p>
                                         <ul>
@@ -356,8 +493,8 @@
                                 </div>
 
                                 <div class="core-bg-white shadow p-4">
+                                    <a class="h5" href="https://1xstavka.ru/">1XBET "Букмекерская компания"</a>
                                     <img src="~/image/logo/1xbet_logo.png" alt="1xbet" class="rounded float-right core-img-logo p-2">
-                                    <a class="h5" href="https://1xstavka.ru/">1XBET (Букмекерская компания)</a>
                                     <p>Дата 10.2019 - тек</p>
                                     <p>
                                         Площадка предоставляет начиная от ставок на спорт,онлайн казино и игры и тд.
@@ -400,100 +537,24 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                            </div>
-                            <div class="col-12">
-                                <h3 class="pb-5 text-center">📚Образование📚</h3>
 
-                                <div class="core-bg-white shadow p-4">
-                                    <p class="h5">
-                                        СГУПС (Сибирский государственный университет путей сообщения),<br>
-                                        Факультет  <a href="https://www.stu.ru/education/index.php?page=176">"Бизнес-информатика"</a>,<br>
-                                        Направление: <span class="font-italic">"Информационные системы и технологии"</span>
-                                    <p>2013-2017</p>
-                                    <p class="m-0">
-                                        Закончил высшее учебное заведение в городе Новосибирск.
-                                        Факультет БИ ("Бизнес-информатика") выделялся из всех это была вишенка на торте🍒. Я понимал что мир меняется,
-                                        он становится цифровым и именно Бизнес и Информатика это то что мне нужно!
-                                        В универе был хороший преподавательский состав (большая часть). Универ дал широкий спектр для выбора направления 🧭.
-                                        <ul>
-                                            <li>• Программирование</li>
-                                            <li>• Сопровождение бизнес процессов и корпоративных информационных систем</li>
-                                            <li>• Сетевые технологии</li>
-                                            <li>• Базы данны</li>
-                                            <li>• Интеллектуальные информационные системы</li>
-                                            <li>• Web-технологии</li>
-                                            <li>• Моделирование бизнес-процессов</li>
-                                        </ul>
-                                        Мне больше импонировало что-то создавать, реконструировать сложные объекты, делать связку между разными
-                                        системами и видеть результат. Я выбрал программирование. Универ дал базу и дальше все зависело от меня и
-                                        что важное здесь, главное продолжать учиться! Не останавливаться! Стать лучшим в этом деле!
-                                    </p>
-                                </div>
 
-                                <div class="core-bg-white shadow p-4">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="card h-100">
-                                                <div class="card-body">
-                                                    <h5 class="card-title text-center">Книги 📚 </h5>
-                                                    <ul class="list-group list-group-flush">
-                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                                                            Стив Макконнелл: Совершенный код. Мастер-класс
-                                                            <span class="badge badge-primary badge-pill">35%</span>
-                                                        </li>
-                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                                                            Приемы объектно-ориентированного проектирования. Паттерны проектирования
-                                                            <span class="badge badge-primary badge-pill">0%</span>
-                                                        </li>
-                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                                                            Алгоритмы: построение и анализ Книга, Клиффорд Штайн, Рональд Линн Ривест, Томас Кормен, и Чарльз Эрик Лейзерсон
-                                                            <span class="badge badge-primary badge-pill">0%</span>
-                                                        </li>
-                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                                                            Рефакторинг. Улучшение проекта существующего кода | Фаулер Мартин, Бек Кент
-                                                            <span class="badge badge-primary badge-pill">0%</span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="card h-100">
-                                                <div class="card-body">
-                                                    <h5 class="card-title text-center">Цифровая информация🌐</h5>
-                                                    <ul class="list-group list-group-flush">
-                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                                                            <a href="https://itvdn.com/ru">Itvdn (Видеокурсы по программированию)</a>
-                                                            <span class="badge badge-primary badge-pill">60%</span>
-                                                        </li>
-                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                                                            <a href="http://www.quizful.net/page/about">Quizful сервиса онлайн тестирования</a>
-                                                            <span class="badge badge-primary badge-pill">40%</span>
-                                                        </li>
-                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                                                            <a href="https://docs.microsoft.com/ru-ru/">Microsoft Docs</a>
-                                                            <span class="badge badge-primary badge-pill">30%</span>
-                                                        </li>
-                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                                                            <a href="http://www.pskills.org/onlinetest.jsp">Programming skills</a>
-                                                            <span class="badge badge-primary badge-pill">20%</span>
-                                                        </li>
-                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                                                            <a href="https://www.tutorialspoint.com/index.htm">Tutorialspoint</a>
-                                                            <span class="badge badge-primary badge-pill">20%</span>
-                                                        </li>
-                                                    </ul>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
 
                             </div>
                         </div>
+
+                        <div class="row pb-5">
+                            <div class="col-12">
+                                <div class="core-bg-white shadow p-4">
+
+                                    <h3 class="text-center">Опыт работы в сфере IT : Более @(ViewBag.DateWork) лет 🎉</h3>
+
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -504,10 +565,10 @@
             <div class="container">
                 <div class="row pt-5">
                     <div class="col-sm-12">
-                        <h2 class="text-center mb-5">Чем я могу быть тебе полезен 🎯</h2>
+                        <h2 class="text-center mb-5">Чем я могу быть полезен 🎯</h2>
                     </div>
 
-                    <div class="col-sm-4 p-2">
+                    <div class="col-12 col-md-4 p-2">
                         <div class="shadow p-5 h-100 text-center">
                             <i class="fas fa-object-ungroup core-fs-35"></i>
                             <h3>App-Разработка</h3>
@@ -519,7 +580,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-sm-4 p-2">
+                    <div class="col-12 col-md-4 p-2">
                         <div class="shadow p-5 h-100 text-center">
                             <i class="fas fa-bullseye core-fs-35"></i>
                             <h3>Консалтинг</h3>
@@ -530,7 +591,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-sm-4 p-2">
+                    <div class="col-12 col-md-4 p-2">
                         <div class="shadow p-5 h-100 text-center">
                             <i class="fas fa-code core-fs-35"></i>
                             <h3>Web-Разработка</h3>
@@ -544,7 +605,7 @@
                     </div>
                 </div>
                 <div class="row justify-content-md-center pb-5">
-                    <div class="col-sm-4  p-2">
+                    <div class="col-12 col-md-4  p-2">
                         <div class="shadow p-5 h-100 text-center">
                             <i class="fas fa-microchip core-fs-35"></i>
                             <h3>Сборка и настройка техники</h3>
@@ -556,7 +617,7 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-4  p-2">
+                    <div class="col-12 col-md-4  p-2">
                         <div class="shadow p-5 h-100 text-center">
                             <i class="fas fa-cloud core-fs-35"></i>
                             <h3>Облачные технологии</h3>
@@ -578,30 +639,30 @@
                     <div class="container">
                         <div class="row pb-5 pt-5">
                             <div class="col-12 col-sm-12 text-center">
-                                <p class="h3 mb-5">Цены</p>
+                                <p class="h3 mb-5">Цены 💵</p>
                             </div>
                             <div class="col-12 col-sm-12 col-md-4 p-3">
-                                <div class="p-4 shadow core-bg-white text-center h-100">
+                                <div class="p-4 shadow core-bg-white text-center h-100 d-flex flex-column">
                                     <i class="fas fa-calendar core-fs-35"></i>
                                     <h4>Полная занятость</h4>
                                     <p>Предложения о сотрудничестве на Full Time отправляейте на почту или пишите в сициальных сетях</p>
-                                    <h5>В Direct</h5>
+                                    <h5 class="mt-auto p-2">В Direct</h5>
                                 </div>
                             </div>
                             <div class="col-12 col-sm-12 col-md-4 p-3">
-                                <div class="p-4 shadow core-bg-white text-center h-100">
+                                <div class="p-4 shadow core-bg-white text-center h-100 d-flex flex-column">
                                     <i class="fas fa-file core-fs-35"></i>
                                     <h4>Проектная работа</h4>
                                     <p>Помогу и решу любую вашу задачу. Есть ТЗ или наброски задания. Пишите, спрашивайте </p>
-                                    <h5>От 2000р</h5>
+                                    <h5 class="mt-auto p-2">От 3000р</h5>
                                 </div>
                             </div>
                             <div class="col-12 col-sm-12 col-md-4 p-3">
-                                <div class="p-4 shadow core-bg-white text-center h-100">
+                                <div class="p-4 shadow core-bg-white text-center h-100 d-flex flex-column">
                                     <i class="fas fa-clock core-fs-35"></i>
                                     <h4>Час работы</h4>
                                     <p>Это может быть консультация, правка вашего кода, обучение и тд </p>
-                                    <h5>От 1500р</h5>
+                                    <h5 class="mt-auto p-2">От 1500р</h5>
                                 </div>
                             </div>
                         </div>
@@ -610,18 +671,18 @@
             </div>
         </div>
 
-        <div class="contactMy">
+        <footer>
             <div class="core-img-map">
                 <div class="container">
                     <div class="row pt-5 pb-5">
                         <div class="col-12 col-sm-12 text-center">
                             <p class="h3">Заинтересованы в работе?</p>
                             <p class="h3">Свяжитесь со мной</p>
-                            <i class="fas fa-angle-double-down core-fs-65 mb-4 mt-3"></i>
+                            <i class="box bounce-1 fas fa-angle-double-down core-fs-65 mb-2 mt-3" style="color: royalblue;"></i>
                         </div>
                         <div class="col-sm-12 text-center">
                             <span class="p-2">
-                                <a href="tel:+79231880845" style="color:#000000;"><i class="fas fa-phone-square core-fs-65"></i></a>
+                                <a href="mailto:redgame0@gmail.com?subject='Сотрудничество MicoGroup'" style="color:#000000;"> <i class="fa fa-envelope core-fs-65"></i></a>
                             </span>
                             <span class="p-2">
                                 <a href="https://www.instagram.com/micom_" style="color:#000000;" title="instagram"><i class="fab fa-instagram core-fs-65"></i></a>
@@ -636,12 +697,8 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-
-        <footer class="container"></footer>
-
-
+        </footer>
 
     </main>
 </body>

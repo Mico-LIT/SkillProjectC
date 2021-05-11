@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Untitled</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+    <input  value="+7 (___) ___-__-__" id="Phone"> <br/>
+    <input type="button" value="OK" onclick="funOutputPhone()"><br/>
+    <input  id="OutputPhone" placeholder="Phone"> <br/><br/>
+
+    <input id="EmailPhone" placeholder="Телефон\Email" style='text-transform: lowercase;'></br>
+    <input type="button" value="OK" onclick="funOutputEmailPhone()"></input></br>
+    <input  id="outputEmailPhone" placeholder="Телефон\Email" > <br/>
+    <script>
+    
+function funOutputEmailPhone(){
+
+    var emailphone =  document.getElementById("EmailPhone").value;
+    var output = document.getElementById("outputEmailPhone");
+    output.value = null;
+
+    var regexPatternEmail = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}/g;
+
+    var result = regexPatternEmail.exec(emailphone);
+
+    if(result != null){
+        output.value=result[0];
+        return;
+    }   
+
+    if(/[^-().^+\d ]/g.exec(emailphone)!= null)
+    {
+        output.value='Не распознано'; 
+        return;
+    }
+
+    emailphone = emailphone.replace(/\D/g, "").replace(/^(7|8)/g, "");    
+
+    var regexPatternPhone = /\d{10,10}/g;
+    var result = regexPatternPhone.exec(emailphone);
+    if (result != null)
+    {
+        output.value ='+7' + result[0];
+        return;
+    }
+
+    output.value='Не распознано'; 
+}
+
+
+function funOutputPhone(){
+    var _phone =  document.getElementById("Phone").value.replace(/\D/g, "");
+
+    if (_phone.match(/^\d{11,11}$/g)){
+        document.getElementById("OutputPhone").
+        value = "+" + document.getElementById("Phone").value.replace(/\D/g, "") ;
+    }
+   else
+   document.getElementById("OutputPhone").value = null;
+    
+}
+
+window.addEventListener("DOMContentLoaded", function() {
+function setCursorPosition(pos, elem) {
+    elem.focus();
+    if (elem.setSelectionRange) elem.setSelectionRange(pos, pos);
+}
+
+function mask(event) {
+
+    var matrix = "(___) ___-__-__",
+        i = 0,
+        positionDelete = 0;
+        val = this.value.replace(/\D/g, "");
+
+        if(val.length > 1 && event.inputType === "deleteContentBackward" || event.inputType === "deleteContentForward") 
+        positionDelete = event.currentTarget.selectionStart
+
+        if (event.inputType === "insertFromPaste")  val = val.replace(/^(7|8)/g, "");
+        val = val.replace(/^(7|8)/g, "");
+
+        this.value = "+7 " + matrix.replace(/./g , function(a) {
+            return  ( /[_]/.test(a) &&  i < val.length ) ? val.charAt(i++) :  a
+        });
+        
+        if(positionDelete != 0) setCursorPosition(positionDelete, this)
+        else setCursorPosition((this.value.match(/.+\d|\(/g) + '').split('').length, this)
+};
+    var input = document.querySelector("#Phone");
+    input.addEventListener("input", mask, false);
+    //input.addEventListener("focus", mask, false);
+});
+
+  </script>
+</body>
+
+</html>

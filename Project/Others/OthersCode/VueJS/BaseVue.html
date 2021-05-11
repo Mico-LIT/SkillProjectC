@@ -1,0 +1,948 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Vue</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://unpkg.com/vue"></script>  
+    <!-- Bootstrap CSS -->	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<style>
+    </style>
+  </head>
+
+
+  
+<body style="margin-bottom: 100px;">
+<div class="container">
+   
+    <header>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4 d-flex justify-content-center">Base Vue</h1>
+            </div>
+          </div>
+    </header>
+
+      <main>
+        <div class="row mt-5">
+            <div class="col-12">
+
+            <div class="card text-left ">
+              <h5 class="card-header">Example 1</h5>
+              <div class="card-body">
+                <h4 class="card-title">@Event</h4>
+                <div id="app">
+                    <input type="text" class="form-control" v-on:input="setMessage"/>  
+                    <p>{{message}}</p>     
+                </div>
+              </div>
+            </div>
+
+            <script>
+                var app = new Vue({
+                  el:'#app',
+                  data: {
+                      message:'Hello Vue!'
+                  },
+                  methods: {
+                    setMessage: function(event){
+                      this.message = event.target.value;
+                    }
+                  }      
+                });
+              </script>
+            </div>
+        </div>
+
+        
+      <div class="row  mt-5">
+        <div class="col-12">
+          <div class="card text-left">
+              <h5 class="card-header">Example 2</h5>
+              <div class="card-body">
+                <h4 class="card-title">Object Vue</h4>
+                <div id="Example2">
+                    <p>props:  {{name}}</p>    
+                    <p>Method: {{welccome()}}</p>
+                    <p>Method:  displayName {{displayName()}}</p>
+                    <p>factorial 6 :  {{factorial(6)}}</p>
+                  </div>
+    
+                <script>
+                    var Example2 = new Vue({
+                      el:'#Example2',
+                      data() {
+                        return {
+                          name: 'Tom',
+                          age: 25
+                        }
+                      },
+                      methods: {
+                        welccome:function(){
+                          return 'Welcome';
+                        },
+                        displayName:function(){
+                          return this.name;
+                        },
+                        factorial:function(n){
+                          var result = 1;
+                          for (let index = 1; index <= n; index++) {
+                            result = result * index;                            
+                          }
+                          return result;
+                        }
+                      }      
+                    });
+                  </script>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="card text-left">
+            <h5 class="card-header">Example 3</h5>
+            <div class="card-body">
+              <h4 class="card-title">Bind data</h4>
+              <div id="Example3">
+                <p>Interpolation {{name}} - {{age}}</p>
+                <span>Attribute bindings</span> <a v-bind:href="link">Google</a>
+                <p></p>
+                <span>Once bind</span>
+                <input type="text" v-on:input="setMessage" />
+                <span v-once>{{message}}</span>
+                <p></p>
+                <div v-html="messHtml"></div>
+                <div>{{messHtml}}</div>
+              </div>
+
+              <script>
+              new Vue({
+                el:'#Example3',
+                data() {
+                  return {
+                    name:'Mico',
+                    age:23,
+                    link: 'http://google.com',
+                    message:'Hi',
+                    messHtml:'<h2>Test</h2>'
+                  }
+                },
+                methods: {
+                  setMessage: function(event){
+                    this.message = event.target.value;
+                  }
+                },
+              });
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="card text-left">
+            <h5 class="card-header">Example 4</h5>
+            <div class="card-body">
+              <h4 class="card-title"></h4>
+              <div id="Example4">
+                <p>{{counter}}</p>
+                <button class="btn btn-primary" v-on:click="increase">+</button>
+                <button class="btn btn-primary" v-on:click="decrease('123',$event)">-</button>
+                <br><br>
+                <input type="text" class="form-control" v-model="name">
+                <br>
+                <input type="text" class="form-control" v-model="name">
+                <p>{{name}}</p>
+
+              </div>
+
+              <script>
+              new Vue({
+                el:'#Example4',
+                data:{
+                  counter:0,
+                  name:''
+                },methods:{
+                  increase:function(value){
+                    //console.log(value);
+                    this.counter++;
+                  },
+                  decrease:function(text,event){
+                    //console.log(event);
+                    if(this.counter > 0) this.counter--;
+                  }
+                }
+              });
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="card text-left">
+            <h5 class="card-header">Exampl 5</h5>
+            <div class="card-body">
+              <h5 class="card-title">Computed</h5>
+              <div id="Exampl5">
+                <input type="text" class="form-control" v-model="name">
+                <input type="text" class="form-control" v-model="age">
+                <p>Имя : {{name}} Возвраст: {{age}}</p>
+                <p>{{chackAge()}}</p>
+                <p>{{enabled}}</p>
+                <p><b>Props</b></p>
+
+                <input type="text" v-model="firstName" />
+                <input type="text" v-model="lastName" />
+                <input type="text" v-model="fullName" />
+                <p>Имя: {{fullName}}</p>
+
+                
+              </div>
+
+              <script>
+              new Vue({
+                el:'#Exampl5',
+                data:{
+                  name:'Mico',
+                  age:23,
+                  firstName:'',
+                  lastName:''
+
+                },
+                computed: {
+                  enabled:function(){
+                    console.log("computed");
+
+                    if(this.age > 17)
+                      return "Доступ разрешен";
+                    else
+                    return "Доступ запрешен";
+                  },
+                  fullName:{
+                    get:function(){
+                      return this.firstName + ' ' + this.lastName;
+                    },
+                    set:function(newValue){
+                      var names = newValue.split(' ')
+                    this.firstName = names[0]
+                    this.lastName = names[names.length - 1]
+                    }
+                  }
+                },
+                methods:{
+                  chackAge:function(){
+                    console.log("method");
+                    if(this.age > 17)
+                      return "Доступ разрешен";
+                    else
+                    return "Доступ запрешен";
+                  }
+
+                }
+              })
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="card text-left">
+            <h5 class="card-header">v-if v-show</h5>
+            <div class="card-doby">
+              <h4 class="card-title"></h4>
+              <div id="Exampl6">
+                <template v-if='visible'>
+                  <h3 >HI</h3>
+                </template>
+
+                <template v-else='visible'>
+                  <h4>Bye</h4>
+                </template>
+
+                <h1 v-show="visible">😊</h1>
+
+                <input class="form-control" type="number" v-model="number"/>
+                <p v-if="number == 0">0</p>
+                <p v-else-if="number == 2">2</p>
+                <p v-else-if="number == 3">3</p>
+                <p v-else>опа</p>
+                <button class="btn btn-primary" v-on:click='visible=!visible'>click</button>
+
+              </div>
+
+              <script>
+              new Vue({
+              el:'#Exampl6',
+              data:{
+                visible:false,
+                number:0
+              },
+              
+              methods:{
+
+              }
+
+              });
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="card text-left">
+            <h5 class="card-header">v-for</h5>
+            <div class="card-doby">
+              <h4 class="card-title"></h4>
+              <div id="Exampl7">
+                <ul>
+                  <li v-for="(item,index) in phone">{{index + 1}}. {{item}}</li>
+                </ul>
+
+                <ul>
+                  <template v-for="user in users">
+                    <li>{{user.name}}</li>
+                    <li>{{user.age}}</li>
+                  </template>
+                </ul>
+
+                <ul>
+                  <li v-for="n in 3">{{n}}</li>
+                </ul>
+              </div>
+
+              <script>
+              new Vue({
+                el:'#Exampl7',
+                data:{
+                  phone:['iPhone 7', 'Galaxy S8', 'Nokia N8', 'Xiaomi Mi6'],
+                  users: [
+                    {name:'Tom', age:22}, 
+                    {name:'Bob', age:31}, 
+                    {name: 'Sam', age:28}
+            ]
+                }
+              })
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="card text-left">
+            <h5 class="card-header">Control array</h5>
+
+            <div class="card-doby">
+              <h4 class="card-title"></h4>
+              <div id="Example8">
+                <span>push() pop() shift() unshift() splice() sort() reverse()</span><br>
+                <span>Но кроме выше описанных методов, которые изменяют отдельные элементы массив, есть ряд методов в javascript, которые возвращают новый массив, типа filter(), concat(), slice()</span>
+                <input type="text" class="form-control" v-model='newPhone'>
+                <button class="btn" v-on:click='phones.push(newPhone)'>Create</button>
+                <ul>
+                  <li v-for="(phone,index) in phones">
+                    <p>
+                      number:{{index+1}} value:{{phone}} <button class="btn btn-primary" v-on:click="phones.splice(index, 1)">Delete</button>
+                    </p>
+                  </li>
+                </ul>
+                <input type="text" v-model="company">
+                <ul>
+                  <li v-for="phone in filtredList"> {{phone}}</li>
+                </ul>
+
+
+                <hr>
+
+
+
+              </div>
+
+              <script>
+                new Vue({
+                  el:'#Example8',
+                  data:{
+                    company:'',
+                    newPhone:'',
+                    phones:[],
+                    otherPhones: [
+                        {title:'iPhone 7', company:'Apple'}, 
+                        {title:'iPhone 6S', company:'Apple'},
+                        {title:'Galaxy S8', company:'Samsung'},
+                        {title:'Galaxy S7 Edge', company:'Samsung'},
+                        {title:'Nokia N8', company:'HMD Global'}]
+                  },
+                  computed:{
+                    filtredList: function(){
+                      var comp = this.company
+
+                      return this.otherPhones.filter(function(item){
+                        if(comp === '') 
+                          return true;
+                        else
+                          return item.company.indexOf(comp)>-1;
+
+                      })
+                    }
+                  }
+                });
+              </script>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="card text-left">
+            <h5 class="card-header">Work is forms</h5>
+            <div class="card-doby">
+              <h4 class="card-title"></h4>
+              <div id="Exampl9">
+                <div class="col-4">
+                  <label>Login</label>
+                  <input type="text" v-model="login" placeholder="" class="form-control"/>
+                  <label>Password</label>
+                  <input type="password" v-model="password" placeholder="" class="form-control">
+                  <label>Age</label>
+                  <input type="number" v-model="age" min="18" class="form-control">
+                  <label>Date registration</label>
+                  <input type="date" v-model="date" class="form-control">
+                  <br>
+                  <div>
+                    <h3>Information</h3>
+                    <p>Login: {{login}}</p>
+                    <p>Password: {{password}}</p>
+                    <p>Age: {{age}}</p>
+                    <p>Date: {{date}}</p>
+                  </div>
+                </div>
+                <hr>
+
+                <div class="col-12">
+                    <textarea v-model="comment"></textarea>
+
+                      <div>
+                        <p>Comments</p>
+                        <p style="white-space:pre-line">{{comment}}</p>
+                      </div>
+                </div>
+                <hr>
+                <div class="col-4">
+                  <input type="checkbox" v-model="checked">
+                  <label>{{checked}}</label><br>
+
+                  <input type="checkbox" v-model="selectedUser" value="{name:'mico',age:12}">
+                  <label>1</label>
+                  <input type="checkbox" v-model="selectedUser" value="2">
+                  <label>2</label>
+                  <input type="checkbox" v-model="selectedUser" value="3">
+                  <label>3</label>
+                  <input type="checkbox" v-model="selectedUser" value="Test">
+                  <label>Test</label>
+                  <p>Selected {{selectedUser}}</p>
+                </div>
+                <div class="col-4">
+                  <template v-for="user in users">
+                    <label for="">{{user.name}}</label>
+                    <input type="checkbox" v-bind:value="user" v-model="selectedUser2"><br>
+                  </template>
+                  <label for="">Selected:</label>
+                  <ul>
+                    <li v-for="user in selectedUser2">Name:{{user.name}} Age:{{user.age}}</li>
+                  </ul>
+                </div>
+                <hr>
+                <div class="col-4">
+                  <select v-model=number class="form-control">
+                    <option value="1" >1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                  <p>Выбрал: {{number}}</p>
+                  <br>
+                  
+                  <select v-model="selectedUser3" multiple>
+                    <option v-for="user in users" v-bind:value="user">{{user.name}}</option>
+                  </select>
+                  <ul>
+                    <li v-for="user in selectedUser3">{{user.name}} - {{user.age}}</li>
+                  </ul>
+                </div>
+              </div>
+
+              <script>
+              new Vue({
+                el:'#Exampl9',
+                data:{
+                  login:'',
+                  password:'',
+                  age:'',
+                  date:'',
+                  comment:'',
+                  checked:true,
+                  selectedUser:[],
+                  selectedUser2:[],
+                  selectedUser3:[],
+                  users:[
+                      {name:'Tom', age:22},
+                      {name:'Bob', age:25},
+                      {name:'Sam', age:28},
+                      {name:'Alice', age:26}
+                      ],
+                      number:''
+
+
+                }
+
+              })
+              </script>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="card text-left">
+            <h5 class="card-header">Perent and child components</h5>
+            <div class="card-doby">
+              <h4 class="card-title"></h4>
+              <div id="Exampl10">
+                <userlist v-bind:users="users"></userlist>
+              </div>
+
+              <script>
+              Vue.component('userdetails',{
+                  props:['user'],
+                  template:`
+                  <ul>
+                    <li>{{user.name}}</li>
+                    <li>{{user.age}}</li>
+                  </ul>
+                  `
+                })
+
+              new Vue({
+                el:'#Exampl10',
+                data:{
+                  users: [{
+                      name: 'Tom',
+                      age: 18
+                  },{
+                      name: 'Bob',
+                      age: 23
+                  },{
+                      name: 'Alice',
+                      age: 21
+                  }]
+                },
+                components:{
+                  'userlist':{
+                    props:['users'],
+                    template:`
+                      <div>
+                        <userdetails v-for="user in users" v-bind:key="user.name" v-bind:user="user"></userdetails>
+                      </div>`
+                  }                  
+                }
+              })
+              
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="card text-left">
+            <h5 class="card-header">Template Vue</h5>
+            <div class="card-doby">
+              <h4 class="card-title"></h4>
+              <div id="Exampl11">
+                <h2>{{name}}</h2>
+                <useredit v-bind:user="name" v-on:userchange="change"></useredit>
+              </div>
+              <div id="Exampl12">
+                  <h2>{{name}}</h2>
+                  <useredit2 :user.sync="name"></useredit2>
+              </div>
+              <script>
+                Vue.component('useredit',{
+                    props:['user'],
+                    data:function(){
+                      return{
+                        userName:this.user
+                      }
+                    },
+                    methods:{
+                      onUserChange:function(){
+                        this.$emit('userchange',this.userName)
+                      }
+                    },
+                      template: `
+                      <div>
+                        <input type="text" v-model="userName" v-on:input="onUserChange()"/>
+                      </div>                      
+                      `
+                  });
+
+              new Vue({
+                el:'#Exampl11',
+                data:{
+                  name:'Tom'
+                },
+                methods:{
+                  change:function(value){
+                    this.name = value;
+                  }
+                }
+              });
+
+              Vue.component('useredit2',{
+                    props:['user'],
+                    data:function(){
+                      return{
+                        userName:this.user
+                      }
+                    },
+                    methods:{
+                      onUserChange:function(){
+                        this.$emit('update:user',this.userName)
+                      }
+                    },
+                      template: `
+                      <div>
+                        <input type="text" v-model="userName" v-on:input="onUserChange()">
+                      </div>
+                      `
+                  });
+
+
+              new Vue({
+                el:'#Exampl12',
+                data:{
+                  name:'Tom2'
+                }
+              });
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="card text-left">
+            <h5 class="card-header">Template data local and global</h5>
+            <div class="card-doby">
+              <h4 class="card-title"></h4>
+              <div id="Exampl13">
+
+                <tmp></tmp>
+                <tmp></tmp>
+                <tmp2></tmp2>
+                <tmp2></tmp2>
+              </div>
+              <script>
+
+              var _date = {
+                      counter:0
+                    };
+
+              new Vue({
+                el:'#Exampl13',
+                components:{
+                  'tmp':{
+                    data: function(){
+                      return _date
+                    },
+                    template:`
+                    <div>
+                      <h2>{{counter}}</h2>
+                      <button v-on:click="counterPlus">123</button>
+                    </div>`,
+                    methods:{
+                      counterPlus: function(){
+                        this.counter=this.counter+1;
+                      }
+                    }
+                  },
+                  'tmp2':{
+                    data: function(){
+                      return {
+                      counter:0
+                    };
+                    },
+                    template:`
+                    <div>
+                      <h2>{{counter}}</h2>
+                      <button v-on:click="counterPlus">123</button>
+                    </div>`,
+                    methods:{
+                      counterPlus: function(){
+                        this.counter=this.counter+1;
+                      }
+                    }
+                  }
+                }
+              })
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="card text-left">
+            <h5 class="card-header">Vue Components</h5>
+            <div class="card-doby">
+              <h4 class="card-title"></h4>
+              <div id="Exampl14">
+                <h2>Change</h2>
+                <userform2 v-bind:user="user"></userform2>
+                <h2>List Users (modify array):</h2>
+                <userform v-bind:users="users"></userform>
+                <user-Item v-for="(user,index) in users"
+                          v-bind:user="user"
+                          v-bind:index="index"
+                          v-bind:key="index"
+                          v-on:userdelete="remove"
+                          v-on:userchange="change"
+                ></user-Item>
+
+
+              </div>
+              <script>
+              new Vue({
+                el:'#Exampl14',
+                data:{
+                  users:[
+                    {name: 'Tom', age: 23},
+                    {name: 'Bob', age: 26},
+                    {name: 'Alice', age: 28}
+                ],
+                user:{}
+                },
+                methods:{
+                  remove:function(index){
+                    this.users.splice(index, 1);
+                  },
+                  change:function(index){
+                    this.user = this.users[index];
+                  }
+                },
+                components:{
+                  'userform2':{
+                    props:['user'],
+                    template:`
+                    <div>
+                      <input type="text" v-model="user.name" />
+                      <input type="number" v-model="user.age"/>
+                    </div>
+                    `
+                  },
+                  'userItem':{
+                    props:['user','index'],
+                    methods:{
+                      userDelete:function(index){
+                        this.$emit('userdelete', index);
+                      },
+                      userChange:function(index){
+                        this.$emit('userchange',index);
+                      }
+                    },
+                    template:`
+                    <div>
+                      <ul>
+                        <li>{{user.name}} {{user.age}}</li>
+                        <button v-on:click="userDelete(index)">Delete</button>
+                        <button v-on:click="userChange(index)">Change</button>
+                      </ul>
+                    </div>
+                    `
+                  },
+                  'userform':{
+                    props:['users'],
+                    data:function(){
+                      return{
+                        user:{name:'', age:18}
+                      }
+                    },
+                    methods: {
+                      userAdd:function(){
+                        this.users.push({name:this.user.name,age:this.user.age});
+                      }
+                    },
+                    template:`
+                    <div>
+                      <input type="text" v-model="user.name" />
+                      <input type="number" v-model="user.age"/>
+                      <button v-on:click="userAdd">Add</button>
+                    </div>
+                    `
+                  }
+                }
+              })
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="card text-left">
+            <h5 class="card-header">Template Vue props</h5>
+            <div class="card-doby">
+              <h4 class="card-title"></h4>
+              <div id="Exampl15">
+                <input type="text" v-model="mess">
+
+                <message-com v-bind:message="mess"></message-com>
+                <user v-bind="user"></user>
+              </div>
+
+              <script>
+                new Vue({
+                  el:'#Exampl15',
+                  data:{
+                    mess:'',
+                    user: {
+                            name: 'Tom',
+                            age: 18
+                          }
+                  },
+                  components:{
+                    'message-com':{
+                      props:['message'],
+                      template:'<h2>{{message}}</h2>'
+                    },
+                    'user':{
+                      props:['name','age'],
+                      template:`
+                        <div>
+                          <p>{{name}}</p>
+                          <p>{{age}}</p>
+                        </div>
+                      
+                      `
+                    }
+                  }
+                })
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="card text-left">
+            <h5 class="card-header">Slot Vue</h5>
+            <div class="card-doby">
+              <h4 class="card-title"></h4>
+              <div id="Exampl16">
+                <ads></ads>
+                <ads>
+                    <h5 slot="header">Продажа телефона</h5>
+                    <p>Содержание</p>
+                    <h6 slot="footer">FOOTER</h6>
+                </ads>
+              </div>
+              <script>
+              new Vue({
+                el:'#Exampl16',
+                components:{
+                  'ads':{
+                    template:`
+                    <div>
+                      <h2>Объявление</h2>
+                      <slot name="header">Здесь могла быть ваша реклама</slot>  
+                      <slot></slot>   
+                      <footer>
+                      <slot name="footer">footer</slot>               
+                      </footer>
+                    </div>                    
+                    `
+                  }
+                }
+              })
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="card text-left">
+            <h5 class="card-header">FilterUpCase</h5>
+            <div class="card-doby">
+              <h4 class="card-title"></h4>
+              <div id="Exampl17">
+                <input type="text" v-model="name">
+                <h3>{{name | filterUpCase}}</h3>
+              </div>
+              <script>
+                new Vue({
+                  el:'#Exampl17',
+                  data:{
+                    name:''
+                  },
+                  filters:{
+                    filterUpCase:function(value){
+                      return value.toUpperCase();
+                    }
+                  }
+
+                })
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- .row.mt-5>.col-12>.card.text-left>h5.card-header{12}div.card-doby>h4.card-title{}div#Exampl16 -->
+
+
+      </main>
+</div>
+
+<footer>
+
+
+</footer>
+
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+</body>
+</html>

@@ -143,9 +143,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "Web\ASP\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DeveloperInterview", "DeveloperInterview", "{72DC783D-FAB8-46C0-9647-EE634DFFDC8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_002_Parsing_CBR", "_002_Parsing_CBR\_002_Parsing_CBR.csproj", "{C67BB8E7-01AD-4E80-ACFA-C9DC82AF0760}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_002_Parsing_CBR", "_002_Parsing_CBR\_002_Parsing_CBR.csproj", "{C67BB8E7-01AD-4E80-ACFA-C9DC82AF0760}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_001_BaseQuestions", "DeveloperInterview\_001_BaseQuestions\_001_BaseQuestions.csproj", "{0E5BC5ED-C394-46F1-A9B8-893C8D3BDC97}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Preview", "Preview", "{49C0A8F0-C3F2-4ADD-8B4C-E5E4ADAF6AA3}"
+	ProjectSection(SolutionItems) = preProject
+		Others\Preview\_001_.png = Others\Preview\_001_.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -353,6 +358,7 @@ Global
 		{52116D53-578A-4388-9F81-ADE7245BAC3D} = {87B52C43-9B6F-49F2-A276-96B8701E3BE4}
 		{C67BB8E7-01AD-4E80-ACFA-C9DC82AF0760} = {72DC783D-FAB8-46C0-9647-EE634DFFDC8E}
 		{0E5BC5ED-C394-46F1-A9B8-893C8D3BDC97} = {72DC783D-FAB8-46C0-9647-EE634DFFDC8E}
+		{49C0A8F0-C3F2-4ADD-8B4C-E5E4ADAF6AA3} = {6729F8B9-C14A-46EA-9CCC-0E4DFF8ECA45}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6B107A0A-E116-4081-981F-C1FB7D76123A}

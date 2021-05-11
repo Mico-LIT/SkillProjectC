@@ -232,15 +232,6 @@
     <Compile Include="TasksByOOP\Games\ICarBody.cs" />
     <Compile Include="TasksByOOP\Games\IEngine.cs" />
     <Compile Include="TasksByOOP\Games\Road.cs" />
-    <Compile Include="InterviewDeveloper\Task_1.cs" />
-    <Compile Include="InterviewDeveloper\Task_2.cs" />
-    <Compile Include="InterviewDeveloper\Task_3.cs" />
-    <Compile Include="InterviewDeveloper\Task_4.cs" />
-    <Compile Include="InterviewDeveloper\Task_5.cs" />
-    <Compile Include="InterviewDeveloper\Task_6.cs" />
-    <Compile Include="InterviewDeveloper\Task_7.cs" />
-    <Compile Include="InterviewDeveloper\Task_8.cs" />
-    <Compile Include="InterviewDeveloper\Task_9.cs" />
     <Compile Include="Professional\AtributeWork\MyAttribute.cs" />
     <Compile Include="Professional\ProgrammingIO\Compressor\_GZipStream.cs" />
     <Compile Include="Professional\ProgrammingIO\DriveInfoExample.cs" />

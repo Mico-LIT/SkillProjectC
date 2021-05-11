@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharp.InterviewDeveloper
+namespace BaseQuestions
 {
     class Task_7
     {

@@ -61,6 +61,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Example\Split.sql" />
+    <Content Include="Others\Запросы.sql" />
+    <Content Include="Others\Создание таблиц.sql" />
     <Content Include="SQL Essential\DDL\SQL_CheckConstraints.sql" />
     <Content Include="SQL Essential\DDL\SQL_Cascading_Referential_Integrity_Constraints.sql" />
     <Content Include="SQL Essential\DDL\SQL_Foreign_Key.sql" />
@@ -105,5 +107,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <None Include="Books\sql.pdf" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

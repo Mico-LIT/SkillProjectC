@@ -6,6 +6,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -22,15 +23,15 @@ namespace _002_Middleware
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            //_01_Example(app, env);
-            //_02_Example(app, env);
-            _03_Example(app, env);
-            //_04_Example(app, env);
-            //_05_Example(app, env);
+            //_01_Example_CustomMiddelware(app, env);
+            //_02_Example_Pipeline_Run(app, env);
+            //_03_Example_HealthCheck(app, env);
+            //_04_Example_Map(app, env);
+            _05_Example_Use(app, env);
             //_06_Example(app, env);
             //_07_Example(app, env);
         }
-        private void _01_Example(IApplicationBuilder app, IWebHostEnvironment env)
+        private void _01_Example_CustomMiddelware(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -54,7 +55,7 @@ namespace _002_Middleware
             });
         }
 
-        private void _02_Example(IApplicationBuilder app, IWebHostEnvironment env)
+        private void _02_Example_Pipeline_Run(IApplicationBuilder app, IWebHostEnvironment env)
         {
             // метод run создает простой middelware который всегда возвращает ответ
             // context (HttpContext) это объект который содержит данные ответа и запроса
@@ -72,7 +73,7 @@ namespace _002_Middleware
             });
         }
 
-        private void _03_Example(IApplicationBuilder app, IWebHostEnvironment env)
+        private void _03_Example_HealthCheck(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseDeveloperExceptionPage();
 
@@ -82,7 +83,7 @@ namespace _002_Middleware
 
                 branch.Run(async (context) =>
                 {
-                    context.Response.ContentType="text/plain";
+                    context.Response.ContentType = "text/plain";
                     await context.Response.WriteAsync("True");
                 });
             });
@@ -93,14 +94,63 @@ namespace _002_Middleware
             });
         }
 
-        private void _04_Example(IApplicationBuilder app, IWebHostEnvironment env)
+        private void _04_Example_Map(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            throw new NotImplementedException();
+            // Метод Map модифицирует ветку запроса и отризает первый сегмент
+            app.Map("/Path1", branch =>
+            {
+                branch.Run(async (context) =>
+                {
+                    // path     = "/home/index"
+                    // pathBase = "/Path1"
+
+                    string path = context.Request.Path;
+                    string pathBase = context.Request.PathBase;
+
+                    await context.Response.WriteAsync($"/Path1 Branch path: {path} pathBase: {pathBase}");
+                });
+            });
+
+            app.Map("/path2/path3", branch =>
+            {
+                branch.Run(async (context) =>
+                {
+                    string path = context.Request.Path;
+                    string pathBase = context.Request.PathBase;
+
+                    await context.Response.WriteAsync($"/path2 Branch path: {path} pathBase: {pathBase}");
+                });
+            });
+
+            app.Run(async (context) =>
+                {
+                    string path = context.Request.Path;
+                    string pathBase = context.Request.PathBase;
+
+                    await context.Response.WriteAsync($"Main path: {path} pathBase: {pathBase}");
+                });
+
         }
 
-        private void _05_Example(IApplicationBuilder app, IWebHostEnvironment env)
+        private void _05_Example_Use(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            throw new NotImplementedException();
+            app.Use(async (context, next) =>
+            {
+                Debug.WriteLine("Use1 before next");
+                await next(); // Вызов след Middelware
+                Debug.WriteLine("Use1 after next");
+            });
+            app.Use(async (context, next) =>
+            {
+                Debug.WriteLine("Use2 before next");
+                await next();// Вызов след Middelware
+                Debug.WriteLine("Use2 after next");
+            });
+            app.Use(async (context, next) =>
+            {
+                Debug.WriteLine("Use3"); // Цепочка на этом прирываеться
+                //await next();
+            });
         }
 
         private void _06_Example(IApplicationBuilder app, IWebHostEnvironment env)

@@ -27,9 +27,10 @@ namespace _002_Middleware
             //_02_Example_Pipeline_Run(app, env);
             //_03_Example_HealthCheck(app, env);
             //_04_Example_Map(app, env);
-            _05_Example_Use(app, env);
-            //_06_Example(app, env);
-            //_07_Example(app, env);
+            //_05_Example_Use(app, env);
+            //_06_Example_MentodNext(app, env);
+            //_07_Example_OnStarting(app, env);
+            _08_Example_CustomMiddelware(app, env);
         }
         private void _01_Example_CustomMiddelware(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -153,14 +154,46 @@ namespace _002_Middleware
             });
         }
 
-        private void _06_Example(IApplicationBuilder app, IWebHostEnvironment env)
+        private void _06_Example_MentodNext(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            throw new NotImplementedException();
+            app.UseDeveloperExceptionPage();
+
+            app.Use(async (context, next) =>
+            {
+                context.Response.Headers.Add("CustomHeader", Guid.NewGuid().ToString());
+                await next();
+                // Выполнять изменение ответа после метода next() запрещено
+                //context.Response.Headers.Add("CustomHeader", Guid.NewGuid().ToString());
+            });
+
+            app.Run(async context => await context.Response.WriteAsJsonAsync("_06_Example"));
         }
 
-        private void _07_Example(IApplicationBuilder app, IWebHostEnvironment env)
+        private void _07_Example_OnStarting(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            throw new NotImplementedException();
+            app.UseDeveloperExceptionPage();
+
+            app.Use(async (context, next) =>
+            {
+                // должна выполниться перед отправкой загаловок клиету
+                context.Response.OnStarting(() =>
+                {
+                    context.Response.Headers.Add("CustomHeader", Guid.NewGuid().ToString());
+                    return Task.CompletedTask;
+                });
+
+                await next();
+            });
+
+            app.Run(async context => await context.Response.WriteAsJsonAsync("_07_Example"));
         }
+
+        private void _08_Example_CustomMiddelware(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            app.UseDeveloperExceptionPage();
+
+            app.UseMiddleware<CustomMiddelware>();
+        }
+
     }
 }

@@ -142,6 +142,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "Web\ASP\Ex_ThreeLayers\DataAccessLayer\DataAccessLayer.csproj", "{52116D53-578A-4388-9F81-ADE7245BAC3D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DeveloperInterview", "DeveloperInterview", "{72DC783D-FAB8-46C0-9647-EE634DFFDC8E}"
+	ProjectSection(SolutionItems) = preProject
+		DeveloperInterview\Тестовое задание Backend Developer.odt = DeveloperInterview\Тестовое задание Backend Developer.odt
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_002_Parsing_CBR", "_002_Parsing_CBR\_002_Parsing_CBR.csproj", "{C67BB8E7-01AD-4E80-ACFA-C9DC82AF0760}"
 EndProject

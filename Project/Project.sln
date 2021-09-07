@@ -146,7 +146,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DeveloperInterview", "Devel
 		DeveloperInterview\Тестовое задание Backend Developer.odt = DeveloperInterview\Тестовое задание Backend Developer.odt
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_002_Parsing_CBR", "_002_Parsing_CBR\_002_Parsing_CBR.csproj", "{C67BB8E7-01AD-4E80-ACFA-C9DC82AF0760}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_002_Parsing_CBR", "DeveloperInterview\_002_Parsing_CBR\_002_Parsing_CBR.csproj", "{C67BB8E7-01AD-4E80-ACFA-C9DC82AF0760}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_001_BaseQuestions", "DeveloperInterview\_001_BaseQuestions\_001_BaseQuestions.csproj", "{0E5BC5ED-C394-46F1-A9B8-893C8D3BDC97}"
 EndProject

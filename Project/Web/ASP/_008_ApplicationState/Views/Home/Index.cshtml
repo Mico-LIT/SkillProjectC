@@ -1,14 +1,16 @@
 ﻿@{
-    Layout = null;
+	ViewData["Title"] = "Home";
+	Layout = "~/Views/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>View</title>
-</head>
-<body>
-</body>
-</html>
+<div>
+	<ul>
+		<li><a asp-controller="_01_QueryString" asp-action="Index">_01_QueryString</a></li>
+		<li><a href="_02_Cookies">_02_CookiesController</a></li>
+		<li><a href="_03_Session">_03_SessionController</a></li>
+		<li><a href="_04_TmpData">_04_TmpDataController</a></li>
+		<li><a href="_05_Cache">_05_CacheController</a></li>
+		<li><a href="_06_HttpContext_Items">_06_HttpContext_ItemsController</a></li>
+		<li><a asp-action="Index" asp-controller="_07_SimpleProblems">_07_SimpleProblems</a></li>
+	</ul>
+</div>

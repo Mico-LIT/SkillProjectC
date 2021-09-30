@@ -13,7 +13,7 @@ namespace _008_ApplicationState.Controllers
         "Время жизни     : 20 мин по умолчанию      " +
         "Контекст        : Все приложение            " +
         "Безопастность   : Безопасны, так как не пересылаются на клиент. Опасность перехвата сессии")]
-    public class SessionController : Controller
+    public class _03_SessionController : Controller
     {
         public IActionResult Index()
         {

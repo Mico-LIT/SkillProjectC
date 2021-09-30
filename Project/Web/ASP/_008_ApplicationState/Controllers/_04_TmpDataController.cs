@@ -13,7 +13,7 @@ namespace _008_ApplicationState.Controllers
      "Время жизни     : До первого чтения      " +
      "Контекст        : Все приложение            " +
      "Безопастность   : Безопасны, так как не пересылаются на клиент. Опасность перехвата сессии")]
-    public class TmpDataController : Controller
+    public class _04_TmpDataController : Controller
     {
         public IActionResult Index()
         {

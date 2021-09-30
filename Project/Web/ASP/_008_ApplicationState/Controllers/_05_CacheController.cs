@@ -10,10 +10,10 @@ namespace _008_ApplicationState.Controllers
     [Description(
      "Допустивые типы : 'Любые типы данных'   " +
      "Место хранения  : sever-sede code           " +
-     "Время жизни     : Время обработки запроса      " +
+     "Время жизни     : Определяеться разработчиком      " +
      "Контекст        : Все приложение            " +
      "Безопастность   : Не передаются на клиент")]
-    public class HttpContext_ItemsController : Controller
+    public class _05_CacheController : Controller
     {
         public IActionResult Index()
         {

@@ -7,13 +7,13 @@ using System.ComponentModel;
 
 namespace _008_ApplicationState.Controllers
 {
-    [Description(
+    [Description(        
         "Допустивые типы : 'String'    " +
-        "Место хранения  : Http Cookies           " +
-        "Время жизни     : Определяеться разработчиком      " +
-        "Контекст        : Все приложение            " +
+        "Место хранения  : Http query string           " +
+        "Время жизни     : До ввода нового адреса      " +
+        "Контекст        : Целевая страница            " +
         "Безопастность   : доступна для просмотра. Легко меняеться ")]
-    public class CookiesController : Controller
+    public class _01_QueryStringController : Controller
     {
         public IActionResult Index()
         {

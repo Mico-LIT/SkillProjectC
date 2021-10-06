@@ -7,7 +7,7 @@ using System.ComponentModel;
 
 namespace _008_ApplicationState.Controllers
 {
-    [Description(        
+    [Description(
         "Допустивые типы : 'String'    " +
         "Место хранения  : Http query string           " +
         "Время жизни     : До ввода нового адреса      " +
@@ -15,9 +15,25 @@ namespace _008_ApplicationState.Controllers
         "Безопастность   : доступна для просмотра. Легко меняеться ")]
     public class _01_QueryStringController : Controller
     {
+        Dictionary<int, string> data;
+
+        public _01_QueryStringController()
+        {
+            data = new Dictionary<int, string>() {
+                {1,"First" },
+                {2,"Second" },
+                {3,"Third" },
+            };
+        }
+
         public IActionResult Index()
         {
-            return View();
+            return View(data);
+        }
+
+        public IActionResult Details(int id)
+        {
+            return View((object)data[id]);
         }
     }
 }

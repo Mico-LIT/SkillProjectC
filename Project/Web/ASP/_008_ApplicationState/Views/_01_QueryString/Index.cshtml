@@ -1,4 +1,14 @@
-﻿@{
+﻿@model Dictionary<int,string>
+
+@{
     ViewData["Title"] = "Index";
     Layout = "~/Views/_Layout.cshtml";
 }
+<div>
+    <ul>
+        @foreach(var item in Model)
+        {
+            <li><a asp-controller="_01_QueryString" asp-action="Details" asp-route-id="@item.Key">@item.Value</a></li>
+        }      
+    </ul>
+</div>

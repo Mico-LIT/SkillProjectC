@@ -330,6 +330,9 @@
     <None Include="App.config" />
     <Compile Include="Base\Threading\TPL\_Parallel\_001_Invoke.cs" />
     <None Include="packages.config" />
+    <None Include="test.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

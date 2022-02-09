@@ -1,0 +1,22 @@
+[
+  {
+    "RefId": 1,
+    "Description": "456",
+    "Brand": "gdfg",
+    "DesktopDomain": "ghjh",
+    "MobileDomain": "https://stgmb2b01m123213.com",
+    "MerchantCode": "1232",
+    "VendorId": "809",
+    "MerchantPasscode": "456"
+  },
+  {
+    "RefId": 65,
+    "Description": "546",
+    "Brand": "456",
+    "DesktopDomain": "456",
+    "MobileDomain": "https://stgmb2b02m12312.com",
+    "MerchantCode": "456",
+    "VendorId": "456",
+    "MerchantPasscode": "456"
+  }
+]
